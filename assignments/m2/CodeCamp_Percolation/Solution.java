@@ -10,6 +10,7 @@
 
 // You can implement the above API to solve the problem
 import java.util.Scanner;
+import java.util.Arrays;
 /**
  * Class for solution.
  * @author tezasrivishnu.
@@ -17,9 +18,11 @@ import java.util.Scanner;
 class Solution {
 	private int array_size;
 	private int open_size;
-	private int[][] grid;
+	private boolean[][] grid;
 	private int[] parent;
 	private int[] size;
+	int start;
+	int end;
 	/**
 	 * Constructs the object.
 	 * declaring the attributes here.
@@ -28,14 +31,16 @@ class Solution {
 	Solution(final int count) {
 		array_size = count;
 		open_size = 0;
-		grid = new int[array_size][array_size];
-		parent = new int[array_size * array_size];
-		size = new int[array_size * array_size];
-		for (int i = 0; i < array_size; i++) {
-			for (int j = 0; j < array_size; j++) {
-				grid[i][j] = 0;
-			}
-		}
+		start = count*count;
+		end = start + 1;
+		grid = new boolean[array_size][array_size];
+		parent = new int[(array_size * array_size)+2];
+		size = new int[(array_size * array_size)+2];
+		// for (int i = 0; i < array_size; i++) {
+		// 	for (int j = 0; j < array_size; j++) {
+		// 		grid[i][j] = 0;
+		// 	}
+		// }
 		for (int i = 0; i < array_size * array_size; i++) {
 			parent[i] = i;
 			size[i] = 1;
@@ -47,8 +52,14 @@ class Solution {
 	 * @param      col   The col
 	 */
 	public void open(final int row, final int col) {
-		grid[row - 1][col - 1] = 1;
+		grid[row - 1][col - 1] = true;
 		open_size += 1;
+		if(row == 1) {
+			union(index(row-1, col-1), start);
+		}
+		if(row == array_size) {
+			union(index(row-1, col-1), end);
+		}
 		if (row-2>-1 && isOpen(row - 1, col)) {
 			union(index(row - 1, col - 1) , index(row - 2, col - 1));
 		}
@@ -70,7 +81,7 @@ class Solution {
 	 * @return     True if open, False otherwise.
 	 */
 	public boolean isOpen(final int row, final int col) {
-		if (grid[row - 1][col - 1] == 1) {
+		if (grid[row - 1][col - 1]) {
 			return true;
 		}
 		return false;
@@ -129,9 +140,6 @@ class Solution {
 			a = parent[a];
 		return a;
 	}
-	public boolean connected(int p, int q) {
-        return find(p) == find(q);
-    }
 	/**
 	 * ckecking for the percolation.
 	 *
@@ -139,14 +147,17 @@ class Solution {
 	 */
 	public boolean valididate() {
 		for (int i = (array_size - 1) * array_size; i < array_size * array_size; i++) {
-			for (int j = 0; j < array_size * array_size; j++) {
-				if (connected(i,j)) {
+			for (int j = 0; j < array_size; j++) {
+				if (connected(i, j)) {
 					return true;
 				}
 			}
 		}
 		return false;
 	}
+	public boolean connected(int p, int q) {
+        return find(p) == find(q);
+    }
 	/**
 	 * main program for solution.
 	 *

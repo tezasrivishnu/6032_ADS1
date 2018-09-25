@@ -19,16 +19,18 @@ class Solution {
 	private int open_size;
 	private int[][] grid;
 	private int[] parent;
+	private int[] size;
 	/**
 	 * Constructs the object.
 	 * declaring the attributes here.
-	 * @param      size  The size
+	 * @param      count  The size
 	 */
-	Solution(final int size) {
-		array_size = size;
+	Solution(final int count) {
+		array_size = count;
 		open_size = 0;
 		grid = new int[array_size][array_size];
 		parent = new int[array_size * array_size];
+		size = new int[array_size * array_size];
 		for (int i = 0; i < array_size; i++) {
 			for (int j = 0; j < array_size; j++) {
 				grid[i][j] = 0;
@@ -36,6 +38,7 @@ class Solution {
 		}
 		for (int i = 0; i < array_size * array_size; i++) {
 			parent[i] = i;
+			size[i] = 1;
 		}
 	}
 	/**
@@ -98,11 +101,21 @@ class Solution {
 	 * @param      p     { parameter_description }
 	 * @param      q     The quarter
 	 */
-	public void union(final int p, final int q) {
-		int rootP = find(p);
-		int rootQ = find(q);
-		parent[rootP] = rootQ;
-	}
+	public void union(int p, int q) {
+        int rootP = find(p);
+        int rootQ = find(q);
+        if (rootP == rootQ) return;
+
+        // make smaller root point to larger one
+        if (size[rootP] < size[rootQ]) {
+            parent[rootP] = rootQ;
+            size[rootQ] += size[rootP];
+        }
+        else {
+            parent[rootQ] = rootP;
+            size[rootP] += size[rootQ];
+        }
+    }
 	/**
 	 * Searches for the first match.
 	 *

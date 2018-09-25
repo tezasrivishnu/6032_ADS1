@@ -15,20 +15,20 @@ import java.util.Arrays;
  * Class for solution.
  * @author tezasrivishnu.
  */
-class Solution {
+class Percolation {
 	private int array_size;
 	private int open_size;
 	private int[][] grid;
 	private int[] parent;
 	private int[] size;
-	int start;
-	int end;
+	// int start;
+	// int end;
 	/**
 	 * Constructs the object.
 	 * declaring the attributes here.
 	 * @param      count  The size
 	 */
-	Solution(final int count) {
+	Percolation(final int count) {
 		array_size = count;
 		open_size = 0;
 		// start = count*count;
@@ -60,13 +60,13 @@ class Solution {
 		// if(row == array_size) {
 		// 	union(index(row-1, col-1), end);
 		// }
-		if (row-2>-1 && isOpen(row - 1, col)) {
+		if (row - 2 > -1 && isOpen(row - 1, col)) {
 			union(index(row - 1, col - 1) , index(row - 2, col - 1));
 		}
 		if (row < array_size && isOpen(row + 1, col)) {
 			union(index(row - 1, col - 1) , index(row, col - 1));
 		}
-		if (col-2>-1 && isOpen(row, col - 1)) {
+		if (col - 2 > -1 && isOpen(row, col - 1)) {
 			union(index(row - 1, col - 1) , index(row - 1, col - 2));
 		}
 		if (col < array_size && isOpen(row, col + 1)) {
@@ -74,7 +74,7 @@ class Solution {
 		}
 	}
 	/**
-	 * checks if the route betwwen two nodes is open or not. 
+	 * checks if the route betwwen two nodes is open or not.
 	 * @param      row   The row
 	 * @param      col   The col
 	 *
@@ -113,26 +113,25 @@ class Solution {
 	 * @param      q     The quarter
 	 */
 	public void union(int p, int q) {
-        int rootP = find(p);
-        int rootQ = find(q);
-        if (rootP == rootQ) return;
+		int rootP = find(p);
+		int rootQ = find(q);
+		if (rootP == rootQ) return;
 
-        // make smaller root point to larger one
-        if (size[rootP] < size[rootQ]) {
-            parent[rootP] = rootQ;
-            size[rootQ] += size[rootP];
-        }
-        else {
-            parent[rootQ] = rootP;
-            size[rootP] += size[rootQ];
-        }
-    }
+		// make smaller root point to larger one
+		if (size[rootP] < size[rootQ]) {
+			parent[rootP] = rootQ;
+			size[rootQ] += size[rootP];
+		} else {
+			parent[rootQ] = rootP;
+			size[rootP] += size[rootQ];
+		}
+	}
 	/**
 	 * Searches for the first match.
 	 *
-	 * @param      p     { parameter_description }
+	 * @param      p (int)     the input parameter.
 	 *
-	 * @return     { description_of_the_return_value }
+	 * @return     the root of the element.
 	 */
 	public int find(final int p) {
 		int a = p;
@@ -149,29 +148,46 @@ class Solution {
 		// for (int j = 0; j < (array_size*array_size); j++) {
 		// 	System.out.println(Arrays.toString(grid[j]));
 		// }
-		for (int i = (array_size - 1) * array_size; i < array_size * array_size; i++) {
-			for (int j = 0; j < array_size; j++) {
-				if (find(i) == find(j)) {
-					return true;
+		if (open_size > 0) {
+			{
+				for (int i = (array_size - 1) * array_size; i < array_size * array_size; i++) {
+					for (int j = 0; j < array_size; j++) {
+						if (find(i) == find(j)) {
+							return true;
+						}
+					}
 				}
+				return false;
 			}
 		}
 		return false;
 	}
+}
+/**
+ * Class for solution.
+ */
+class Solution {
 	/**
-	 * main program for solution.
+	 * Constructs the object.
+	 */
+	Solution() {
+
+	}
+	/**
+	 * main program for Percolation.
 	 *
 	 * @param      args  The arguments
 	 */
 	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int number = sc.nextInt();
-		Solution sol = new Solution(number);
+		Percolation objper = new Percolation(number);
 		while (sc.hasNext()) {
 			int one = sc.nextInt();
 			int two = sc.nextInt();
-			sol.open(one, two);
+			//System.out.println(one+" "+two);
+			objper.open(one, two);
 		}
-		System.out.println(sol.valididate());
+		System.out.println(objper.valididate());
 	}
 }

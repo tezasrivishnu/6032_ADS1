@@ -7,7 +7,7 @@ class Percolation {
     /**
      * initializing array size.
      */
-    private int array_size;
+    private int arraySize;
     /**
      * initializing open nodes size.
      */
@@ -32,19 +32,19 @@ class Percolation {
      * @param      count  The size
      */
     Percolation(final int count) {
-        array_size = count;
+        arraySize = count;
         openNsize = 0;
         // start = count*count;
         // end = start + 1;
-        grid = new int[array_size][array_size];
-        parent = new int[array_size * array_size];
-        size = new int[array_size * array_size];
-        // for (int i = 0; i < array_size; i++) {
-        //  for (int j = 0; j < array_size; j++) {
+        grid = new int[arraySize][arraySize];
+        parent = new int[arraySize * arraySize];
+        size = new int[arraySize * arraySize];
+        // for (int i = 0; i < arraySize; i++) {
+        //  for (int j = 0; j < arraySize; j++) {
         //      grid[i][j] = 0;
         //  }
         // }
-        for (int i = 0; i < array_size * array_size; i++) {
+        for (int i = 0; i < arraySize * arraySize; i++) {
             parent[i] = i;
             size[i] = 1;
         }
@@ -60,24 +60,24 @@ class Percolation {
         // if(row == 1) {
         //  union(index(row-1, col-1), start);
         // }
-        // if(row == array_size) {
+        // if(row == arraySize) {
         //  union(index(row-1, col-1), end);
         // }
         if (row - 2 > -1 && isOpen(row - 1, col)) {
-            union(index(row - 1, col - 1)
-                ,index(row - 2, col - 1));
+            union(index(row - 1, col - 1),
+                index(row - 2, col - 1));
         }
-        if (row < array_size && isOpen(row + 1, col)) {
-            union(index(row - 1, col - 1)
-                ,index(row, col - 1));
+        if (row < arraySize && isOpen(row + 1, col)) {
+            union(index(row - 1, col - 1),
+                index(row, col - 1));
         }
         if (col - 2 > -1 && isOpen(row, col - 1)) {
-            union(index(row - 1, col - 1)
-                ,index(row - 1, col - 2));
+            union(index(row - 1, col - 1),
+                index(row - 1, col - 2));
         }
-        if (col < array_size && isOpen(row, col + 1)) {
-            union(index(row - 1, col - 1)
-                ,index(row - 1, col));
+        if (col < arraySize && isOpen(row, col + 1)) {
+            union(index(row - 1, col - 1),
+                index(row - 1, col));
         }
     }
     /**
@@ -111,7 +111,7 @@ class Percolation {
      * @return     index of the element.
      */
     public int index(final int i, final int j) {
-        return (i * array_size) + j;
+        return (i * arraySize) + j;
     }
     /**
      * @param      p     is the input parameter.
@@ -152,14 +152,14 @@ class Percolation {
      * @return     true or false.
      */
     public boolean valididate() {
-        // for (int j = 0; j < (array_size*array_size); j++) {
+        // for (int j = 0; j < (arraySize*arraySize); j++) {
         //  System.out.println(Arrays.toString(grid[j]));
         // }
         if (openNsize > 0) {
-            for (int i = (array_size - 1)
-                         * array_size; i < array_size
-                    * array_size; i++) {
-                for (int j = 0; j < array_size; j++) {
+            for (int i = (arraySize - 1)
+                         * arraySize; i < arraySize
+                    * arraySize; i++) {
+                for (int j = 0; j < arraySize; j++) {
                     if (find(i) == find(j)) {
                         return true;
                     }

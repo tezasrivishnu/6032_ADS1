@@ -1,25 +1,28 @@
-// public class Solution {
-//    public Percolation(int n)                // create n-by-n grid, with all sites blocked
-//    public    void open(int row, int col)    // open site (row, col) if it is not open already
-//    public boolean isOpen(int row, int col)  // is site (row, col) open?
-//    public boolean isFull(int row, int col)  // is site (row, col) full?
-//    public     int numberOfOpenSites()       // number of open sites
-//    public boolean percolates()              // does the system percolate?
-// }
-
-
-// You can implement the above API to solve the problem
 import java.util.Scanner;
-import java.util.Arrays;
 /**
  * Class for solution.
  * @author tezasrivishnu.
  */
 class Percolation {
+	/**
+	 * initializing array size.
+	 */
 	private int array_size;
+	/**
+	 * initializing open nodes size.
+	 */
 	private int open_size;
+	/**
+	 * initializing array grid.
+	 */
 	private int[][] grid;
+	/**
+	 * initializing array parent.
+	 */
 	private int[] parent;
+	/**
+	 * initializing size.
+	 */
 	private int[] size;
 	// int start;
 	// int end;
@@ -61,16 +64,20 @@ class Percolation {
 		// 	union(index(row-1, col-1), end);
 		// }
 		if (row - 2 > -1 && isOpen(row - 1, col)) {
-			union(index(row - 1, col - 1) , index(row - 2, col - 1));
+			union(index(row - 1, col - 1)
+				, index(row - 2, col - 1));
 		}
 		if (row < array_size && isOpen(row + 1, col)) {
-			union(index(row - 1, col - 1) , index(row, col - 1));
+			union(index(row - 1, col - 1)
+				, index(row, col - 1));
 		}
 		if (col - 2 > -1 && isOpen(row, col - 1)) {
-			union(index(row - 1, col - 1) , index(row - 1, col - 2));
+			union(index(row - 1, col - 1)
+				, index(row - 1, col - 2));
 		}
 		if (col < array_size && isOpen(row, col + 1)) {
-			union(index(row - 1, col - 1) , index(row - 1, col));
+			union(index(row - 1, col - 1)
+				, index(row - 1, col));
 		}
 	}
 	/**
@@ -107,16 +114,15 @@ class Percolation {
 		return (i * array_size) + j;
 	}
 	/**
-	 * { function_description }
-	 *
-	 * @param      p     { parameter_description }
+	 * @param      p     is the input parameter.
 	 * @param      q     The quarter
 	 */
-	public void union(int p, int q) {
+	public void union(final int p, final int q) {
 		int rootP = find(p);
 		int rootQ = find(q);
-		if (rootP == rootQ) return;
-
+		if (rootP == rootQ) {
+			return;
+		}
 		// make smaller root point to larger one
 		if (size[rootP] < size[rootQ]) {
 			parent[rootP] = rootQ;
@@ -135,8 +141,9 @@ class Percolation {
 	 */
 	public int find(final int p) {
 		int a = p;
-		while (a != parent[a])
+		while (a != parent[a]) {
 			a = parent[a];
+		}
 		return a;
 	}
 	/**
@@ -149,16 +156,16 @@ class Percolation {
 		// 	System.out.println(Arrays.toString(grid[j]));
 		// }
 		if (open_size > 0) {
-			{
-				for (int i = (array_size - 1) * array_size; i < array_size * array_size; i++) {
-					for (int j = 0; j < array_size; j++) {
-						if (find(i) == find(j)) {
-							return true;
-						}
+			for (int i = (array_size - 1)
+			             * array_size; i < array_size
+			        * array_size; i++) {
+				for (int j = 0; j < array_size; j++) {
+					if (find(i) == find(j)) {
+						return true;
 					}
 				}
-				return false;
 			}
+			return false;
 		}
 		return false;
 	}
@@ -166,11 +173,11 @@ class Percolation {
 /**
  * Class for solution.
  */
-class Solution {
+public class Solution {
 	/**
 	 * Constructs the object.
 	 */
-	Solution() {
+	private Solution() {
 
 	}
 	/**

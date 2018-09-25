@@ -129,6 +129,9 @@ class Solution {
 			a = parent[a];
 		return a;
 	}
+	public boolean connected(int p, int q) {
+        return find(p) == find(q);
+    }
 	/**
 	 * ckecking for the percolation.
 	 *
@@ -137,7 +140,7 @@ class Solution {
 	public boolean valididate() {
 		for (int i = (array_size - 1) * array_size; i < array_size * array_size; i++) {
 			for (int j = 0; j < array_size * array_size; j++) {
-				if (find(i) == find(j)) {
+				if (connected(i,j)) {
 					return true;
 				}
 			}

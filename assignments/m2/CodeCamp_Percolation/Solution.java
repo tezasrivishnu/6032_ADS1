@@ -18,7 +18,7 @@ import java.util.Arrays;
 class Solution {
 	private int array_size;
 	private int open_size;
-	private boolean[][] grid;
+	private int[][] grid;
 	private int[] parent;
 	private int[] size;
 	int start;
@@ -33,9 +33,9 @@ class Solution {
 		open_size = 0;
 		start = count*count;
 		end = start + 1;
-		grid = new boolean[array_size][array_size];
+		grid = new int[array_size][array_size];
 		parent = new int[(array_size * array_size)+2];
-		size = new int[(array_size * array_size)+2];
+		size = new int[array_size * array_size];
 		// for (int i = 0; i < array_size; i++) {
 		// 	for (int j = 0; j < array_size; j++) {
 		// 		grid[i][j] = 0;
@@ -52,7 +52,7 @@ class Solution {
 	 * @param      col   The col
 	 */
 	public void open(final int row, final int col) {
-		grid[row - 1][col - 1] = true;
+		grid[row - 1][col - 1] = 1;
 		open_size += 1;
 		if(row == 1) {
 			union(index(row-1, col-1), start);
@@ -81,7 +81,7 @@ class Solution {
 	 * @return     True if open, False otherwise.
 	 */
 	public boolean isOpen(final int row, final int col) {
-		if (grid[row - 1][col - 1]) {
+		if (grid[row - 1][col - 1] == 1) {
 			return true;
 		}
 		return false;
@@ -148,16 +148,13 @@ class Solution {
 	public boolean valididate() {
 		for (int i = (array_size - 1) * array_size; i < array_size * array_size; i++) {
 			for (int j = 0; j < array_size; j++) {
-				if (connected(i, j)) {
+				if (find(i) == find(j)) {
 					return true;
 				}
 			}
 		}
 		return false;
 	}
-	public boolean connected(int p, int q) {
-        return find(p) == find(q);
-    }
 	/**
 	 * main program for solution.
 	 *

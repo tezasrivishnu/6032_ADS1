@@ -21,7 +21,7 @@ class Solution {
         System.out.println(sol.threeSum(inputarray));
     }
     /**
-     * finding if sum of three elements is zero using 3-sum complexity
+     * finding if sum of three elements is zero using 3-sum complexity.
      *
      * @param      array  the input array.
      *

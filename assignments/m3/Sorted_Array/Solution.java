@@ -18,7 +18,7 @@ class Solution {
         String[] firstarr = new String[sc.nextInt()];
         String[] secondarr = new String[sc.nextInt()];
         if (firstarr.length == 0) {
-            firstarr = sc.next().split(",");
+            firstarr = sc.nextLine().split(",");
             secondarr = sc.next().split(",");
         } else {
             firstarr = sc.next().split(",");
@@ -39,7 +39,6 @@ class Solution {
      * @return     { description_of_the_return_value }
      */
     public int[] sortedArray(String[] onearray, final String[] twoarray) {
-        System.out.println("here");
         int[] firstarray = new int[onearray.length];
         int[] secondarray = new int[twoarray.length];
         for (int i = 0; i < onearray.length; i++) {

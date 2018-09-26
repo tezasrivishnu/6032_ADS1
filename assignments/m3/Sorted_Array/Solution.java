@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Arrays;
 /**
  * Class for solution.
  * @author tezasrivishnu.
@@ -13,8 +12,6 @@ class Solution {
     public static void main(final String[] args) {
         Solution sol = new Solution();
         Scanner sc = new Scanner(System.in);
-        // int firstSize = sc.nextInt();
-        // int secondSize = sc.nextInt();
         String[] firstarr = new String[sc.nextInt()];
         String[] secondarr = new String[sc.nextInt()];
         if (firstarr.length == 0) {
@@ -36,14 +33,12 @@ class Solution {
     /**
      * merging two sorted array into one sorted array.
      *
-     * @param      onesize   The onesize
-     * @param      twosize   The twosize
      * @param      onearray  The onearray
      * @param      twoarray  The twoarray
      *
      * @return     { description_of_the_return_value }
      */
-    public int[] sortedArray(String[] onearray, final String[] twoarray) {
+    public int[] sortedArray(final String[] onearray, final String[] twoarray) {
         int[] firstarray = new int[onearray.length];
         int[] secondarray = new int[twoarray.length];
         for (int i = 0; i < onearray.length; i++) {

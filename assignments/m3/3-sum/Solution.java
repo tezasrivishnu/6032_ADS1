@@ -14,7 +14,7 @@ class Solution {
 		int count = 0;
 		for (int i = 0; i < array.length; i++) {
 			for (int j = i+1; j < array.length-1; j++) {
-				for (int k = j+1; k < array.length-2; k++) {
+				for (int k = j+1; k < array.length-1; k++) {
 					if((array[i] + array[j] + array[k]) == 0) {
 						count += 1;
 					}

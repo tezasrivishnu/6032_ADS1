@@ -14,19 +14,22 @@ class Solution {
 	public int threeSum(long[] array) {
 		Arrays.sort(array);
 		int count = 0;
-		for (int i = 0; i < array.length; i++) {
-			int j = i + 1;
-			int k = array.length - 1;
-			while (j < k) {
-				if (array[i] + array [j] + array[j] == 0) {
+		for (int i = 0; i < array.length - 2; i++) {
+			long a = array[i];
+			int start = i + 1;
+			int end = array.length - 1;
+			while (start < end) {
+				long b = array[start];
+				long c = array[end];
+				if(a+b+c == 0) {
 					count += 1;
+					start += 1;
+					end -= 1;
+				} else if (a + b + c > 0) {
+					end -= 1;
+				} else {
+					start += 1;
 				}
-				if (array[i] + array [j] + array[j] < 0) {
-					j++;
-				}
-				if (array[i] + array [j] + array[j] > 0) {
-					k++;
-				} 
 			}
 		}
 		return count;

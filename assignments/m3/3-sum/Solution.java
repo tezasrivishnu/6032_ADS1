@@ -5,7 +5,7 @@ class Solution {
 		Solution sol = new Solution();
 		int input = sc.nextInt();
 		long[] inputarray = new long[input];
-		for (int i = 0; i<input; i++) {
+		for (int i = 0; i < input; i++) {
 			inputarray[i] = sc.nextLong();
 		}
 		System.out.println(sol.threeSum(inputarray));
@@ -13,11 +13,10 @@ class Solution {
 	public int threeSum(long[] array) {
 		int count = 0;
 		for (int i = 0; i < array.length; i++) {
-			for (int j = i+1; j < array.length-1; j++) {
-				for (int k = j+1; k < array.length-1; k++) {
-					if((array[i] + array[j] + array[k]) == 0) {
-						count += 1;
-					}
+			for (int j = i + 1; j < array.length - 1; j++) {
+				int k = i + j;
+				if (array[i] + array[j] + array[k] == 0) {
+					count += 1;
 				}
 			}
 		}

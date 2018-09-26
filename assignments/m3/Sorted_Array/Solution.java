@@ -50,7 +50,7 @@ class Solution {
     public String toString(int[] array) {
         String s = "";
         int i = 0;
-        for (i = 0; i<array.length; i++) {
+        for (i = 0; i<array.length-1; i++) {
             s += array[i]+",";
         }
         s += array[i];

@@ -17,20 +17,6 @@ class Solution {
         // int secondSize = sc.nextInt();
         String[] firstarr = new String[sc.nextInt()];
         String[] secondarr = new String[sc.nextInt()];
-        // if (firstSize == 0) {
-        //     int[] secondarray = new int[secondSize];
-        //     for (int i = 0; i < secondSize; i++) {
-        //         secondarray[i] = (secondarr[i]);
-        //     }
-        //     sol.toString(secondarray);
-        // }
-        // if (secondSize == 0) {
-        //     int[] firstarray = new int[firstSize];
-        //     for (int i = 0; i < firstSize; i++) {
-        //         firstarray[i] = Integer.parseInt(firstarr[i]);
-        //     }
-        //     sol.toString(firstarray);
-        // } else {
         if (firstarr.length == 0) {
             firstarr = sc.next().split(",");
             secondarr = sc.next().split(",");
@@ -87,7 +73,7 @@ class Solution {
             index += 1;
         }
 
-        System.out.println(Arrays.toString(sortedArray));
+        //System.out.println(Arrays.toString(sortedArray));
         return sortedArray;
     }
     /**

@@ -1,6 +1,15 @@
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Class for solution.
+ * @author tezasrivishnu.
+ */
 class Solution {
+    /**
+     * main program for solution class.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         Solution sol = new Solution();
         Scanner sc = new Scanner(System.in);
@@ -30,10 +39,21 @@ class Solution {
             for (int i = 0; i < secondSize; i++) {
                 secondarray[i] = Integer.parseInt(secondarr[i]);
             }
-            int[] sorted = sol.sortedArray(firstSize, secondSize, firstarray, secondarray);
+            int[] sorted = sol.sortedArray(firstSize,
+                secondSize, firstarray, secondarray);
             System.out.println(sol.toString(sorted));
         }
     }
+    /**
+     * merging two sorted array into one sorted array.
+     *
+     * @param      onesize   The onesize
+     * @param      twosize   The twosize
+     * @param      onearray  The onearray
+     * @param      twoarray  The twoarray
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int[] sortedArray(final int onesize, final int twosize,
                              final int[] onearray, final int[] twoarray) {
         // int[] firstarray = new int[onesize];
@@ -78,6 +98,13 @@ class Solution {
         //System.out.println(Arrays.toString(sortedArray));
         return sortedArray;
     }
+    /**
+     * Returns a string representation of the sorted array
+     *
+     * @param      array  The array
+     *
+     * @return     String representation of the sorted array.
+     */
     public String toString(final int[] array) {
         String s = "";
         int i = 0;

@@ -20,6 +20,11 @@ class Solution {
         if (firstarr.length == 0) {
             firstarr = sc.nextLine().split(",");
             secondarr = sc.next().split(",");
+            int[] secondarray = new int[secondarr.length];
+            for (int i = 0; i < secondarr.length; i++) {
+                secondarray[i] = Integer.parseInt(secondarr[i]);
+            }
+            System.out.println(sol.toString(secondarray));
         } else {
             firstarr = sc.next().split(",");
             secondarr = sc.next().split(",");

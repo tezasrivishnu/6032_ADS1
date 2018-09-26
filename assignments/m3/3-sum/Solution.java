@@ -12,9 +12,9 @@ class Solution {
 	}
 	public int threeSum(long[] array) {
 		int count = 0;
-		for (int i = 0; i < array.length - 1; i++) {
+		for (int i = 0; i < array.length; i++) {
 			long k = array[i] + array[i + 1];
-			for (int j = i+2; j < array.length-2; j++) {
+			for (int j = i; j < array.length; j++) {
 				if (k + array[j] == 0) {
 					count += 1;
 				}

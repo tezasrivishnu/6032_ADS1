@@ -32,11 +32,11 @@ class Solution {
         //     sol.toString(firstarray);
         // } else {
         if (firstarr.length == 0) {
-            firstarr = sc.nextLine().split(",");
-            secondarr = sc.nextLine().split(",");
+            firstarr = sc.next().split(",");
+            secondarr = sc.next().split(",");
         } else {
-            firstarr = sc.nextLine().split(",");
-            secondarr = sc.nextLine().split(",");
+            firstarr = sc.next().split(",");
+            secondarr = sc.next().split(",");
             int[] sorted = sol.sortedArray(firstarr, secondarr);
             System.out.println(sol.toString(sorted));
         }

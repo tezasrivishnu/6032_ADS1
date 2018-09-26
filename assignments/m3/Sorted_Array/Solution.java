@@ -80,7 +80,6 @@ class Solution {
      * Returns a string representation of the sorted array
      *
      * @param      array  The array
-     *
      * @return     String representation of the sorted array.
      */
     public String toString(final int[] array) {

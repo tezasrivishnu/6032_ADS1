@@ -6,8 +6,8 @@ class Solution {
         Scanner sc = new Scanner(System.in);
         int firstSize = sc.nextInt();
         int secondSize = sc.nextInt();
-        String[] firstarr = sc.nextLine().split(",");
-        String[] secondarr = sc.nextLine().split(",");
+        String[] firstarr = sc.next().split(",");
+        String[] secondarr = sc.next().split(",");
         if (firstSize == 0) {
             int[] secondarray = new int[secondSize];
             for (int i = 0; i < secondSize; i++) {

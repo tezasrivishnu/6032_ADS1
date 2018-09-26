@@ -17,33 +17,33 @@ class Solution {
         int secondSize = sc.nextInt();
         String[] firstarr = sc.next().split(",");
         String[] secondarr = sc.next().split(",");
-        if (firstSize == 0) {
-            int[] secondarray = new int[secondSize];
-            for (int i = 0; i < secondSize; i++) {
-                secondarray[i] = Integer.parseInt(secondarr[i]);
-            }
-            sol.toString(secondarray);
+        // if (firstSize == 0) {
+        //     int[] secondarray = new int[secondSize];
+        //     for (int i = 0; i < secondSize; i++) {
+        //         secondarray[i] = Integer.parseInt(secondarr[i]);
+        //     }
+        //     sol.toString(secondarray);
+        // }
+        // if (secondSize == 0) {
+        //     int[] firstarray = new int[firstSize];
+        //     for (int i = 0; i < firstSize; i++) {
+        //         firstarray[i] = Integer.parseInt(firstarr[i]);
+        //     }
+        //     sol.toString(firstarray);
+        // } else {
+        int[] firstarray = new int[firstSize];
+        int[] secondarray = new int[secondSize];
+        for (int i = 0; i < firstSize; i++) {
+            firstarray[i] = Integer.parseInt(firstarr[i]);
         }
-        if (secondSize == 0) {
-            int[] firstarray = new int[firstSize];
-            for (int i = 0; i < firstSize; i++) {
-                firstarray[i] = Integer.parseInt(firstarr[i]);
-            }
-            sol.toString(firstarray);
-        } else {
-            int[] firstarray = new int[firstSize];
-            int[] secondarray = new int[secondSize];
-            for (int i = 0; i < firstSize; i++) {
-                firstarray[i] = Integer.parseInt(firstarr[i]);
-            }
-            for (int i = 0; i < secondSize; i++) {
-                secondarray[i] = Integer.parseInt(secondarr[i]);
-            }
-            int[] sorted = sol.sortedArray(firstSize,
-                                           secondSize, firstarray, secondarray);
-            System.out.println(sol.toString(sorted));
+        for (int i = 0; i < secondSize; i++) {
+            secondarray[i] = Integer.parseInt(secondarr[i]);
         }
+        int[] sorted = sol.sortedArray(firstSize,
+                                       secondSize, firstarray, secondarray);
+        System.out.println(sol.toString(sorted));
     }
+
     /**
      * merging two sorted array into one sorted array.
      *

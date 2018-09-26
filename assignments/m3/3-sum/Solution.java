@@ -4,13 +4,13 @@ class Solution {
 		Scanner sc = new Scanner(System.in);
 		Solution sol = new Solution();
 		int input = sc.nextInt();
-		int[] inputarray = new int[input];
+		long[] inputarray = new long[input];
 		for (int i = 0; i<input; i++) {
-			inputarray[i] = sc.nextInt();
+			inputarray[i] = sc.nextLong();
 		}
 		System.out.println(sol.threeSum(inputarray));
 	}
-	public int threeSum(int[] array) {
+	public int threeSum(long[] array) {
 		int count = 0;
 		for (int i = 0; i < array.length; i++) {
 			for (int j = i+1; j < array.length-1; j++) {

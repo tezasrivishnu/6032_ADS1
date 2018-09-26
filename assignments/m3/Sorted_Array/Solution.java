@@ -7,7 +7,7 @@ class Solution {
         int firstSize = sc.nextInt();
         int secondSize = sc.nextInt();
         String[] firstarr = sc.nextLine().split(",");
-        String[] secondarr = sc.next().split(",");
+        String[] secondarr = sc.nextLine().split(",");
         if (firstSize == 0) {
             int[] secondarray = new int[secondSize];
             for (int i = 0; i < secondSize; i++) {

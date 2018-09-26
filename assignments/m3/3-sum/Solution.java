@@ -22,6 +22,7 @@ class Solution {
 					count += 1;
 				}
 				j++;
+				k--;
 			}
 		}
 		return count;

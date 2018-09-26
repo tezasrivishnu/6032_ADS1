@@ -36,7 +36,7 @@ class Solution {
      * @param      onearray  The onearray
      * @param      twoarray  The twoarray
      *
-     * @return     { description_of_the_return_value }
+     * @return     sorted array after merging
      */
     public int[] sortedArray(final String[] onearray, final String[] twoarray) {
         int[] firstarray = new int[onearray.length];
@@ -51,7 +51,8 @@ class Solution {
         int index = 0;
         int firstindex = 0;
         int secondindex = 0;
-        while (firstindex < firstarray.length && secondindex < secondarray.length) {
+        while (firstindex < firstarray.length
+            && secondindex < secondarray.length) {
             if (firstarray[firstindex] < secondarray[secondindex]) {
                 sortedArray[index] = firstarray[firstindex];
                 firstindex++;
@@ -75,7 +76,7 @@ class Solution {
         //System.out.println(Arrays.toString(sortedArray));
         return sortedArray;
     }
-    /**
+    /**.
      * Returns a string representation of the sorted array
      *
      * @param      array  The array

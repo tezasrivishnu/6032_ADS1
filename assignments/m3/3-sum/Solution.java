@@ -21,8 +21,12 @@ class Solution {
 				if (array[i] + array [j] + array[j] == 0) {
 					count += 1;
 				}
-				j++;
-				k--;
+				if (array[i] + array [j] + array[j] < 0) {
+					j++;
+				}
+				if (array[i] + array [j] + array[j] > 0) {
+					k++;
+				} 
 			}
 		}
 		return count;

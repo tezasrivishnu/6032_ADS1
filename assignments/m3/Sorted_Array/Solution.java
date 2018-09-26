@@ -53,6 +53,7 @@ class Solution {
      * @return     { description_of_the_return_value }
      */
     public int[] sortedArray(String[] onearray, final String[] twoarray) {
+        System.out.println("here");
         int[] firstarray = new int[onearray.length];
         int[] secondarray = new int[twoarray.length];
         for (int i = 0; i < onearray.length; i++) {

@@ -34,7 +34,6 @@ class Solution {
         if (firstarr.length != 0) {
             firstarr = sc.nextLine().split(",");
             secondarr = sc.nextLine().split(",");
-
         } else {
             firstarr = sc.nextLine().split(",");
             secondarr = sc.nextLine().split(",");
@@ -68,26 +67,26 @@ class Solution {
         int secondindex = 0;
         while (firstindex < firstarray.length && secondindex < secondarray.length) {
             if (firstarray[firstindex] < secondarray[secondindex]) {
-                sortedArray[index] = (firstarray[firstindex]);
+                sortedArray[index] = firstarray[firstindex];
                 firstindex++;
             } else {
-                sortedArray[index] = (secondarray[secondindex]);
+                sortedArray[index] = secondarray[secondindex];
                 secondindex++;
             }
             index += 1;
         }
         while (firstindex < onearray.length) {
-            sortedArray[index] = (firstarray[firstindex]);
+            sortedArray[index] = firstarray[firstindex];
             firstindex += 1;
             index += 1;
         }
         while (secondindex < secondarray.length) {
-            sortedArray[index] = (secondarray[secondindex]);
+            sortedArray[index] = secondarray[secondindex];
             secondindex += 1;
             index += 1;
         }
 
-        //System.out.println(Arrays.toString(sortedArray));
+        System.out.println(Arrays.toString(sortedArray));
         return sortedArray;
     }
     /**

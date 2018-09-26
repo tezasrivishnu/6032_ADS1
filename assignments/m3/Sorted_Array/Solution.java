@@ -31,7 +31,7 @@ class Solution {
         //     }
         //     sol.toString(firstarray);
         // } else {
-        if (firstarr.length != 0) {
+        if (firstarr.length == 0) {
             firstarr = sc.nextLine().split(",");
             secondarr = sc.nextLine().split(",");
         } else {

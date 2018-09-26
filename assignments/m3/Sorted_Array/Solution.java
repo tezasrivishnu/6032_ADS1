@@ -13,14 +13,14 @@ class Solution {
     public static void main(final String[] args) {
         Solution sol = new Solution();
         Scanner sc = new Scanner(System.in);
-        int firstSize = sc.nextInt();
-        int secondSize = sc.nextInt();
-        String[] firstarr = sc.next().split(",");
-        String[] secondarr = sc.next().split(",");
+        // int firstSize = sc.nextInt();
+        // int secondSize = sc.nextInt();
+        String[] firstarr = new String[sc.nextInt()];
+        String[] secondarr = new String[sc.nextInt()];
         // if (firstSize == 0) {
         //     int[] secondarray = new int[secondSize];
         //     for (int i = 0; i < secondSize; i++) {
-        //         secondarray[i] = Integer.parseInt(secondarr[i]);
+        //         secondarray[i] = (secondarr[i]);
         //     }
         //     sol.toString(secondarray);
         // }
@@ -31,17 +31,16 @@ class Solution {
         //     }
         //     sol.toString(firstarray);
         // } else {
-        int[] firstarray = new int[firstSize];
-        int[] secondarray = new int[secondSize];
-        for (int i = 0; i < firstSize; i++) {
-            firstarray[i] = Integer.parseInt(firstarr[i]);
+        if (firstarr.length != 0) {
+            firstarr = sc.nextLine().split(",");
+            secondarr = sc.nextLine().split(",");
+
+        } else {
+            firstarr = sc.nextLine().split(",");
+            secondarr = sc.nextLine().split(",");
+            int[] sorted = sol.sortedArray(firstarr, secondarr);
+            System.out.println(sol.toString(sorted));
         }
-        for (int i = 0; i < secondSize; i++) {
-            secondarray[i] = Integer.parseInt(secondarr[i]);
-        }
-        int[] sorted = sol.sortedArray(firstSize,
-                                       secondSize, firstarray, secondarray);
-        System.out.println(sol.toString(sorted));
     }
 
     /**
@@ -54,47 +53,40 @@ class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public int[] sortedArray(final int onesize, final int twosize,
-                             final int[] onearray, final int[] twoarray) {
-        // int[] firstarray = new int[onesize];
-        // int[] secondarray = new int[twosize];
-        // for (int i = 0; i < onesize; i++) {
-        //     firstarray[i] = Integer.parseInt(onearray[i]);
-        // }
-        // for (int i = 0; i < twosize; i++) {
-        //     secondarray[i] = Integer.parseInt(twoarray[i]);
-        // }
-        int[] sortedArray = new int[onesize + twosize];
+    public int[] sortedArray(String[] onearray, final String[] twoarray) {
+        int[] firstarray = new int[onearray.length];
+        int[] secondarray = new int[twoarray.length];
+        for (int i = 0; i < onearray.length; i++) {
+            firstarray[i] = Integer.parseInt(onearray[i]);
+        }
+        for (int i = 0; i < twoarray.length; i++) {
+            secondarray[i] = Integer.parseInt(twoarray[i]);
+        }
+        int[] sortedArray = new int[firstarray.length + secondarray.length];
         int index = 0;
         int firstindex = 0;
         int secondindex = 0;
-        if (onearray.length == 0) {
-            sortedArray = twoarray;
+        while (firstindex < firstarray.length && secondindex < secondarray.length) {
+            if (firstarray[firstindex] < secondarray[secondindex]) {
+                sortedArray[index] = (firstarray[firstindex]);
+                firstindex++;
+            } else {
+                sortedArray[index] = (secondarray[secondindex]);
+                secondindex++;
+            }
+            index += 1;
         }
-        if (twoarray.length == 0) {
-            sortedArray = onearray;
-        } else {
-            while (firstindex < onesize && secondindex < twosize) {
-                if (onearray[firstindex] < twoarray[secondindex]) {
-                    sortedArray[index] = onearray[firstindex];
-                    firstindex++;
-                } else {
-                    sortedArray[index] = twoarray[secondindex];
-                    secondindex++;
-                }
-                index += 1;
-            }
-            while (firstindex < onesize) {
-                sortedArray[index] = onearray[firstindex];
-                firstindex += 1;
-                index += 1;
-            }
-            while (secondindex < twosize) {
-                sortedArray[index] = twoarray[secondindex];
-                secondindex += 1;
-                index += 1;
-            }
+        while (firstindex < onearray.length) {
+            sortedArray[index] = (firstarray[firstindex]);
+            firstindex += 1;
+            index += 1;
         }
+        while (secondindex < secondarray.length) {
+            sortedArray[index] = (secondarray[secondindex]);
+            secondindex += 1;
+            index += 1;
+        }
+
         //System.out.println(Arrays.toString(sortedArray));
         return sortedArray;
     }

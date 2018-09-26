@@ -24,25 +24,32 @@ class Solution {
         int index = 0;
         int firstindex = 0;
         int secondindex = 0;
-        while(firstindex < onesize && secondindex < twosize){
-            if (firstarray[firstindex] < secondarray[secondindex]) {
-                sortedArray[index] = firstarray[firstindex];
-                firstindex++;
-            } else {
-                sortedArray[index] = secondarray[secondindex];
-                secondindex++;
+        if (onearray.length == 0) {
+            sortedArray = secondarray;
+        }
+        if (twoarray.length == 0) {
+            sortedArray = firstarray;
+        } else {
+            while (firstindex < onesize && secondindex < twosize) {
+                if (firstarray[firstindex] < secondarray[secondindex]) {
+                    sortedArray[index] = firstarray[firstindex];
+                    firstindex++;
+                } else {
+                    sortedArray[index] = secondarray[secondindex];
+                    secondindex++;
+                }
+                index += 1;
             }
-            index += 1;
-        }
-        while(firstindex < onesize) {
-            sortedArray[index] = firstarray[firstindex];
-            firstindex += 1;
-            index += 1;
-        }
-        while(secondindex < twosize) {
-            sortedArray[index] = secondarray[secondindex];
-            secondindex += 1;
-            index += 1;
+            while (firstindex < onesize) {
+                sortedArray[index] = firstarray[firstindex];
+                firstindex += 1;
+                index += 1;
+            }
+            while (secondindex < twosize) {
+                sortedArray[index] = secondarray[secondindex];
+                secondindex += 1;
+                index += 1;
+            }
         }
         //System.out.println(Arrays.toString(sortedArray));
         return sortedArray;
@@ -50,8 +57,8 @@ class Solution {
     public String toString(int[] array) {
         String s = "";
         int i = 0;
-        for (i = 0; i<array.length-1; i++) {
-            s += array[i]+",";
+        for (i = 0; i < array.length - 1; i++) {
+            s += array[i] + ",";
         }
         s += array[i];
         return s;

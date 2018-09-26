@@ -13,8 +13,8 @@ class Solution {
 	public int threeSum(int[] array) {
 		int count = 0;
 		for (int i = 0; i < array.length; i++) {
-			for (int j = i; j < array.length-1; j++) {
-				for (int k = j; k < array.length-2; k++) {
+			for (int j = i+1; j < array.length-1; j++) {
+				for (int k = j+1; k < array.length-2; k++) {
 					if((array[i] + array[j] + array[k]) == 0) {
 						count += 1;
 					}

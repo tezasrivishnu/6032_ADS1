@@ -1,0 +1,12 @@
+sentence = "it was - the best - of times - - - it was - the - -""
+
+for the first "-" pop, the sentence will be "it".
+for the second "-" pop, the sentence will be "it the".
+for the third "-" pop, the sentence will be "it the of".
+for the fourth "-" pop, the sentence will be "it the".
+for the fifth "-" pop, the sentence will be "it".
+for the sixth "-" pop, the sentence will be "it it".
+for the seventh "-" pop, the sentence will be "it it".
+for the eighth "-" pop, the sentence will be "it".
+
+Final Output - "it".

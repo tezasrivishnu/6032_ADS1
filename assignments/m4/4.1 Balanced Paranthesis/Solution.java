@@ -19,9 +19,9 @@ class CharacterStack {
 	}
 	public void push(char c) {
 		if (size >= character.length) {
-			character = Arrays.copyOf(character, size * size );
+			character = Arrays.copyOf(character, size + 1);
 		}
-		character[++size] = c;
+		character[size++] = c;
 	}
 }
 class Solution {

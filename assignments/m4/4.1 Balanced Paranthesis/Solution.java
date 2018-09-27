@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 /**
  * List of characters class.
@@ -18,7 +17,7 @@ class CharacterStack {
   *
   * @param      size  The size
   */
- public CharacterStack(final int size) {
+ CharacterStack(final int size) {
   character = new char[size];
   count = 0;
  }
@@ -69,6 +68,11 @@ class Solution {
    sol.yesNo(input);
   }
  }
+ /**
+  * checking the parathesis are in order or not.
+  *
+  * @param      value  The value
+  */
  public void yesNo(final String value) {
   CharacterStack stack = new CharacterStack(value.length());
   char[] string = value.toCharArray();

@@ -10,9 +10,12 @@ class CharacterStack {
 	public int size() {
 		return size;
 	}
-	char pop() {
-		char result = character[--size];
-		return result;
+	public char pop() {
+		if (size >= 0) {
+			char result = character[--size];
+			return result;
+		}
+		return ' ';
 	}
 	public void push(char c) {
 		if (size == character.length) {
@@ -24,25 +27,34 @@ class CharacterStack {
 class Solution {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		Solution sol = new Solution();
-		String input = scan.next();
-		sol.yesNo(input);
-	}
-	public void yesNo(String value) {
 		CharacterStack stack = new CharacterStack();
+		int num = scan.nextInt();
+		Solution sol = new Solution();
+		for (int i = 0; i < num; i++) {
+			String input = scan.next();
+			sol.yesNo(input, stack);
+		}
+		// String input = scan.next();
+		// sol.yesNo(input);
+	}
+	public void yesNo(String value, CharacterStack stack) {
 		char[] string = value.toCharArray();
 		int flag = 0;
 		if (string[0] == '}' || string[0] == ']' || string[0] == ')') {
-			System.out.println("No");
+			System.out.println("NO");
 		} else {
 			if (string[string.length - 1] == '{' || string[string.length - 1] == '[' || string[string.length - 1] == '(') {
-				System.out.println("No");
+				System.out.println("NO");
 			} else {
-				for (int c = 0; c<string.length; c++) {
+				for (int c = 0; c < string.length; c++) {
 					if (string[c] == '[' || string[c] == '{' || string[c] == '(') {
 						stack.push(string[c]);
 					} else {
 						char s = stack.pop();
+						if(s == ' '){
+							flag = 1;
+							break;
+						}
 						if (string[c] == '(' && s == ')') {
 							flag = 1;
 							break;
@@ -59,9 +71,9 @@ class Solution {
 					}
 				}
 				if (flag == 1) {
-					System.out.println("Yes");
+					System.out.println("YES");
 				} else {
-					System.out.println("No");
+					System.out.println("NO");
 				}
 			}
 		}

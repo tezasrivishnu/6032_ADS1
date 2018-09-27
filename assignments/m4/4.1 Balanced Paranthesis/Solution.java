@@ -38,9 +38,9 @@ class Solution {
 			if (string[string.length - 1] == '{' || string[string.length - 1] == '[' || string[string.length - 1] == '(') {
 				System.out.println("No");
 			} else {
-				for (Character c : string) {
+				for (int c = 0; c<string.length; c++) {
 					if (string[c] == '[' || string[c] == '{' || string[c] == '(') {
-						stack.push(c);
+						stack.push(string[c]);
 					} else {
 						char s = stack.pop();
 						if (string[c] == '(' && s == ')') {

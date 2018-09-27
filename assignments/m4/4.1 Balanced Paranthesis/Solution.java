@@ -18,7 +18,7 @@ class CharacterStack {
 		return ' ';
 	}
 	public void push(char c) {
-		if (size == character.length) {
+		if (size == character.length-1) {
 			character = Arrays.copyOf(character, size + 1);
 		}
 		character[++size] = c;

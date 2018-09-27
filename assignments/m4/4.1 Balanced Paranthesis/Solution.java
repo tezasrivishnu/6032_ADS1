@@ -58,13 +58,16 @@ class Solution {
 								continue;
 							} else if (string[c] == '{' && s == '}') {
 								continue;
-							} else {
-								flag = 1;
-								break;
 							}
+							// } else {
+							// 	flag = 1;
+							// 	break;
+							// }
 						}
 					}
 				}
+				// System.out.println(flag);
+				// System.out.println(stack.size());
 				if (flag == 0 && stack.size() == 0) {
 					System.out.println("YES");
 				} else {

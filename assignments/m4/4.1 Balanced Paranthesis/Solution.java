@@ -18,7 +18,7 @@ class CharacterStack {
 		return ' ';
 	}
 	public void push(char c) {
-		character[++count] = c;
+		character[count++] = c;
 	}
 }
 class Solution {
@@ -48,20 +48,22 @@ class Solution {
 						stack.push(string[c]);
 					} else {
 						char s = stack.pop();
-						if(s == ' '){
+						if (s == ' ') {
 							flag = 1;
 							break;
-						}
-						if (string[c] == '(' && s == ')') {
-							continue;
-						} else if (string[c] == '[' && s == ']') {
-							continue;
-						} else if (string[c] == '{' && s == '}') {
-							continue;
 						} else {
-							flag = 1;
-							break;
+							if (string[c] == '(' && s == ')') {
+								continue;
+							} else if (string[c] == '[' && s == ']') {
+								continue;
+							} else if (string[c] == '{' && s == '}') {
+								continue;
+							} else {
+								flag = 1;
+								break;
+							}
 						}
+
 					}
 				}
 				if (flag == 0 && stack.size() == 0) {

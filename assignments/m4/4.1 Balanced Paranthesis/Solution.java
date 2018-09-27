@@ -57,20 +57,20 @@ class Solution {
 						}
 						if (string[c] == '(' && s == ')') {
 							flag = 1;
-							break;
+							continue;
 						} else if (string[c] == '[' && s == ']') {
 							flag = 1;
-							break;
+							continue;
 						} else if (string[c] == '{' && s == '}') {
 							flag = 1;
-							break;
+							continue;
 						} else {
 							flag = 0;
 							break;
 						}
 					}
 				}
-				if (flag == 0) {
+				if (flag == 1) {
 					System.out.println("YES");
 				} else {
 					System.out.println("NO");

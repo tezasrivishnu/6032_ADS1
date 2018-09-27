@@ -12,7 +12,7 @@ class CharacterStack {
 	}
 	public char pop() {
 		if (size >= 0) {
-			char result = character[--size];
+			char result = character[size--];
 			return result;
 		}
 		return ' ';
@@ -21,7 +21,7 @@ class CharacterStack {
 		if (size == character.length) {
 			character = Arrays.copyOf(character, size + 1);
 		}
-		character[size++] = c;
+		character[++size] = c;
 	}
 }
 class Solution {
@@ -56,13 +56,10 @@ class Solution {
 							break;
 						}
 						if (string[c] == '(' && s == ')') {
-							flag = 1;
 							continue;
 						} else if (string[c] == '[' && s == ']') {
-							flag = 1;
 							continue;
 						} else if (string[c] == '{' && s == '}') {
-							flag = 1;
 							continue;
 						} else {
 							flag = 0;
@@ -70,7 +67,7 @@ class Solution {
 						}
 					}
 				}
-				if (flag == 1 && stack.size() == -1) {
+				if (flag == 0 && stack.size() == -1) {
 					System.out.println("YES");
 				} else {
 					System.out.println("NO");

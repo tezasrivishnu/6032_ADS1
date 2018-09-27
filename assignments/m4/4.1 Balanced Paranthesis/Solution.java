@@ -63,6 +63,7 @@ class Solution {
 							continue;
 						} else {
 							flag = 1;
+							break;
 						}
 					}
 				}

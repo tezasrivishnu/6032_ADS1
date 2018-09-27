@@ -19,7 +19,7 @@ class CharacterStack {
 	}
 	public void push(char c) {
 		if (size >= character.length) {
-			character = Arrays.copyOf(character, size + 1);
+			character = Arrays.copyOf(character, size * 2);
 		}
 		character[size++] = c;
 	}
@@ -62,12 +62,11 @@ class Solution {
 						} else if (string[c] == '{' && s == '}') {
 							continue;
 						} else {
-							flag = 0;
-							break;
+							flag = 1;
 						}
 					}
 				}
-				if (flag == 1 && stack.size() == 0) {
+				if (flag == 0 && stack.size() == 0) {
 					System.out.println("YES");
 				} else {
 					System.out.println("NO");

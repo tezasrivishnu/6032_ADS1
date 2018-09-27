@@ -67,7 +67,7 @@ class Solution {
 						}
 					}
 				}
-				if (flag == 0 && stack.size() == 0) {
+				if (flag == 1 && stack.size() == 0) {
 					System.out.println("YES");
 				} else {
 					System.out.println("NO");

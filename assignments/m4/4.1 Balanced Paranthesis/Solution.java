@@ -5,7 +5,7 @@ class CharacterStack {
 	private int size;
 	public CharacterStack() {
 		character = new char[20];
-		size = 0;
+		size = -1;
 	}
 	public int size() {
 		return size;
@@ -21,7 +21,7 @@ class CharacterStack {
 		if (size == character.length) {
 			character = Arrays.copyOf(character, size + 1);
 		}
-		character[size++] = c;
+		character[++size] = c;
 	}
 }
 class Solution {
@@ -70,7 +70,7 @@ class Solution {
 						}
 					}
 				}
-				if (flag == 1) {
+				if (flag == 1 && stack.size() == -1) {
 					System.out.println("YES");
 				} else {
 					System.out.println("NO");

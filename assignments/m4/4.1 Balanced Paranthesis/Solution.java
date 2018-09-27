@@ -18,10 +18,10 @@ class CharacterStack {
 		return ' ';
 	}
 	public void push(char c) {
-		if (size > character.length) {
+		if (size >= character.length) {
 			character = Arrays.copyOf(character, size + 1);
 		}
-		character[++size] = c;
+		character[size++] = c;
 	}
 }
 class Solution {

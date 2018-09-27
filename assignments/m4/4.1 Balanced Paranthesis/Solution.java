@@ -11,7 +11,7 @@ class CharacterStack {
 		return size;
 	}
 	public char pop() {
-		if (size >= 0) {
+		if (size > 0) {
 			char result = character[size--];
 			return result;
 		}

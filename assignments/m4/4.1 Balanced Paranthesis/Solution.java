@@ -3,8 +3,8 @@ import java.util.Scanner;
 class CharacterStack {
 	private char[] character;
 	private int size;
-	public CharacterStack() {
-		character = new char[20];
+	public CharacterStack(int size) {
+		character = new char[size];
 		size = 0;
 	}
 	public int size() {
@@ -18,26 +18,23 @@ class CharacterStack {
 		return ' ';
 	}
 	public void push(char c) {
-		if (size >= character.length) {
-			character = Arrays.copyOf(character, size * 2);
-		}
 		character[size++] = c;
 	}
 }
 class Solution {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		CharacterStack stack = new CharacterStack();
 		int num = scan.nextInt();
 		Solution sol = new Solution();
 		for (int i = 0; i < num; i++) {
 			String input = scan.next();
-			sol.yesNo(input, stack);
+			sol.yesNo(input);
 		}
 		// String input = scan.next();
 		// sol.yesNo(input);
 	}
-	public void yesNo(String value, CharacterStack stack) {
+	public void yesNo(String value) {
+		CharacterStack stack = new CharacterStack(value.length());
 		char[] string = value.toCharArray();
 		int flag = 0;
 		if (string[0] == '}' || string[0] == ']' || string[0] == ')') {

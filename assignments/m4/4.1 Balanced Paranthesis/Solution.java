@@ -70,7 +70,7 @@ class Solution {
 						}
 					}
 				}
-				if (flag == 1) {
+				if (flag == 0) {
 					System.out.println("YES");
 				} else {
 					System.out.println("NO");

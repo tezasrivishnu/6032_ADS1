@@ -5,7 +5,7 @@ class CharacterStack {
 	private int count;
 	public CharacterStack(int size) {
 		character = new char[size];
-		count = -1;
+		count = 0;
 	}
 	public int size() {
 		return count;
@@ -63,7 +63,6 @@ class Solution {
 								break;
 							}
 						}
-
 					}
 				}
 				if (flag == 0 && stack.size() == 0) {

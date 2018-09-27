@@ -2,23 +2,23 @@ import java.util.Arrays;
 import java.util.Scanner;
 class CharacterStack {
 	private char[] character;
-	private int size;
+	private int count;
 	public CharacterStack(int size) {
 		character = new char[size];
-		size = 0;
+		count = 0;
 	}
 	public int size() {
-		return size;
+		return count;
 	}
 	public char pop() {
-		if (size > 0) {
-			char result = character[size--];
+		if (count > 0) {
+			char result = character[count--];
 			return result;
 		}
 		return ' ';
 	}
 	public void push(char c) {
-		character[size++] = c;
+		character[count++] = c;
 	}
 }
 class Solution {

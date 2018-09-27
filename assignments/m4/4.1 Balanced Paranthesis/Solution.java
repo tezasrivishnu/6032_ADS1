@@ -5,7 +5,7 @@ class CharacterStack {
 	private int count;
 	public CharacterStack(int size) {
 		character = new char[size];
-		count = 0;
+		count = -1;
 	}
 	public int size() {
 		return count;
@@ -18,7 +18,7 @@ class CharacterStack {
 		return ' ';
 	}
 	public void push(char c) {
-		character[count++] = c;
+		character[++count] = c;
 	}
 }
 class Solution {

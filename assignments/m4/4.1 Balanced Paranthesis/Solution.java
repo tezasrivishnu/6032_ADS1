@@ -1,15 +1,40 @@
 import java.util.Arrays;
 import java.util.Scanner;
+/**
+ * List of characters class.
+ * @author tezasrivishnu
+ */
 class CharacterStack {
+	/**
+	 * declaring the chararcter array.
+	 */
 	private char[] character;
+	/**
+	 * declaring the int count variable.
+	 */
 	private int count;
-	public CharacterStack(int size) {
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      size  The size
+	 */
+	public CharacterStack(final int size) {
 		character = new char[size];
 		count = 0;
 	}
+	/**
+	 * return the size of the array.
+	 *
+	 * @return     the size count.
+	 */
 	public int size() {
 		return count;
 	}
+	/**
+	 * getting the last element in array.
+	 *
+	 * @return     char element.
+	 */
 	public char pop() {
 		if (count > 0) {
 			char result = character[count--];
@@ -17,12 +42,25 @@ class CharacterStack {
 		}
 		return ' ';
 	}
-	public void push(char c) {
+	/**
+	 * adding a element to array.
+	 *
+	 * @param      c     the input character.
+	 */
+	public void push(final char c) {
 		character[count++] = c;
 	}
 }
+/**
+ * Class for solution.
+ */
 class Solution {
-	public static void main(String[] args) {
+	/**
+	 * main class for the solution class.
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int num = scan.nextInt();
 		Solution sol = new Solution();
@@ -30,10 +68,8 @@ class Solution {
 			String input = scan.next();
 			sol.yesNo(input);
 		}
-		// String input = scan.next();
-		// sol.yesNo(input);
 	}
-	public void yesNo(String value) {
+	public void yesNo(final String value) {
 		CharacterStack stack = new CharacterStack(value.length());
 		char[] string = value.toCharArray();
 		int flag = 0;
@@ -59,15 +95,9 @@ class Solution {
 							} else if (string[c] == '{' && s == '}') {
 								continue;
 							}
-							// } else {
-							// 	flag = 1;
-							// 	break;
-							// }
 						}
 					}
 				}
-				// System.out.println(flag);
-				// System.out.println(stack.size());
 				if (flag == 0 && stack.size() == 0) {
 					System.out.println("YES");
 				} else {

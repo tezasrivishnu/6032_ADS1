@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Iterator;
 /**
  * Linked list.
  *
@@ -196,3 +197,24 @@ final class Solution {
         }
     }
 }
+// class MyIterator<E> implements Iterator<E> {
+//     Deque current;
+
+//     public MyIterator(Deque first) {
+//         current = first;
+//     }
+
+//     public boolean hasNext() {
+//         return current !=  null;
+//     }
+
+//     public void remove() {
+
+//     }
+
+//     public E next() {
+//         E data = current.data;
+//         current = current.next;
+//         return data;
+//     }
+// }

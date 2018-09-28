@@ -25,16 +25,16 @@ class LinkedList<E> {
         /**
          * Constructs the object.
          *
-         * @param      data  The data
+         * @param      datainp  The data
          */
-        Deque(final E data) {
-            this(data, null);
+        Deque(final E datainp) {
+            this(datainp, null);
         }
         /**
          * Constructs the object.
          *
          * @param      datainp  The data
-         * @param      nextadrress  The next
+         * @param      nextaddress  The next
          */
         Deque(final E datainp, final Deque nextaddress) {
             this.data = datainp;

@@ -1,0 +1,15 @@
+stack stack = new Stack();
+while(!q.isEmpty())
+	stack.push(q.dequeue());
+while(!stack.isEmpty())
+	q.enqueue(stack.pop());
+
+
+let us consider for a example for the following
+	q = 1,2,3,4,5,6,7,8
+output at end of the 1st while loop is 
+	stack = 1,2,3,4,5,6,7,8
+output at end of the 2nd while loop is 
+	q = 8,7,6,5,4,3,2,1
+
+the whole stack is reversed by this method.

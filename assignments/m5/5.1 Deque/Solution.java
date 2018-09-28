@@ -9,30 +9,36 @@ class LinkedList<E> {
      * Class for deque.
      */
     private class Deque {
-        E data;
-        Deque next;
+        /**
+         * initializing the variable data of type E.
+         */
+        private E data;
+        /**
+         * initializing class variable.
+         */
+        private Deque next;
         /**
          * Constructs the object.
          */
-        Deque () {
+        Deque() {
         }
         /**
          * Constructs the object.
          *
          * @param      data  The data
          */
-        Deque (final E data) {
+        Deque(final E data) {
             this(data, null);
         }
         /**
          * Constructs the object.
          *
-         * @param      data  The data
-         * @param      next  The next
+         * @param      datainp  The data
+         * @param      nextadrress  The next
          */
-        Deque (final E data, final Deque next) {
-            this.data = data;
-            this.next = next;
+        Deque(final E datainp, final Deque nextaddress) {
+            this.data = datainp;
+            this.next = nextaddress;
         }
     }
     /**
@@ -113,8 +119,9 @@ class LinkedList<E> {
         }
         E data = tail.data;
         Deque thead = head;
-        while (thead.next != tail)
+        while (thead.next != tail) {
             thead = thead.next;
+        }
         thead.next = null;
         tail = thead;
         size--;
@@ -142,7 +149,7 @@ class LinkedList<E> {
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */

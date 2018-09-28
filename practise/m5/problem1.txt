@@ -1,0 +1,8 @@
+(a) 0 1 2 3 4 5 6 7 8 9
+	its is in sequencial order while dequeing the elements out.
+(b) 4 6 8 7 5 3 2 9 0 1 
+	its is not in sequencial order while dequeing the elements out because 1 came at the end.
+(c) 2 5 6 7 4 8 9 3 1 0
+	its is not in sequencial order while dequeing the elements out because 0 came at the end.
+(d) 4 3 2 1 0 5 6 7 8 9
+	its is not in sequencial order while dequeing the elements out because  4 3 2 1 0 has come out in reverse order.

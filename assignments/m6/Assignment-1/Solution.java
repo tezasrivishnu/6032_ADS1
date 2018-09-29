@@ -72,6 +72,7 @@ class AddLargeNumbers {
         while (!two.isEmpty()) {
             char ch = two.pop();
             input = quo1 + Integer.parseInt(String.valueOf(ch));
+            quo1 = 0;
             if (input >= 10) {
                 int reamin = input % 10;
                 int quo = input / 10;
@@ -82,6 +83,9 @@ class AddLargeNumbers {
                 result = input;
                 res.push(result);
             }
+        }
+        if(quo1 > 0) {
+            res.push(quo1);
         }
         return res;
     }

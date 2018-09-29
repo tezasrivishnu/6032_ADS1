@@ -4,6 +4,16 @@ import java.util.Scanner;
  */
 class AddLargeNumbers {
     /**
+     * initializing value of 10.
+     */
+    private static final int TEN = 10;
+    /**
+     * Constructs the object.
+     */
+    private AddLargeNumbers() {
+
+    }
+    /**
      * converts the string to linked list.
      *
      * @param      number  The number
@@ -29,7 +39,7 @@ class AddLargeNumbers {
      *
      * @return     string.
      */
-    public static String digitsToNumber(LinkedList list) {
+    public static String digitsToNumber(final LinkedList list) {
         String string = "";
         // for (int i = 0; i < list.size(); i++) {
         //     string = string + list.pop();
@@ -66,12 +76,13 @@ class AddLargeNumbers {
         while (!one.isEmpty() && !two.isEmpty()) {
             char ch = one.pop();
             char ch1 = two.pop();
-            input = quo1 + Integer.parseInt(String.valueOf(ch)) + Integer.parseInt(String.valueOf(ch1));
+            input = quo1 + Integer.parseInt(String.valueOf(ch))
+            + Integer.parseInt(String.valueOf(ch1));
             quo1 = 0;
             //System.out.println("input "+input);
-            if (input >= 10) {
-                int reamin = input % 10;
-                int quo = input / 10;
+            if (input >= TEN) {
+                int reamin = input % TEN;
+                int quo = input / TEN;
                 quo1 = quo;
                 result = reamin;
                 res.push(result);
@@ -84,9 +95,9 @@ class AddLargeNumbers {
             char ch = one.pop();
             input = quo1 + Integer.parseInt(String.valueOf(ch));
             quo1 = 0;
-            if (input >= 10) {
-                int reamin = input % 10;
-                int quo = input / 10;
+            if (input >= TEN) {
+                int reamin = input % TEN;
+                int quo = input / TEN;
                 quo1 = quo;
                 result = reamin;
                 res.push(result);
@@ -99,9 +110,9 @@ class AddLargeNumbers {
             char ch = two.pop();
             input = quo1 + Integer.parseInt(String.valueOf(ch));
             quo1 = 0;
-            if (input >= 10) {
-                int reamin = input % 10;
-                int quo = input / 10;
+            if (input >= TEN) {
+                int reamin = input % TEN;
+                int quo = input / TEN;
                 quo1 = quo;
                 result = reamin;
                 res.push(result);
@@ -119,7 +130,7 @@ class AddLargeNumbers {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */

@@ -140,45 +140,45 @@ class LinkedList<E> {
         private E data;
         // The next element in the stack
         private Element next;
-        
+
         Element(E data) {
             this.data = data;
             this.next = null;
         }
     }
-    
+
     // The element at the top of the stack
     private Element top;
-    
+
     /** Create an empty stack **/
     public LinkedList() {
         this.top = null;
     }
-    
+
     /** @return true if the stack is empty, false if it is not.
     **/
     public boolean isEmpty() {
         return top == null;
     }
-    
+
     /**
-        Pushes a value onto the top of the stack. 
+        Pushes a value onto the top of the stack.
         @param value The data for the stack's new top element.
     **/
     public void push(E value) {
         // Create new top element
         Element newTop = new Element(value);
-        
+
         // If the stack is not empty
-        if(!isEmpty()) {
+        if (!isEmpty()) {
             // Set old top's next variable to point to new top
             newTop.next = top;
         }
-        
+
         // Set new top regardless of whether or not stack is empty
         this.top = newTop;
     }
-    
+
     /**
         Remove the element at the top of the stack.
         @return the data associated with the stack's topmost element being removed.
@@ -187,17 +187,15 @@ class LinkedList<E> {
     public E pop() {
         Element oldTop = top;
         this.top = top.next;
-        
         return oldTop.data;
     }
-    
-    /** 
+    /**
         'View' the element at the top of the stack.
         @return the data associated with the stack's topmost element.
         @throws EmptyStackException if the stack contains no elements.
     **/
     public E peek() {
-        
+
         return top.data;
     }
 }

@@ -30,22 +30,23 @@ class AddLargeNumbers {
         LinkedList<Character> two1 = list2;
         LinkedList<Character> one = new LinkedList<Character>();
         LinkedList<Character> two = new LinkedList<Character>();
-        while(!one1.isEmpty()) {
+        while (!one1.isEmpty()) {
             one.push(one1.pop());
         }
-        while(!two1.isEmpty()) {
+        while (!two1.isEmpty()) {
             two.push(two1.pop());
         }
+        int input = 0;
         int quo1 = 0;
         int result = 0;
-        while(!one.isEmpty() && !two.isEmpty()) {
+        while (!one.isEmpty() && !two.isEmpty()) {
             char ch = one.pop();
             char ch1 = two.pop();
-            int input = quo1 + Integer.parseInt(String.valueOf(ch)) + Integer.parseInt(String.valueOf(ch1)); 
+            input = quo1 + Integer.parseInt(String.valueOf(ch)) + Integer.parseInt(String.valueOf(ch1));
             //System.out.println("input "+input);
-            if(input >= 10) {
+            if (input >= 10) {
                 int reamin = input % 10;
-                int quo = input/10;
+                int quo = input / 10;
                 quo1 = quo;
                 result = reamin;
                 res.push(result);
@@ -54,17 +55,38 @@ class AddLargeNumbers {
                 res.push(result);
             }
         }
-        while(!one.isEmpty()) {
+        while (!one.isEmpty()) {
             char ch = one.pop();
-            result = quo1 + Integer.parseInt(String.valueOf(ch));
-            res.push(result);
+            input = quo1 + Integer.parseInt(String.valueOf(ch));
+            if (input >= 10) {
+                int reamin = input % 10;
+                int quo = input / 10;
+                quo1 = quo;
+                result = reamin;
+                res.push(result);
+            } else {
+                result = input;
+                res.push(result);
+            }
         }
-        while(!two.isEmpty()) {
-            char ch = two.pop();
-            result = quo1 + Integer.parseInt(String.valueOf(ch));
-            res.push(result);
+        while (!two.isEmpty()) {
+            char ch = one.pop();
+            input = quo1 + Integer.parseInt(String.valueOf(ch));
+            if (input >= 10) {
+                int reamin = input % 10;
+                int quo = input / 10;
+                quo1 = quo;
+                result = reamin;
+                res.push(result);
+            } else {
+                result = input;
+                res.push(result);
+            }
         }
-    return res;
+        if(quo1 != 0) {
+            res.push(quo1);
+        }
+        return res;
     }
 }
 
@@ -84,8 +106,8 @@ public class Solution {
         case "addLargeNumbers":
             pDigits = AddLargeNumbers.numberToDigits(p);
             qDigits = AddLargeNumbers.numberToDigits(q);
-            LinkedList result = 
-            AddLargeNumbers.addLargeNumbers(pDigits, qDigits);
+            LinkedList result =
+                AddLargeNumbers.addLargeNumbers(pDigits, qDigits);
             System.out.println(AddLargeNumbers.digitsToNumber(result));
             break;
         }

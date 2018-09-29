@@ -14,6 +14,7 @@ class Josephus {
             }
             System.out.print(queue.dequeue() + " ");
         }
+        System.out.print(queue.dequeue());
         System.out.println();
     }
 }

@@ -2,7 +2,7 @@ import java.util.Scanner;
 /**
  * Class for add large numbers.
  */
-class AddLargeNumbers {
+final class AddLargeNumbers {
     /**
      * initializing value of 10.
      */

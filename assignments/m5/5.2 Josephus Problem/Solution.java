@@ -8,7 +8,7 @@ class Josephus {
         for (int i = 0; i < m; i++)
             queue.enqueue(i);
 
-        while (!queue.isEmpty()) {
+        while (!queue.isEmpty() && queue.peekFirst() != null) {
             for (int i = 0; i < n - 1; i++) {
                 queue.enqueue(queue.dequeue());
             }

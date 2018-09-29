@@ -70,12 +70,12 @@ class Queue<E> {
         @return the data associated with the queue's first element.
         @throws NoSuchElementException if the queue contains no elements.
     **/
-    public E peekFirst() {
+    public Element<E> peekFirst() {
         // if (isEmpty()) {
         //     throw new NoSuchElementException();
         // }
 
-        return front.data;
+        return front.next;
     }
 
     /**
@@ -83,12 +83,12 @@ class Queue<E> {
         @return the data associated with the queue's first element.
         @throws NoSuchElementException if the queue contains no elements.
     **/
-    public E peekLast() {
+    public Element<E> peekLast() {
         // if (isEmpty()) {
         //     throw new NoSuchElementException();
         // }
 
-        return back.data;
+        return back.next;
     }
 }
 

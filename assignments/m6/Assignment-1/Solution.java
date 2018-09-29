@@ -1,6 +1,16 @@
 import java.util.Scanner;
+/**
+ * Class for add large numbers.
+ */
 class AddLargeNumbers {
-    public static LinkedList numberToDigits(String number) {
+    /**
+     * converts the string to linked list.
+     *
+     * @param      number  The number
+     *
+     * @return    linked list.
+     */
+    public static LinkedList numberToDigits(final String number) {
         LinkedList<Character> str = new LinkedList<Character>();
         String input = number;
         for (int i = 0; i < input.length(); i++) {
@@ -12,7 +22,13 @@ class AddLargeNumbers {
         }
         return str1;
     }
-
+    /**
+     * converts the linkedlist to string.
+     *
+     * @param      list  The list
+     *
+     * @return     string.
+     */
     public static String digitsToNumber(LinkedList list) {
         String string = "";
         // for (int i = 0; i < list.size(); i++) {
@@ -23,8 +39,16 @@ class AddLargeNumbers {
         }
         return string;
     }
-
-    public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
+    /**
+     * adding to linked lists.
+     *
+     * @param      list1  The list 1
+     * @param      list2  The list 2
+     *
+     * @return     a linked list.
+     */
+    public static LinkedList addLargeNumbers(final LinkedList list1,
+            final LinkedList list2) {
         LinkedList<Integer> res = new LinkedList<Integer>();
         LinkedList<Character> one1 = list1;
         LinkedList<Character> two1 = list2;
@@ -86,15 +110,28 @@ class AddLargeNumbers {
                 res.push(result);
             }
         }
-        if(quo1 > 0) {
+        if (quo1 > 0) {
             res.push(quo1);
         }
         return res;
     }
 }
-
+/**
+ * Class for solution.
+ */
 public class Solution {
-    public static void main(String[] args) {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+
+    }
+    /**
+     * main class for the program.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
         String p = sc.nextLine();
@@ -112,6 +149,8 @@ public class Solution {
             LinkedList result =
                 AddLargeNumbers.addLargeNumbers(pDigits, qDigits);
             System.out.println(AddLargeNumbers.digitsToNumber(result));
+            break;
+        default:
             break;
         }
     }

@@ -39,8 +39,9 @@ class Steque {
 	}
 	/**
 	 * adding element at head.
-	 *
-	 * @param      number  The number
+	 * complexity O(1).
+	 * because we are just adding one element to the steque.
+	 * @param      number  int
 	 */
 	public void push(final int number) {
 		Node node = head;
@@ -54,8 +55,9 @@ class Steque {
 	}
 	/**
 	 * adding a element at the tail.
-	 *
-	 * @param      number  The number
+	 * complexity O(1).
+	 * because we are just adding one element to the steque.
+	 * @param      number  int
 	 */
 	public void enqueue(final int number) {
 		Node node = tail;
@@ -71,6 +73,8 @@ class Steque {
 	}
 	/**
 	 * removing the link of the last node in steque.
+	 * complexity O(1).
+	 * because we are just removing one element from the steque.
 	 */
 	public void pop() {
 		if (size == 0) {
@@ -82,7 +86,8 @@ class Steque {
 	}
 	/**
 	 * checks if steque is empty or not.
-	 *
+	 * complexity O(1).
+	 * ckecking the head so the complexity is one.
 	 * @return     True if empty, False otherwise.
 	 */
 	public boolean isEmpty() {
@@ -90,7 +95,8 @@ class Steque {
 	}
 	/**
 	 * getting the size of the steque.
-	 *
+	 * complexity O(1).
+	 * because we are just returning the size.
 	 * @return     the size.
 	 */
 	public int size() {
@@ -106,6 +112,8 @@ class Steque {
 	}
 	/**
 	 * string representation of the nodes data.
+	 * complexity O(N).
+	 * because we are iterating through complete steque.
 	 */
 	public void toprint() {
 		if (size == 0) {
@@ -138,8 +146,9 @@ public final class Solution {
 	}
 	/**
 	 * main program for the problem.
-	 *
-	 * @param      args  The arguments
+	 * complexity O(N)
+	 * we are taking input N times.
+	 * @param      args  String.
 	 */
 	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);

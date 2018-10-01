@@ -60,7 +60,7 @@ class Solution {
 		Steque steque = new Steque();
 		int input = scan.nextInt();
 		while (scan.hasNext()) {
-			String token = scan.next();
+			String token = scan.nextLine();
 			String[] tokens = token.split(" ");
 			switch (tokens[0]) {
 			case "push":

@@ -139,22 +139,26 @@ public final class Solution {
         int input = scan.nextInt();
         while (scan.hasNext()) {
             String token = scan.nextLine();
-            String[] tokens = token.split(" ");
-            switch (tokens[0]) {
-            case "push":
-                steque.push(Integer.parseInt(tokens[1]));
-                steque.print();
-                break;
-            case "enqueue":
-                steque.enqueue(Integer.parseInt(tokens[1]));
-                steque.print();
-                break;
-            case "pop":
-                steque.pop();
-                steque.print();
-                break;
-            default:
-                break;
+            if (token == null) {
+                System.out.println();
+            } else {
+                String[] tokens = token.split(" ");
+                switch (tokens[0]) {
+                case "push":
+                    steque.push(Integer.parseInt(tokens[1]));
+                    steque.print();
+                    break;
+                case "enqueue":
+                    steque.enqueue(Integer.parseInt(tokens[1]));
+                    steque.print();
+                    break;
+                case "pop":
+                    steque.pop();
+                    steque.print();
+                    break;
+                default:
+                    break;
+                }
             }
         }
     }

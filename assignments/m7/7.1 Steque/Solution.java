@@ -148,7 +148,7 @@ public final class Solution {
 		while (scan.hasNext()) {
 			String token = scan.nextLine();
 			String[] tokens = token.split(" ");
-			if (tokens.length == 0) {
+			if (token.length() == 0) {
 				steque.makingnull();
 				System.out.println();
 			} else {

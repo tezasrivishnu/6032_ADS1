@@ -17,6 +17,9 @@ class Steque {
 		head = new Node();
 		head.data = number;
 		head.next = node;
+		if(tail == null) {
+			tail = head;
+		}
 		size ++;
 	}
 	public void enqueue(int number) {

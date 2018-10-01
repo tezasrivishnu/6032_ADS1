@@ -107,7 +107,7 @@ class Steque {
 	/**
 	 * string representation of the nodes data.
 	 */
-	public void print() {
+	public void toprint() {
 		if (size == 0) {
 			System.out.println("Steque is empty.");
 			return;
@@ -150,20 +150,20 @@ public final class Solution {
 			String[] tokens = scan.nextLine().split(" ");
 			if (tokens[0].length() == 0) {
 				steque.makingnull();
-				System.out.println();
+				//System.out.println();
 			}
 			switch (tokens[0]) {
 			case "push":
 				steque.push(Integer.parseInt(tokens[1]));
-				steque.print();
+				steque.toprint();
 				break;
 			case "enqueue":
 				steque.enqueue(Integer.parseInt(tokens[1]));
-				steque.print();
+				steque.toprint();
 				break;
 			case "pop":
 				steque.pop();
-				steque.print();
+				steque.toprint();
 				break;
 			default:
 				break;

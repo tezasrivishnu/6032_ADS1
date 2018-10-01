@@ -146,7 +146,7 @@ public final class Solution {
 		Steque steque = new Steque();
 		int input = scan.nextInt();
 		while (scan.hasNext()) {
-			String token = scan.nextLine();
+			String token = scan.next();
 			String[] tokens = token.split(" ");
 			if (token.length() == 0) {
 				steque.makingnull();

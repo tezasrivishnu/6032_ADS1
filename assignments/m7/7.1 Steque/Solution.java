@@ -144,7 +144,7 @@ public final class Solution {
 	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		Steque steque = new Steque();
-		int input = scan.nextInt();
+		String input = scan.nextLine();
 		while (scan.hasNext()) {
 			// String token = scan.nextLine();
 			String[] tokens = scan.nextLine().split(" ");

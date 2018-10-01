@@ -35,6 +35,9 @@ class Steque {
 		size ++;
 	}
 	public void pop() {
+		if(size == 0){
+			return;
+		}
 		int num = head.data;
 		head = head.next;
 		size --;

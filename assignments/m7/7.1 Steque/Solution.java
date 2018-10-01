@@ -38,7 +38,7 @@ class Steque {
 		if(size == 0){
 			return;
 		}
-		int num = head.data;
+		//int num = head.data;
 		head = head.next;
 		size --;
 	}

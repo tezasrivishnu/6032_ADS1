@@ -50,7 +50,7 @@ class Steque {
 	}
 	public void print() {
 		if(size == 0) {
-			System.out.println("Steque is empty");
+			System.out.print("Steque is empty");
 			return;
 		}
 		String str = "";
@@ -64,7 +64,7 @@ class Steque {
 		// 	str += node.data +  ", ";
 		// }
 		str += node.data;
-		System.out.println(str);
+		System.out.print(str);
 	}
 
 }

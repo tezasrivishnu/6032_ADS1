@@ -152,22 +152,22 @@ public final class Solution {
 				steque.makingnull();
 				System.out.println();
 			}
-				switch (tokens[0]) {
-				case "push":
-					steque.push(Integer.parseInt(tokens[1]));
-					steque.print();
-					break;
-				case "enqueue":
-					steque.enqueue(Integer.parseInt(tokens[1]));
-					steque.print();
-					break;
-				case "pop":
-					steque.pop();
-					steque.print();
-					break;
-				default:
-					break;
-				}
+			switch (tokens[0]) {
+			case "push":
+				steque.push(Integer.parseInt(tokens[1]));
+				steque.print();
+				break;
+			case "enqueue":
+				steque.enqueue(Integer.parseInt(tokens[1]));
+				steque.print();
+				break;
+			case "pop":
+				steque.pop();
+				steque.print();
+				break;
+			default:
+				break;
 			}
 		}
 	}
+}

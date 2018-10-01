@@ -97,6 +97,14 @@ class Steque {
         return size;
     }
     /**
+     * clearing the steque.
+     */
+    public void makingnull() {
+        head = null;
+        tail = null;
+        size = 0;
+    }
+    /**
      * string representation of the nodes data.
      */
     public void print() {
@@ -141,6 +149,7 @@ public final class Solution {
             String token = scan.nextLine();
             if (token.length() == 0) {
                 System.out.println();
+                steque.makingnull();
             } else {
                 String[] tokens = token.split(" ");
                 switch (tokens[0]) {

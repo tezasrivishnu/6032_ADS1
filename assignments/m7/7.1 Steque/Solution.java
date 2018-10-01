@@ -148,9 +148,9 @@ public final class Solution {
 		while (scan.hasNext()) {
 			// String token = scan.nextLine();
 			String[] tokens = scan.nextLine().split(" ");
-			if (tokens[0].length() == 0) {
+			if (tokens.length == 0) {
 				steque.makingnull();
-				//System.out.println();
+				System.out.println();
 			}
 			switch (tokens[0]) {
 			case "push":

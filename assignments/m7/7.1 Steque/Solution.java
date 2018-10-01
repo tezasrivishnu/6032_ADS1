@@ -146,12 +146,12 @@ public final class Solution {
 		Steque steque = new Steque();
 		int input = scan.nextInt();
 		while (scan.hasNext()) {
-			String token = scan.next();
+			String token = scan.nextLine();
 			String[] tokens = token.split(" ");
 			if (token.length() == 0) {
 				steque.makingnull();
 				System.out.println();
-			} else {
+			}
 				switch (tokens[0]) {
 				case "push":
 					steque.push(Integer.parseInt(tokens[1]));
@@ -171,4 +171,3 @@ public final class Solution {
 			}
 		}
 	}
-}

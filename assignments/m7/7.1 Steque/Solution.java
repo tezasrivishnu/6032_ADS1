@@ -139,7 +139,7 @@ public final class Solution {
         int input = scan.nextInt();
         while (scan.hasNext()) {
             String token = scan.nextLine();
-            if (token == null) {
+            if (token == " ") {
                 System.out.println();
             } else {
                 String[] tokens = token.split(" ");

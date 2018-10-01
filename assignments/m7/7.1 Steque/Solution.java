@@ -55,15 +55,15 @@ class Steque {
 		}
 		String str = "";
 		Node node = head;
-		while(node.next == null) {
-			str += node.data +  ", ";
-			node = node.next;
-		}
-		str += node.data; 
-		// for(int i = 0; i<size()-1; i++) {
+		// while(node.next == tail) {
 		// 	str += node.data +  ", ";
+		// 	node = node.next;
 		// }
-		// str += node.data;
+		// str += node.data; 
+		for(int i = 0; i<size()-1; i++) {
+			str += i +  ", ";
+		}
+		str += node.data;
 		System.out.println(str);
 	}
 

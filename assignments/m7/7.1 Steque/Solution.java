@@ -38,7 +38,6 @@ class Steque {
 		int num = head.data;
 		head = head.next;
 		size --;
-		System.out.println(num);
 	}
 	public boolean isEmpty() {
 		return head == null;

@@ -60,7 +60,7 @@ class Steque {
 		// 	node = node.next;
 		// }
 		// str += node.data; 
-		for(int i = size(); i>0; i--) {
+		for(int i = size(); i>1; i--) {
 			str += i +  ", ";
 		}
 		str += node.data;

@@ -20,8 +20,14 @@ class Steque {
      * Class for node.
      */
     class Node {
-        int data;
-        Node next;
+        /**
+        * declaring the int data.
+        */
+        private int data;
+        /**
+        * declaring the next node.
+        */
+        private Node next;
     }
     /**
      * Constructs the object.
@@ -44,7 +50,7 @@ class Steque {
         if (tail == null) {
             tail = head;
         }
-        size ++;
+        size++;
     }
     /**
      * adding a element at the tail.
@@ -61,7 +67,7 @@ class Steque {
         } else {
             node.next = tail;
         }
-        size ++;
+        size++;
     }
     /**
      * removing the link of the last node in steque.
@@ -72,7 +78,7 @@ class Steque {
         }
         //int num = head.data;
         head = head.next;
-        size --;
+        size--;
     }
     /**
      * checks if steque is empty or not.

@@ -54,17 +54,16 @@ class Steque {
 			return;
 		}
 		String str = "";
-		int i = size();
-		//Node node = head;
-		// while(node.next == tail) {
-		// 	str += node.data +  ", ";
-		// 	node = node.next;
-		// }
-		// str += node.data; 
-		for(i = size(); i>1; i--) {
-			str += i +  ", ";
+		Node node = head;
+		while(node.next == tail) {
+			str += node.data +  ", ";
+			node = node.next;
 		}
-		str += i;
+		// str += node.data; 
+		// for(int i = 0; i<size()-1; i++) {
+		// 	str += node.data +  ", ";
+		// }
+		str += node.data;
 		System.out.println(str);
 	}
 

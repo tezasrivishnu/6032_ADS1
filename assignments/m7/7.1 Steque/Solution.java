@@ -148,8 +148,8 @@ public final class Solution {
         while (scan.hasNext()) {
             String token = scan.nextLine();
             if (token.length() == 0) {
-                System.out.println();
                 steque.makingnull();
+                System.out.println();
             } else {
                 String[] tokens = token.split(" ");
                 switch (tokens[0]) {

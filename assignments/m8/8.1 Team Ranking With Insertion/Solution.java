@@ -23,7 +23,7 @@ class TeamInformation implements Comparable<TeamInformation>{
 	public int getTeamDraws() {
 		return this.teamdraws;
 	}
-	public int compareTo(TeamInformation this, TeamInformation that) {
+	public int compareTo(TeamInformation that) {
 		if (this.getTeamWins() > that.getTeamWins()) {
 			return 1;
 		}
@@ -90,7 +90,7 @@ class Sorting {
 				if (count == -1) {
 					max = j;
 				} else {
-					continue;
+					max = i;
 				}
 			}
 			team = swapping(max, i, team);
@@ -123,10 +123,11 @@ class Sorting {
 		// }
 	}
 	public TeamInformation[] swapping(int max, int index, TeamInformation[] info) {
-		TeamInformation temp = info[max];
-		info[max] = info[index];
-		info[index] = temp;
-		return info;
+		TeamInformation[] swap = info;
+		TeamInformation temp = swap[max];
+		swap[max] = swap[index];
+		swap[index] = temp;
+		return swap;
 	}
 }
 public final class Solution {

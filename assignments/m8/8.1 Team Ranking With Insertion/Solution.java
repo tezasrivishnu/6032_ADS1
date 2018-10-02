@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.Arrays;
-class TeamInformation {
+class TeamInformation implements Comparable<TeamInformation>{
 	String teamname;
 	int teamwins;
 	int teamloses;
@@ -24,17 +24,17 @@ class TeamInformation {
 		return this.teamdraws;
 	}
 	public int compareTo(TeamInformation this, TeamInformation that) {
-		if (this.teamwins > that.teamwins) {
+		if (this.getTeamWins() > that.getTeamWins()) {
 			return 1;
 		}
-		if (this.teamwins == that.teamwins) {
-			if (this.teamloses < that.teamloses) {
+		if (this.getTeamWins() == that.getTeamWins()) {
+			if (this.getTeamLoses() < that.getTeamLoses()) {
 				return 0;
 			}
 		}
-		if (this.teamwins == that.teamwins) {
-			if (this.teamloses == that.teamloses) {
-				if (this.teamdraws > that.teamdraws) {
+		if (this.getTeamWins() == that.getTeamWins()) {
+			if (this.getTeamLoses() == that.getTeamLoses()) {
+				if (this.getTeamDraws() > that.getTeamDraws()) {
 					return -1;
 				}
 			}
@@ -80,7 +80,7 @@ class Sorting {
 		for (int i = 0; i < team.length; i++) {
 			int max = i;
 			for (int j = 0; j < team.length; j++) {
-				int count = (team[i].compareTo(team[max]));
+				int count = team[i].compareTo(team[max]);
 				if (count == 1) {
 					max = j;
 				}

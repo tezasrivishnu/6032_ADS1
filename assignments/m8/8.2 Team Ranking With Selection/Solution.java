@@ -78,17 +78,17 @@ class TeamInformation {
      * @return     boolean
      */
     public boolean less(final TeamInformation that) {
-        if (this.teamwins < that.teamwins) {
+        if (this.teamwins > that.teamwins) {
             return true;
         }
         if (this.teamwins == that.teamwins) {
-            if (this.teamloses > that.teamloses) {
+            if (this.teamloses < that.teamloses) {
                 return true;
             }
         }
         if (this.teamwins == that.teamwins) {
             if (this.teamloses == that.teamloses) {
-                if (this.teamdraws < that.teamdraws) {
+                if (this.teamdraws > that.teamdraws) {
                     return true;
                 }
             }
@@ -184,7 +184,7 @@ class Sorting {
             boolean sort = false;
             TeamInformation key = teams[i];
             int j = i - 1;
-            while (teams[i].less(teams[j])) {
+            while (teams[j].less(teams[i]) && j>=0) {
                 //int count = teams[j].compareTo(teams[max]);
                 // if (count != 0) {
                 //     max = j;

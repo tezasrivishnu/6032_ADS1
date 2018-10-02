@@ -184,7 +184,7 @@ class Sorting {
             boolean sort = false;
             TeamInformation key = teams[i];
             int j = i - 1;
-            while (teams[j].less(teams[i]) && j>=0) {
+            while (j>=0 && teams[j].less(teams[i])) {
                 //int count = teams[j].compareTo(teams[max]);
                 // if (count != 0) {
                 //     max = j;

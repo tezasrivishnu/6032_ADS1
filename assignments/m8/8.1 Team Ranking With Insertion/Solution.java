@@ -43,21 +43,18 @@ class TeamSorting {
 		for (int i = 0; i < size; i++) {
 			int max = i;
 			for (int j = i + 1; j < size; j++) {
-				if (teaminformation[j].getTeamWins() > teaminformation[i].getTeamWins()) {
+				if (teaminformation[j].getTeamWins() > teaminformation[max].getTeamWins()) {
 					max = j;
-					break;
 				}
-				else if (teaminformation[j].getTeamWins() == teaminformation[i].getTeamWins()) {
-					if (teaminformation[j].getTeamLoses() < teaminformation[i].getTeamLoses()) {
+				if (teaminformation[j].getTeamWins() == teaminformation[max].getTeamWins()) {
+					if (teaminformation[j].getTeamLoses() < teaminformation[max].getTeamLoses()) {
 						max = j;
-						break;
 					}
 				}
-				else if (teaminformation[j].getTeamWins() == teaminformation[i].getTeamWins()) {
-					if (teaminformation[j].getTeamLoses() == teaminformation[i].getTeamLoses()) {
-						if (teaminformation[j].getTeamDraws() > teaminformation[i].getTeamDraws()) {
+				if (teaminformation[j].getTeamWins() == teaminformation[max].getTeamWins()) {
+					if (teaminformation[j].getTeamLoses() == teaminformation[max].getTeamLoses()) {
+						if (teaminformation[j].getTeamDraws() > teaminformation[max].getTeamDraws()) {
 							max = j;
-							break;
 						}
 					}
 				}

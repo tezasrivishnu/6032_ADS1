@@ -27,20 +27,20 @@ class TeamInformation {
 	public int compareTo(TeamInformation that) {
 		if (this.teamwins > that.teamwins) {
 			return 1;
-		} else if (this.teamwins > that.teamwins) {
-			return 0;
-		} else {
+		}
+		if (this.teamwins == that.teamwins) {
 			if (this.teamloses < that.teamloses) {
-				return 1;
-			} else if (this.teamloses > that.teamloses) {
-				return 0;
-			} else {
+				return -1;
+			}
+		}
+		if (this.teamwins == that.teamwins) {
+			if (this.teamloses == that.teamloses) {
 				if (this.teamdraws > that.teamdraws) {
 					return 1;
 				}
 			}
 		}
-		return -1;
+		return 0;
 	}
 }
 class LeaderBoard {
@@ -82,7 +82,7 @@ class Sorting {
 			int max = i;
 			for (int j = i + 1; j < team.length; j++) {
 				int count = team[j].compareTo(team[max]);
-				if (count == 1) {
+				if (count != 0) {
 					max = j;
 				}
 			}

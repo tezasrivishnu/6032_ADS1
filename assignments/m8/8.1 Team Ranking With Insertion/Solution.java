@@ -4,7 +4,8 @@ import java.util.Arrays;
  * Class for team information.
  * @author tezasrivishnu.
  */
-class TeamInformation implements Comparable<TeamInformation> {
+class TeamInformation {
+//implements Comparable<TeamInformation> {
     /**
      * declaring String variable teamname.
      */
@@ -30,7 +31,7 @@ class TeamInformation implements Comparable<TeamInformation> {
      * @param      draws  int type
      */
     TeamInformation(final String name, final int wins,
-        final int loses, final int draws) {
+                    final int loses, final int draws) {
         this.teamname = name;
         this.teamwins = wins;
         this.teamloses = loses;
@@ -39,6 +40,7 @@ class TeamInformation implements Comparable<TeamInformation> {
     /**
      * Gets the team name.
      * complexity O(1)
+     * because we are just returing the name.
      * @return     string team name
      */
     public String getTeamName() {
@@ -47,6 +49,7 @@ class TeamInformation implements Comparable<TeamInformation> {
     /**
      * Gets the no. of team wins.
      * complexity O(1)
+     * because we are just returing the no of wins.
      * @return     int
      */
     public int getTeamWins() {
@@ -55,6 +58,7 @@ class TeamInformation implements Comparable<TeamInformation> {
     /**
      * Gets the no of team loses.
      * complexity O(1)
+     * because we are just returing the no of loses.
      * @return     int
      */
     public int getTeamLoses() {
@@ -63,6 +67,7 @@ class TeamInformation implements Comparable<TeamInformation> {
     /**
      * Gets the no of draws.
      * complexity O(1)
+     * because we are just returing the no of draws.
      * @return     int
      */
     public int getTeamDraws() {
@@ -72,6 +77,7 @@ class TeamInformation implements Comparable<TeamInformation> {
      * compare two teaminformation objects
      * respective of their individual parameters.
      * complexity O(1)
+     * because just comparing the two element parameters
      * @param      that  teaminformation object
      *
      * @return     int
@@ -122,6 +128,7 @@ class LeaderBoard {
     /**
      * adding a object to the teaminformation array.
      * complexity O(1)
+     * because we are just adding a element.
      * @param      teamdata  teaminformation object
      */
     public void add(final TeamInformation teamdata) {
@@ -131,6 +138,7 @@ class LeaderBoard {
     /**
      * size of teaminformation array.
      * complexity O(1)
+     * because we are returning the size.
      * @return     int size
      */
     public int size() {
@@ -148,6 +156,7 @@ class LeaderBoard {
      * Returns a string representation
      * of the array objects in form of team names.
      * complexity O(N)
+     * beacuse we are iterating throughout the array.
      * @return     String
      */
     public String toString() {
@@ -171,8 +180,9 @@ class Sorting {
 
     }
     /**
-     * sorting of the teaminformation array using selection sort.
+     * sorting of the teaminformation array using insertion sort.
      * complexity O(N^2/2)
+     * because we are using two lopps, one for and anpther while loop.
      * @param      team  teaminformation objects array.
      *
      * @return     teaminformation objects array.
@@ -222,6 +232,7 @@ final class Solution {
     /**
      * main program.
      * complexity O(N)
+     * because we are taking the input using for loop
      * @param      args  The arguments
      */
     public static void main(final String[] args) {

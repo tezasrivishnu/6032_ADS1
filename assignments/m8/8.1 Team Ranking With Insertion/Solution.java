@@ -46,12 +46,12 @@ class TeamSorting {
 				if (teaminformation[j].getTeamWins() > teaminformation[i].getTeamWins()) {
 					max = j;
 				}
-				if (teaminformation[j].getTeamWins() == teaminformation[i].getTeamWins()) {
+				else if (teaminformation[j].getTeamWins() == teaminformation[i].getTeamWins()) {
 					if (teaminformation[j].getTeamLoses() < teaminformation[i].getTeamLoses()) {
 						max = j;
 					}
 				}
-				if (teaminformation[j].getTeamWins() == teaminformation[i].getTeamWins()) {
+				else if (teaminformation[j].getTeamWins() == teaminformation[i].getTeamWins()) {
 					if (teaminformation[j].getTeamLoses() == teaminformation[i].getTeamLoses()) {
 						if (teaminformation[j].getTeamDraws() > teaminformation[i].getTeamDraws()) {
 							max = j;

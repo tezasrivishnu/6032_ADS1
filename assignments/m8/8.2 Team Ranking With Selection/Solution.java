@@ -40,6 +40,7 @@ class TeamInformation {
     /**
      * Gets the team name.
      * complexity O(1)
+     * because we are just returing the name.
      * @return     string team name
      */
     public String getTeamName() {
@@ -48,6 +49,7 @@ class TeamInformation {
     /**
      * Gets the no. of team wins.
      * complexity O(1)
+     * because we are just returing the no of wins.
      * @return     int
      */
     public int getTeamWins() {
@@ -56,6 +58,7 @@ class TeamInformation {
     /**
      * Gets the no of team loses.
      * complexity O(1)
+     * because we are just returing the no of loses.
      * @return     int
      */
     public int getTeamLoses() {
@@ -64,6 +67,7 @@ class TeamInformation {
     /**
      * Gets the no of draws.
      * complexity O(1)
+     * because we are just returing the no of draws.
      * @return     int
      */
     public int getTeamDraws() {
@@ -73,6 +77,7 @@ class TeamInformation {
      * compare two teaminformation objects
      * respective of their individual parameters.
      * complexity O(1)
+     * because just comparing the two element parameters
      * @param      that  teaminformation object
      *
      * @return     boolean
@@ -123,6 +128,7 @@ class LeaderBoard {
     /**
      * adding a object to the teaminformation array.
      * complexity O(1)
+     * because we are just adding a element.
      * @param      teamdata  teaminformation object
      */
     public void add(final TeamInformation teamdata) {
@@ -132,6 +138,7 @@ class LeaderBoard {
     /**
      * size of teaminformation array.
      * complexity O(1)
+     * because we are returning the size.
      * @return     int size
      */
     public int size() {
@@ -139,7 +146,6 @@ class LeaderBoard {
     }
     /**
      * sorting the array according the parameters.
-     *
      */
     public void teamRanking() {
         teaminformation = Arrays.copyOf(teaminformation, size);
@@ -149,6 +155,7 @@ class LeaderBoard {
      * Returns a string representation
      * of the array objects in form of team names.
      * complexity O(N)
+     * beacuse we are iterating throughout the array.
      * @return     String
      */
     public String toString() {
@@ -174,6 +181,7 @@ class Sorting {
     /**
      * sorting of the teaminformation array using insertion sort.
      * complexity O(N^2/4)
+     * because we are using two lopps, one for and anpther while loop.
      * @param      team  teaminformation objects array.
      *
      * @return     teaminformation objects array.
@@ -181,36 +189,16 @@ class Sorting {
     public TeamInformation[] teamSorting(final TeamInformation[] team) {
         TeamInformation[] teams = team;
         for (int i = 1; i < teams.length; i++) {
-            // boolean sort = false;
             TeamInformation key = teams[i];
             int j = i - 1;
-            while (j>=0 && key.less(teams[j])) {
-                //int count = teams[j].compareTo(teams[max]);
-                // if (count != 0) {
-                //     max = j;
-                // }
+            while (j >= 0 && key.less(teams[j])) {
                 teams[j + 1] = teams[j];
                 j = j - 1;
 
             }
-            teams[j+1] = key;
+            teams[j + 1] = key;
         }
         return teams;
-    }
-    /**
-     * swapping of the elements according to the insertion sorting result.
-     * complexity O(1)
-     * @param      max    int
-     * @param      index  int
-     * @param      info   teaminformation object array
-     *
-     * @return     teaminformation object array after swapping
-     */
-    public TeamInformation[] swapping(final int max,
-              final TeamInformation key, final TeamInformation[] info) {
-        TeamInformation[] swap = info;
-        swap[max + 1] = key;
-        return swap;
     }
 }
 /**
@@ -226,6 +214,7 @@ final class Solution {
     /**
      * main program.
      * complexity O(N)
+     * because we are taking the input using for loop
      * @param      args  The arguments
      */
     public static void main(final String[] args) {

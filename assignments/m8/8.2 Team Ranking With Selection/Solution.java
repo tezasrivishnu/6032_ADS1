@@ -181,10 +181,10 @@ class Sorting {
     public TeamInformation[] teamSorting(final TeamInformation[] team) {
         TeamInformation[] teams = team;
         for (int i = 1; i < teams.length; i++) {
-            boolean sort = false;
+            // boolean sort = false;
             TeamInformation key = teams[i];
             int j = i - 1;
-            while (j>=0 && teams[j].less(teams[i])) {
+            while (j>=0 && teams[i].less(teams[j])) {
                 //int count = teams[j].compareTo(teams[max]);
                 // if (count != 0) {
                 //     max = j;
@@ -193,7 +193,7 @@ class Sorting {
                 j = j - 1;
 
             }
-            teams = swapping(j, key, teams);
+            teams[j+1] = key;
         }
         return teams;
     }

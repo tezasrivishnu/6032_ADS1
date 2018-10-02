@@ -27,9 +27,13 @@ class TeamInformation {
 	public int compareTo(TeamInformation that) {
 		if (this.teamwins > that.teamwins) {
 			return 1;
+		} else if (this.teamwins > that.teamwins) {
+			return 0;
 		} else {
 			if (this.teamloses < that.teamloses) {
 				return 1;
+			} else if (this.teamloses > that.teamloses) {
+				return 0;
 			} else {
 				if (this.teamdraws > that.teamdraws) {
 					return 1;

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.Arrays;
-class TeamInformation implements Comparable<TeamInformation>{
+class TeamInformation implements Comparable<TeamInformation> {
 	String teamname;
 	int teamwins;
 	int teamloses;
@@ -24,22 +24,22 @@ class TeamInformation implements Comparable<TeamInformation>{
 		return this.teamdraws;
 	}
 	public int compareTo(TeamInformation that) {
-		if (this.getTeamWins() > that.getTeamWins()) {
-			return 1;
+		if (this.teamwins > that.teamwins) {
+			return 0;
 		}
-		if (this.getTeamWins() == that.getTeamWins()) {
-			if (this.getTeamLoses() < that.getTeamLoses()) {
-				return 0;
+		if (this.teamwins == that.teamwins) {
+			if (this.teamloses < that.teamloses) {
+				return 1;
 			}
 		}
-		if (this.getTeamWins() == that.getTeamWins()) {
-			if (this.getTeamLoses() == that.getTeamLoses()) {
-				if (this.getTeamDraws() > that.getTeamDraws()) {
-					return -1;
+		if (this.teamwins == that.teamwins) {
+			if (this.teamloses == that.teamloses) {
+				if (this.teamdraws > that.teamdraws) {
+					return 2;
 				}
 			}
 		}
-		return 10;
+		return -1;
 	}
 }
 class LeaderBoard {
@@ -81,16 +81,8 @@ class Sorting {
 			int max = i;
 			for (int j = 0; j < team.length; j++) {
 				int count = team[i].compareTo(team[max]);
-				if (count == 1) {
+				if (count >= 0) {
 					max = j;
-				}
-				if (count == 0) {
-					max = j;
-				}
-				if (count == -1) {
-					max = j;
-				} else {
-					max = i;
 				}
 			}
 			team = swapping(max, i, team);

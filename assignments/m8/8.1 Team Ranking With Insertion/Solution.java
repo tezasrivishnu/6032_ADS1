@@ -23,11 +23,16 @@ class TeamInformation {
 	public int getTeamDraws() {
 		return this.teamdraws;
 	}
+	public int compareTo(TeamInformation this, TeamInformation that) {
+		return 0;
+	}
 }
-class TeamSorting {
+class LeaderBoard {
 	TeamInformation[] teaminformation;
 	int size;
-	TeamSorting() {
+	Sorting sort;
+	LeaderBoard() {
+		sort = new Sorting();
 		teaminformation = new TeamInformation[10];
 		size = 0;
 	}
@@ -40,29 +45,7 @@ class TeamSorting {
 	}
 	public void teamRanking() {
 		teaminformation = Arrays.copyOf(teaminformation, size);
-		for (int i = 0; i < size; i++) {
-			int max = i;
-			for (int j = i + 1; j < size; j++) {
-				if (teaminformation[j].getTeamWins() > teaminformation[max].getTeamWins()) {
-					max = j;
-				}
-				if (teaminformation[j].getTeamWins() == teaminformation[max].getTeamWins()) {
-					if (teaminformation[j].getTeamLoses() < teaminformation[max].getTeamLoses()) {
-						max = j;
-					}
-				}
-				if (teaminformation[j].getTeamWins() == teaminformation[max].getTeamWins()) {
-					if (teaminformation[j].getTeamLoses() == teaminformation[max].getTeamLoses()) {
-						if (teaminformation[j].getTeamDraws() > teaminformation[max].getTeamDraws()) {
-							max = j;
-						}
-					}
-				}
-			}
-			TeamInformation temp = teaminformation[max];
-			teaminformation[max] = teaminformation[i];
-			teaminformation[i] = temp;
-		}
+		sort.teamSorting(teaminformation);
 	}
 	public String toString() {
 		String str = "";
@@ -74,21 +57,29 @@ class TeamSorting {
 		return str;
 	}
 }
+class Sorting {
+	Sorting() {
+
+	}
+	public void teamSorting(TeamInformation[] team) {
+
+	}
+}
 public final class Solution {
 	Solution() {
 
 	}
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		TeamSorting sorting = new TeamSorting();
+		LeaderBoard board = new LeaderBoard();
 		while (scan.hasNext()) {
 			String[] teams = scan.nextLine().split(",");
-			sorting.add(new TeamInformation(teams[0],
+			board.add(new TeamInformation(teams[0],
 			                                Integer.parseInt(teams[1]),
 			                                Integer.parseInt(teams[2]),
 			                                Integer.parseInt(teams[3])));
 		}
-		sorting.teamRanking();
-		System.out.println(sorting.toString());
+		board.teamRanking();
+		System.out.println(board.toString());
 	}
 }

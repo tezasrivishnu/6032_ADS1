@@ -79,7 +79,7 @@ class Sorting {
 	public TeamInformation[] teamSorting(TeamInformation[] team) {
 		for (int i = 0; i < team.length; i++) {
 			int max = i;
-			for (int j = 0; j < team.length; j++) {
+			for (int j = i + 1; j < team.length; j++) {
 				int count = team[i].compareTo(team[max]);
 				if (count >= 0) {
 					max = j;
@@ -88,31 +88,6 @@ class Sorting {
 			team = swapping(max, i, team);
 		}
 		return team;
-
-		// for (int i = 0; i < size; i++) {
-		// 	int max = i;
-		// 	for (int j = i + 1; j < size; j++) {
-		// 		//max = sorting(i, j);
-		// 		if (teaminformation[j].getTeamWins() > teaminformation[max].getTeamWins()) {
-		// 			max = j;
-		// 		}
-		// 		if (teaminformation[j].getTeamWins() == teaminformation[max].getTeamWins()) {
-		// 			if (teaminformation[j].getTeamLoses() < teaminformation[max].getTeamLoses()) {
-		// 				max = j;
-		// 			}
-		// 		}
-		// 		if (teaminformation[j].getTeamWins() == teaminformation[max].getTeamWins()) {
-		// 			if (teaminformation[j].getTeamLoses() == teaminformation[max].getTeamLoses()) {
-		// 				if (teaminformation[j].getTeamDraws() > teaminformation[max].getTeamDraws()) {
-		// 					max = j;
-		// 				}
-		// 			}
-		// 		}
-		// 	}
-		// 	TeamInformation temp = teaminformation[max];
-		// 	teaminformation[max] = teaminformation[i];
-		// 	teaminformation[i] = temp;
-		// }
 	}
 	public TeamInformation[] swapping(int max, int index, TeamInformation[] info) {
 		TeamInformation[] swap = info;

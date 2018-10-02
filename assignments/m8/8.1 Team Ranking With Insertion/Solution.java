@@ -24,7 +24,22 @@ class TeamInformation {
 		return this.teamdraws;
 	}
 	public int compareTo(TeamInformation this, TeamInformation that) {
-		return 0;
+		if (this.teamwins > that.teamwins) {
+			return 1;
+		}
+		if (this.teamwins == that.teamwins) {
+			if (this.teamloses < that.teamloses) {
+				return 0;
+			}
+		}
+		if (this.teamwins == that.teamwins) {
+			if (this.teamloses == that.teamloses) {
+				if (this.teamdraws > that.teamdraws) {
+					return -1;
+				}
+			}
+		}
+		return 10;
 	}
 }
 class LeaderBoard {
@@ -45,12 +60,12 @@ class LeaderBoard {
 	}
 	public void teamRanking() {
 		teaminformation = Arrays.copyOf(teaminformation, size);
-		sort.teamSorting(teaminformation);
+		teaminformation = sort.teamSorting(teaminformation);
 	}
 	public String toString() {
 		String str = "";
 		int i = 0;
-		for (i = 0; i<size-1; i++) {
+		for (i = 0; i < size - 1; i++) {
 			str += teaminformation[i].getTeamName() + ",";
 		}
 		str += teaminformation[i].getTeamName();
@@ -61,8 +76,57 @@ class Sorting {
 	Sorting() {
 
 	}
-	public void teamSorting(TeamInformation[] team) {
+	public TeamInformation[] teamSorting(TeamInformation[] team) {
+		for (int i = 0; i < team.length; i++) {
+			int max = i;
+			for (int j = 0; j < team.length; j++) {
+				int count = (team[i].compareTo(team[max]));
+				if (count == 1) {
+					max = j;
+				}
+				if (count == 0) {
+					max = j;
+				}
+				if (count == -1) {
+					max = j;
+				} else {
+					continue;
+				}
+			}
+			team = swapping(max, i, team);
+		}
+		return team;
 
+		// for (int i = 0; i < size; i++) {
+		// 	int max = i;
+		// 	for (int j = i + 1; j < size; j++) {
+		// 		//max = sorting(i, j);
+		// 		if (teaminformation[j].getTeamWins() > teaminformation[max].getTeamWins()) {
+		// 			max = j;
+		// 		}
+		// 		if (teaminformation[j].getTeamWins() == teaminformation[max].getTeamWins()) {
+		// 			if (teaminformation[j].getTeamLoses() < teaminformation[max].getTeamLoses()) {
+		// 				max = j;
+		// 			}
+		// 		}
+		// 		if (teaminformation[j].getTeamWins() == teaminformation[max].getTeamWins()) {
+		// 			if (teaminformation[j].getTeamLoses() == teaminformation[max].getTeamLoses()) {
+		// 				if (teaminformation[j].getTeamDraws() > teaminformation[max].getTeamDraws()) {
+		// 					max = j;
+		// 				}
+		// 			}
+		// 		}
+		// 	}
+		// 	TeamInformation temp = teaminformation[max];
+		// 	teaminformation[max] = teaminformation[i];
+		// 	teaminformation[i] = temp;
+		// }
+	}
+	public TeamInformation[] swapping(int max, int index, TeamInformation[] info) {
+		TeamInformation temp = info[max];
+		info[max] = info[index];
+		info[index] = temp;
+		return info;
 	}
 }
 public final class Solution {
@@ -75,9 +139,9 @@ public final class Solution {
 		while (scan.hasNext()) {
 			String[] teams = scan.nextLine().split(",");
 			board.add(new TeamInformation(teams[0],
-			                                Integer.parseInt(teams[1]),
-			                                Integer.parseInt(teams[2]),
-			                                Integer.parseInt(teams[3])));
+			                              Integer.parseInt(teams[1]),
+			                              Integer.parseInt(teams[2]),
+			                              Integer.parseInt(teams[3])));
 		}
 		board.teamRanking();
 		System.out.println(board.toString());

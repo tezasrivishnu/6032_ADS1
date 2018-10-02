@@ -43,36 +43,31 @@ class TeamSorting {
 		for (int i = 0; i < size; i++) {
 			int max = i;
 			for (int j = i + 1; j < size; j++) {
-				max = sorting(i, j);
+				if (teaminformation[j].getTeamWins() > teaminformation[max].getTeamWins()) {
+					max = j;
+				}
+				if (teaminformation[j].getTeamWins() == teaminformation[max].getTeamWins()) {
+					if (teaminformation[j].getTeamLoses() < teaminformation[max].getTeamLoses()) {
+						max = j;
+					}
+				}
+				if (teaminformation[j].getTeamWins() == teaminformation[max].getTeamWins()) {
+					if (teaminformation[j].getTeamLoses() == teaminformation[max].getTeamLoses()) {
+						if (teaminformation[j].getTeamDraws() > teaminformation[max].getTeamDraws()) {
+							max = j;
+						}
+					}
+				}
 			}
 			TeamInformation temp = teaminformation[max];
 			teaminformation[max] = teaminformation[i];
 			teaminformation[i] = temp;
 		}
 	}
-	public int sorting(int i, int j) {
-		int max = i;
-		if (teaminformation[j].getTeamWins() > teaminformation[max].getTeamWins()) {
-			max = j;
-		}
-		if (teaminformation[j].getTeamWins() == teaminformation[max].getTeamWins()) {
-			if (teaminformation[j].getTeamLoses() < teaminformation[max].getTeamLoses()) {
-				max = j;
-			}
-		}
-		if (teaminformation[j].getTeamWins() == teaminformation[max].getTeamWins()) {
-			if (teaminformation[j].getTeamLoses() == teaminformation[max].getTeamLoses()) {
-				if (teaminformation[j].getTeamDraws() > teaminformation[max].getTeamDraws()) {
-					max = j;
-				}
-			}
-		}
-		return j;
-	}
 	public String toString() {
 		String str = "";
 		int i = 0;
-		for (i = 0; i < size - 1; i++) {
+		for (i = 0; i<size-1; i++) {
 			str += teaminformation[i].getTeamName() + ",";
 		}
 		str += teaminformation[i].getTeamName();

@@ -1,0 +1,3 @@
+Insersion sort will do O(1) per element and it will be O(N) for all the elements. Selection sort will be O(N^2), however the input is.
+
+So the Insersion sort runs faster.But when the input arrays are sorted both the complexities are equal.

@@ -80,7 +80,7 @@ class Sorting {
 		for (int i = 0; i < team.length; i++) {
 			int max = i;
 			for (int j = i + 1; j < team.length; j++) {
-				int count = team[i].compareTo(team[max]);
+				int count = team[j].compareTo(team[max]);
 				if (count >= 0) {
 					max = j;
 				}

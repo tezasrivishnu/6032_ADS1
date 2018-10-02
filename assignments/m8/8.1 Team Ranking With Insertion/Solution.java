@@ -1,30 +1,82 @@
 import java.util.Scanner;
 import java.util.Arrays;
-class TeamInformation {
-//implements Comparable<TeamInformation> {
-	String teamname;
-	int teamwins;
-	int teamloses;
-	int teamdraws;
-	TeamInformation(String name, int wins, int loses, int draws) {
+/**
+ * Class for team information.
+ * @author tezasrivishnu.
+ */
+class TeamInformation implements Comparable<TeamInformation> {
+	/**
+	 * declaring String variable teamname.
+	 */
+	private String teamname;
+	/**
+	 * declaring int variable teamwins.
+	 */
+	private int teamwins;
+	/**
+	 * declaring int variable teamloses.
+	 */
+	private int teamloses;
+	/**
+	 * declaring int variable teamdraws.
+	 */
+	private int teamdraws;
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      name   string type
+	 * @param      wins   int type
+	 * @param      loses  int type
+	 * @param      draws  int type
+	 */
+	TeamInformation(final String name, final int wins,
+		final int loses, final int draws) {
 		this.teamname = name;
 		this.teamwins = wins;
 		this.teamloses = loses;
 		this.teamdraws = draws;
 	}
+	/**
+	 * Gets the team name.
+	 * complexity O(1)
+	 * @return     string team name
+	 */
 	public String getTeamName() {
 		return this.teamname;
 	}
+	/**
+	 * Gets the no. of team wins.
+	 * complexity O(1)
+	 * @return     int
+	 */
 	public int getTeamWins() {
 		return this.teamwins;
 	}
+	/**
+	 * Gets the no of team loses.
+	 * complexity O(1)
+	 * @return     int
+	 */
 	public int getTeamLoses() {
 		return this.teamloses;
 	}
+	/**
+	 * Gets the no of draws.
+	 * complexity O(1)
+	 * @return     int
+	 */
 	public int getTeamDraws() {
 		return this.teamdraws;
 	}
-	public int compareTo(TeamInformation that) {
+	/**
+	 * compare two teaminformation objects
+	 * respective of their individual parameters.
+	 * complexity O(1)
+	 * @param      that  teaminformation object
+	 *
+	 * @return     int
+	 */
+	public int compareTo(final TeamInformation that) {
 		if (this.teamwins > that.teamwins) {
 			return 1;
 		}
@@ -43,26 +95,60 @@ class TeamInformation {
 		return 0;
 	}
 }
+/**
+ * Class for leader board.
+ */
 class LeaderBoard {
-	TeamInformation[] teaminformation;
-	int size;
-	Sorting sort;
+	/**
+	 * declaring array of teaminformation class objects.
+	 */
+	private TeamInformation[] teaminformation;
+	/**
+	 * declaring inr variable size.
+	 */
+	private int size;
+	/**
+	 * declaring sorting class object sort.
+	 */
+	private Sorting sort;
+	/**
+	 * Constructs the object.
+	 */
 	LeaderBoard() {
 		sort = new Sorting();
 		teaminformation = new TeamInformation[10];
 		size = 0;
 	}
-	public void add(TeamInformation teamdata) {
+	/**
+	 * adding a object to the teaminformation array.
+	 * complexity O(1)
+	 * @param      teamdata  teaminformation object
+	 */
+	public void add(final TeamInformation teamdata) {
 		teaminformation[size] = teamdata;
 		size += 1;
 	}
+	/**
+	 * size of teaminformation array.
+	 * complexity O(1)
+	 * @return     int size
+	 */
 	public int size() {
 		return size;
 	}
+	/**
+	 * sorting the array according the parameters.
+	 * 
+	 */
 	public void teamRanking() {
 		teaminformation = Arrays.copyOf(teaminformation, size);
 		teaminformation = sort.teamSorting(teaminformation);
 	}
+	/**
+	 * Returns a string representation of the array objects in form of team names.
+	 * complexity O(N)
+	 * @return     String
+	 */
 	public String toString() {
 		String str = "";
 		int i = 0;
@@ -73,10 +159,23 @@ class LeaderBoard {
 		return str;
 	}
 }
+/**
+ * Class for sorting.
+ */
 class Sorting {
+	/**
+	 * Constructs the object.
+	 */
 	Sorting() {
 
 	}
+	/**
+	 * sorting of the teaminformation array using selection sort.
+	 * complexity O(N^2/2)
+	 * @param      team  teaminformation objects array.
+	 *
+	 * @return     teaminformation objects array.
+	 */
 	public TeamInformation[] teamSorting(TeamInformation[] team) {
 		for (int i = 0; i < team.length; i++) {
 			int max = i;
@@ -90,7 +189,16 @@ class Sorting {
 		}
 		return team;
 	}
-	public TeamInformation[] swapping(int max, int index, TeamInformation[] info) {
+	/**
+	 * swapping of the elements according to the selection sorting result.
+	 * complexity O(1)
+	 * @param      max    int
+	 * @param      index  int
+	 * @param      info   teaminformation object array
+	 *
+	 * @return     teaminformation object array after swapping
+	 */
+	public TeamInformation[] swapping(final int max, int index, TeamInformation[] info) {
 		TeamInformation[] swap = info;
 		TeamInformation temp = swap[max];
 		swap[max] = swap[index];
@@ -98,11 +206,22 @@ class Sorting {
 		return swap;
 	}
 }
-public final class Solution {
-	Solution() {
+/**
+ * class Solution
+ */
+final class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	private Solution() {
 
 	}
-	public static void main(String[] args) {
+	/**
+	 * main program.
+	 * complexity O(N)
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		LeaderBoard board = new LeaderBoard();
 		while (scan.hasNext()) {

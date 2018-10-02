@@ -78,17 +78,17 @@ class TeamInformation {
      * @return     boolean
      */
     public boolean less(final TeamInformation that) {
-        if (this.teamwins > that.teamwins) {
+        if (this.teamwins < that.teamwins) {
             return true;
         }
         if (this.teamwins == that.teamwins) {
-            if (this.teamloses < that.teamloses) {
+            if (this.teamloses > that.teamloses) {
                 return true;
             }
         }
         if (this.teamwins == that.teamwins) {
             if (this.teamloses == that.teamloses) {
-                if (this.teamdraws > that.teamdraws) {
+                if (this.teamdraws < that.teamdraws) {
                     return true;
                 }
             }

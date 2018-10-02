@@ -1,0 +1,1 @@
+They make equal number of comparisions.Since the values at every position will have to be changed. The worst case scenario for insertion sort is reverse order so that mean its complexity is O(N^2) and also the selection sort is also O(N^2). 

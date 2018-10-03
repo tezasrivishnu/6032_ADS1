@@ -2,7 +2,7 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
@@ -11,7 +11,7 @@ class Solution {
     }
     /**
      * main method for the progra.
-     *
+     *Time complexity of this method is O(1).
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
@@ -45,7 +45,8 @@ class Merge {
     }
     /**
      * copying the array to auxxilary array.
-     *
+     *Time complexity of this method is O(1).
+     *beacuse we are coping the array at once
      * @param      a     array
      */
     public void sort(final Comparable[] a) {
@@ -55,7 +56,7 @@ class Merge {
     }
     /**
      * merging two arrays.
-     *
+     * complexity is O(N) as we are accessing the full array.
      * @param      a     array
      * @param      aux   The auxiliary array
      * @param      lo    The lower value
@@ -83,7 +84,7 @@ class Merge {
     }
     /**
      * sorting of two arrays.
-     *
+     * complexity is O(nlogn) as we dividing the array into two.
      * @param      a     array
      * @param      aux   The auxiliary array
      * @param      lo    The lower array
@@ -112,7 +113,7 @@ class Merge {
     }
     /**
      * Returns a string representation of the object.
-     *
+     * complexity is O(N) as we are accessing the array fully.
      * @param      input  array
      *
      * @return     String representation of the object.
@@ -128,7 +129,7 @@ class Merge {
     }
     /**
      * Method to determine if the array is sorted (or) not.
-     *
+     * complexity is O(n) as we checking it only once
      * @param      a     array
      *
      * @return     True if sorted, False otherwise.
@@ -138,6 +139,7 @@ class Merge {
     }
     /**
      * Method to determine if the array is sorted (or) not.
+     * complexity is O(N) as we are accessing array fully to check.
      * @param      a     array
      * @param      lo    The lower value
      * @param      hi    The higher value
@@ -160,7 +162,7 @@ class Merge {
 class Insertion {
     /**
      * method for insertion sort.
-     *
+     * complecity is O(n^2/2) as it is insertion sort.
      * @param      a     array
      * @param      lo    The lower value
      * @param      hi    The higher value
@@ -189,7 +191,7 @@ class Insertion {
     }
     /**
      * swapping of two elements.
-     *
+     * complexity is O(1) as we are just swapping the elements.
      * @param      a     array
      * @param      i     index
      * @param      j     index
@@ -202,7 +204,7 @@ class Insertion {
     }
     /**
      * comparing two elements.
-     *
+     * complexity O(1) as we are checking once.
      * @param      one   value
      * @param      two   value
      *

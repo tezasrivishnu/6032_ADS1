@@ -4,6 +4,12 @@ import java.util.Scanner;
  */
 class Solution {
     /**
+     * Constructs the object.
+     */
+    private Solution() {
+
+    }
+    /**
      * main method for the progra.
      *
      * @param      args  The arguments
@@ -27,7 +33,10 @@ class Merge {
      * initializing value of 7.
      */
     private static final int SEVEN = 7;
-    Insertion insertion = new Insertion();
+    /**
+     * insertion class object.
+     */
+    private Insertion insertion = new Insertion();
     /**
      * Constructs the object.
      */
@@ -39,13 +48,13 @@ class Merge {
      *
      * @param      a     array
      */
-    public void sort(Comparable[] a) {
+    public void sort(final Comparable[] a) {
         Comparable[] aux = a.clone();
         sort(aux, a, 0, a.length - 1);
         assert isSorted(a);
     }
     /**
-     * merging two arrays
+     * merging two arrays.
      *
      * @param      a     array
      * @param      aux   The auxiliary array
@@ -53,7 +62,7 @@ class Merge {
      * @param      mid   The middle value
      * @param      hi    The higher value
      */
-    public void merge(Comparable[] a, Comparable[] aux,
+    public void merge(final Comparable[] a, final Comparable[] aux,
         final int lo, final int mid, final int hi) {
         assert isSorted(a, lo, mid);
         assert isSorted(a, mid + 1, hi);
@@ -73,14 +82,14 @@ class Merge {
         assert isSorted(aux, lo, hi);
     }
     /**
-     * sorting of two arrays
+     * sorting of two arrays.
      *
      * @param      a     array
      * @param      aux   The auxiliary array
      * @param      lo    The lower array
      * @param      hi    The higher array
      */
-    private void sort(Comparable[] a, Comparable[] aux,
+    private void sort(final Comparable[] a, final Comparable[] aux,
         final int lo, final int hi) {
         //int cutoff = SEVEN;
         if (hi <= lo + SEVEN) {
@@ -108,7 +117,7 @@ class Merge {
      *
      * @return     String representation of the object.
      */
-    public String toString(Comparable[] input) {
+    public String toString(final Comparable[] input) {
         String str = "[";
         int i;
         for (i = 0; i < input.length - 1; i++) {
@@ -119,12 +128,12 @@ class Merge {
     }
     /**
      * Method to determine if the array is sorted (or) not.
-     * 
+     *
      * @param      a     array
      *
      * @return     True if sorted, False otherwise.
      */
-    public boolean isSorted(Comparable[] a) {
+    public boolean isSorted(final Comparable[] a) {
         return isSorted(a, 0, a.length - 1);
     }
     /**
@@ -135,7 +144,7 @@ class Merge {
      *
      * @return     True if sorted, False otherwise.
      */
-    public boolean isSorted(Comparable[] a,
+    public boolean isSorted(final Comparable[] a,
                             final int lo, final int hi) {
         for (int i = lo + 1; i <= hi; i++) {
             if (insertion.less(a[i], a[i - 1])) {
@@ -156,7 +165,7 @@ class Insertion {
      * @param      lo    The lower value
      * @param      hi    The higher value
      */
-    public void sorting(Comparable[] a,
+    public void sorting(final Comparable[] a,
         final int lo, final int hi) {
         // int[] teams = team;
         // for (int i = lo; i < hi; i++) {
@@ -179,13 +188,13 @@ class Insertion {
         }
     }
     /**
-     * swapping of two elements
+     * swapping of two elements.
      *
      * @param      a     array
      * @param      i     index
      * @param      j     index
      */
-    private void exch(Comparable[] a,
+    private void exch(final Comparable[] a,
         final int i, final int j) {
         Comparable swap = a[i];
         a[i] = a[j];

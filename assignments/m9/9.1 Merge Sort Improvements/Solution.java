@@ -3,7 +3,7 @@ import java.util.Scanner;
  * Class for solution.
  * @author tezasrivishnu
  */
-class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
@@ -31,12 +31,19 @@ class Solution {
  * Class for merge.
  */
 class Merge {
-    Insertion insertion = new Insertion();
+    /**
+     * initializing variable for 7.
+     */
+    private static final int SEVEN = 7;
+    /**
+     * { var_description }
+     */
+    Insertion insertion;
     /**
      * Constructs the object.
      */
     Merge() {
-        
+        insertion = new Insertion();
     }
     /**
      * coping the original array to auxilary array.
@@ -49,7 +56,7 @@ class Merge {
         assert isSorted(a);
     }
     /**
-     * Method to merge two arrays
+     * Method to merge two arrays.
      * time complexity is O(N) as we are iterating loop for N times
      * @param      a     array
      * @param      aux   array
@@ -78,7 +85,8 @@ class Merge {
     }
     /**
      * Method for sorting
-     * Time complexity is O(logN) as we using recursion and seperating two arrays.
+     * Time complexity is O(logN) as we using
+     * recursion and seperating two arrays.
      * @param      a     array
      * @param      aux   The auxiliary array
      * @param      lo    The lower value
@@ -86,7 +94,7 @@ class Merge {
      */
     private void sort(final Comparable[] a,
         final Comparable[] aux, final int lo, final int hi) {
-        int cutoff = 7;
+        int cutoff = SEVEN;
         if (hi <= lo + cutoff) {
             insertion.sorting(aux, lo, hi);
             System.out.println("Insertion sort method invoked...");

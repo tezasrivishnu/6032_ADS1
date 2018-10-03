@@ -1,19 +1,11 @@
 import java.util.Scanner;
 /**
  * Class for solution.
- * @author tezasrivishnu
  */
 class Solution {
     /**
-     * Constructs the object.
-     */
-    private Solution() {
-
-    }
-    /**
-     * main program for the program.
-     * time complexity O(N).
-     * beacuse we are taking input N times.
+     * main method for the progra.
+     *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
@@ -32,7 +24,7 @@ class Solution {
  */
 class Merge {
     /**
-     * initializing variable for 7.
+     * initializing value of 7.
      */
     private static final int SEVEN = 7;
     Insertion insertion = new Insertion();
@@ -40,10 +32,11 @@ class Merge {
      * Constructs the object.
      */
     Merge() {
+
     }
     /**
-     * coping the original array to auxilary array.
-     * complexity O(1) as we are copything the array.
+     * copying the array to auxxilary array.
+     *
      * @param      a     array
      */
     public void sort(final Comparable[] a) {
@@ -52,12 +45,12 @@ class Merge {
         assert isSorted(a);
     }
     /**
-     * Method to merge two arrays.
-     * time complexity is O(N) as we are iterating loop for N times
+     * merging two arrays
+     *
      * @param      a     array
-     * @param      aux   array
-     * @param      lo    low value
-     * @param      mid   middle value
+     * @param      aux   The auxiliary array
+     * @param      lo    The lower value
+     * @param      mid   The middle value
      * @param      hi    The higher value
      */
     public void merge(final Comparable[] a, final Comparable[] aux,
@@ -80,18 +73,17 @@ class Merge {
         assert isSorted(aux, lo, hi);
     }
     /**
-     * Method for sorting
-     * Time complexity is O(logN) as we using
-     * recursion and seperating two arrays.
+     * sorting of two arrays
+     *
      * @param      a     array
      * @param      aux   The auxiliary array
-     * @param      lo    The lower value
-     * @param      hi    The higher value
+     * @param      lo    The lower array
+     * @param      hi    The higher array
      */
-    private void sort(final Comparable[] a,
-        final Comparable[] aux, final int lo, final int hi) {
-        int cutoff = SEVEN;
-        if (hi <= lo + cutoff) {
+    private void sort(final Comparable[] a, final Comparable[] aux,
+        final int lo, final int hi) {
+        //int cutoff = SEVEN;
+        if (hi <= lo + SEVEN) {
             insertion.sorting(aux, lo, hi);
             System.out.println("Insertion sort method invoked...");
             return;
@@ -104,14 +96,14 @@ class Merge {
                 aux[i] = a[i];
             }
             System.out.println(
-    "Array is already sorted. So,skipped the call to merge...");
+    "Array is already sorted. So, skipped the call to merge...");
             return;
         }
         merge(a, aux, lo, mid, hi);
     }
     /**
      * Returns a string representation of the object.
-     * complexity O(N) as we are printing the whole array.
+     *
      * @param      input  array
      *
      * @return     String representation of the object.
@@ -126,21 +118,18 @@ class Merge {
         return str;
     }
     /**
-    * Method to determine if the array is sorted (or) not.
-    * complexity is O(1).
-    * @param      a     array
-    *
-    * @return     True if sorted, False otherwise.
-    */
+     * Method to determine if the array is sorted (or) not.
+     * 
+     * @param      a     array
+     *
+     * @return     True if sorted, False otherwise.
+     */
     public boolean isSorted(final Comparable[] a) {
         return isSorted(a, 0, a.length - 1);
     }
     /**
      * Method to determine if the array is sorted (or) not.
-     * complexity is O(N) as we are checking
-     * for the array is sorted or not
-     * iterating the whole array.
-     * @param      a     array.
+     * @param      a     array
      * @param      lo    The lower value
      * @param      hi    The higher value
      *
@@ -161,14 +150,8 @@ class Merge {
  */
 class Insertion {
     /**
-     * Constructs the object.
-     */
-    Insertion() {
-
-    }
-    /**
-     * sorting of array using insertion sort.
-     * complexity is O(N^2/2).
+     * method for insertion sort.
+     *
      * @param      a     array
      * @param      lo    The lower value
      * @param      hi    The higher value
@@ -190,36 +173,33 @@ class Insertion {
         // for (int i = lo; i <= hi; i++)
         // Comparable[] sort = team;
         for (int i = lo; i <= hi; i++) {
-            for (int j = i; j > lo
-                && less(a[j], a[j - 1]); j--) {
+            for (int j = i; j > lo && less(a[j], a[j - 1]); j--) {
                 exch(a, j, j - 1);
             }
         }
     }
     /**
-     * swapping of the variables.
-     * complexity O(N)
-     * swapping just once
-     * @param      a     array.
+     * swapping of two elements
+     *
+     * @param      a     array
      * @param      i     index
      * @param      j     index
      */
     private void exch(final Comparable[] a,
-                      final int i, final int j) {
+        final int i, final int j) {
         Comparable swap = a[i];
         a[i] = a[j];
         a[j] = swap;
     }
     /**
-     * compares two elements.
-     * complexity O(N)
+     * comparing two elements.
+     *
      * @param      one   value
      * @param      two   value
      *
-     * @return     true or false.
+     * @return     true or false
      */
-    public boolean less(final Comparable one,
-                        final Comparable two) {
+    public boolean less(final Comparable one, final Comparable two) {
         return one.compareTo(two) < 0;
     }
 }

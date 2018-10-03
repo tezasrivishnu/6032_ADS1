@@ -3,7 +3,7 @@ import java.util.Scanner;
  * Class for solution.
  * @author tezasrivishnu
  */
-final class Solution {
+class Solution {
     /**
      * Constructs the object.
      */
@@ -35,15 +35,11 @@ class Merge {
      * initializing variable for 7.
      */
     private static final int SEVEN = 7;
-    /**
-     * { var_description }
-     */
-    Insertion insertion;
+    Insertion insertion = new Insertion();
     /**
      * Constructs the object.
      */
     Merge() {
-        insertion = new Insertion();
     }
     /**
      * coping the original array to auxilary array.

@@ -1,11 +1,2 @@
 Starting audit...
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m10\10.1 LinkedList using Recursion\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m10\10.1 LinkedList using Recursion\Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m10\10.1 LinkedList using Recursion\Solution.java:45:17: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m10\10.1 LinkedList using Recursion\Solution.java:45:21: Variable 'value' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m10\10.1 LinkedList using Recursion\Solution.java:46:17: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m10\10.1 LinkedList using Recursion\Solution.java:46:22: Variable 'next' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m10\10.1 LinkedList using Recursion\Solution.java:81:9: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m10\10.1 LinkedList using Recursion\Solution.java:190:29: Parameter node should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 8 errors.

@@ -97,7 +97,7 @@ class LinkedList {
      * @param      data   The data to be inserted.
      */
     public void insertAt(final int index, final int data) {
-        System.out.println("here");
+        //System.out.println("here");
         if (index < 0 || index > size) {
             System.out.println("Can't insert at this position.");
             return;
@@ -119,7 +119,7 @@ class LinkedList {
     public Node insertAt(final Node current,
         final Node node, final int index,
         final int till) {
-        System.out.println("here");
+        //System.out.println("here");
         // int counter = 0;
         // if (index > size || index < 0) {
         //  System.out.println("Can't insert at this position.");
@@ -181,7 +181,7 @@ class LinkedList {
      * complexity O(n) we are calling a method once.
      */
     public void reverse() {
-        System.out.println("here");
+        //System.out.println("here");
         if (size == 0) {
             System.out.println("No elements to reverse.");
             return;
@@ -196,10 +196,10 @@ class LinkedList {
      *
      * @return     node
      */
-    public Node reverse(Node node) {
-        //Node node_ex = node;
+    public Node reverse(final Node node) {
+        Node node_ex = node;
         Node prev = null;
-        Node current = node;
+        Node current = node_ex;
         Node next = null;
         while (current != null) {
             next = current.next;
@@ -208,8 +208,8 @@ class LinkedList {
             current = next;
         }
         
-        node = prev;
-        return node;
+        node_ex = prev;
+        return node_ex;
                // Node newnode;
                // if (node.next == null) {
                //   return node;

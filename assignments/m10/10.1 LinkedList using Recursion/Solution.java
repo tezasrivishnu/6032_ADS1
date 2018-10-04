@@ -1,6 +1,20 @@
 import java.util.Scanner;
-class Solution {
-	public static void main(String[] args) {
+/**
+ * Class for solution.
+ */
+final class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	private Solution() {
+
+	}
+	/**
+	 * main program for the program.
+	 * complexity O(n) as we are taking n inputs.
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		LinkedList list = new LinkedList();
 		while (scan.hasNext()) {
@@ -20,27 +34,63 @@ class Solution {
 		}
 	}
 }
+/**
+ * List of linkeds.
+ */
 class LinkedList {
+	/**
+	 * Class for node.
+	 */
 	private class Node {
 		int value;
 		Node next;
-		Node(int val, Node n) {
+		/**
+		 * Constructs the object.
+		 *
+		 * @param      val   The value
+		 * @param      n     node.
+		 */
+		Node(final int val, final Node n) {
 			value = val;
 			next = n;
 		}
-		Node(int val) {
+		/**
+		 * Constructs the object.
+		 * complexity O(n) as we are just asigning the values.
+		 * @param      val   The value
+		 */
+		Node(final int val) {
 			this(val, null);
 		}
 	}
-	Node head;
-	Node tail;
-	int size;
+	/**
+	 * declaring the node head.
+	 */
+	private Node head;
+	/**
+	 * declaring the node tail.
+	 */
+	private Node tail;
+	/**
+	 * declaring the int size.
+	 */
+	private int size;
+	/**
+	 * Constructs the object.
+	 */
 	public LinkedList() {
 		head = null;
 		tail = head;
 		size = 0;
 	}
-	public void insertAt(int index, int data) {
+	/**
+	 * helper method.
+	 * complexity O(n) as we are calling a method once.
+	 *
+	 * @param      index  The index at which.
+	 * @param      data   The data to be inserted.
+	 */
+	public void insertAt(final int index, final int data) {
 		if (index < 0 || index > size) {
 			System.out.println("Can't insert at this position.");
 			return;
@@ -49,7 +99,19 @@ class LinkedList {
 		System.out.println(toString());
 		size++;
 	}
-	public Node insertAt(Node current, Node node, int index, int till) {
+	/**
+	 * inserting at a specified location.
+	 * complexity O(n) max. if we have to insert at last node.
+	 * @param      current  head as current node.
+	 * @param      node     new node with data.
+	 * @param      index    The index
+	 * @param      till     The till index
+	 *
+	 * @return     node.
+	 */
+	public Node insertAt(final Node current,
+		final Node node, final int index,
+		final int till) {
 		// int counter = 0;
 		// if (index > size || index < 0) {
 		// 	System.out.println("Can't insert at this position.");
@@ -58,7 +120,7 @@ class LinkedList {
 		//Node node = new Node(data);
 		if (current == null) {
 			//current.data = node;
-			current = node;
+			//current = node;
 			//System.out.println(toString());
 			return node;
 		}
@@ -106,6 +168,10 @@ class LinkedList {
 		// // }
 		// System.out.println(toString());
 	}
+	/**
+	 * helper method.
+	 * complexity O(n) we are calling a method once.
+	 */
 	public void reverse() {
 		if (size == 0) {
 			System.out.println("No elements to reverse.");
@@ -114,6 +180,13 @@ class LinkedList {
 		head = reverse(head);
 		System.out.println(toString());
 	}
+	/**
+	 * reverse of the linked list.
+	 *complexity O(n) since we are reversing the full list.
+	 * @param      node  node head.
+	 *
+	 * @return     node
+	 */
 	public Node reverse(Node node) {
 		Node prev = null;
 		Node current = node;
@@ -135,6 +208,11 @@ class LinkedList {
 		       // node.next = null;
 		       // return newnode;
 	}
+	/**
+	 * Returns a string representation of the object.
+	 * comlexity (N) as we are printing all the data.
+	 * @return     String representation of the object.
+	 */
 	public String toString() {
 		Node temp = head;
 		String str = "";

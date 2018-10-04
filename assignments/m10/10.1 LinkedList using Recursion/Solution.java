@@ -197,9 +197,9 @@ class LinkedList {
      * @return     node
      */
     public Node reverse(final Node node) {
-        Node node_ex = node;
+        Node nodeex = node;
         Node prev = null;
-        Node current = node_ex;
+        Node current = nodeex;
         Node next = null;
         while (current != null) {
             next = current.next;
@@ -207,9 +207,8 @@ class LinkedList {
             prev = current;
             current = next;
         }
-        
-        node_ex = prev;
-        return node_ex;
+        nodeex = prev;
+        return nodeex;
                // Node newnode;
                // if (node.next == null) {
                //   return node;

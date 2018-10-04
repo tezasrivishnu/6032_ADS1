@@ -206,8 +206,9 @@ class LinkedList {
             prev = current;
             current = next;
         }
-        //node = prev;
-        return prev;
+        Node node_ex = node;
+        node_ex = prev;
+        return node_ex;
                // Node newnode;
                // if (node.next == null) {
                //   return node;

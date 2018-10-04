@@ -62,7 +62,7 @@ class LinkedList {
 			//System.out.println(toString());
 			return node;
 		}
-		if (size == till) {
+		if (index == till) {
 			node.next = current;
 			//System.out.println(toString());
 			return node;

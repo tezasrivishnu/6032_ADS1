@@ -10,7 +10,7 @@ class Solution {
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        Solution sol = new Solution();
+        Merge merge = new Merge();
         Scanner sc = new Scanner(System.in);
         String[] firstarr = new String[sc.nextInt()];
         String[] secondarr = new String[sc.nextInt()];
@@ -21,15 +21,25 @@ class Solution {
             for (int i = 0; i < secondarr.length; i++) {
                 secondarray[i] = Integer.parseInt(secondarr[i]);
             }
-            System.out.println(sol.toString(secondarray));
+            System.out.println(merge.toString(secondarray));
         } else {
             firstarr = sc.next().split(",");
             secondarr = sc.next().split(",");
-            int[] sorted = sol.sortedArray(firstarr, secondarr);
-            System.out.println(sol.toString(sorted));
+            int[] sorted = merge.sortedArray(firstarr, secondarr);
+            System.out.println(merge.toString(sorted));
         }
     }
+}
+/**
+ * Class for merge.
+ */
+class Merge {
+    /**
+     * Constructs the object.
+     */
+    Merge(){
 
+    }
     /**
      * merging two sorted array into one sorted array.
      *

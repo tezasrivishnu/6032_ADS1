@@ -105,7 +105,7 @@ class Steque {
     /**
      * clearing the steque.
      */
-    public void makingnull() {
+    public void clear() {
         head = null;
         tail = null;
         size = 0;
@@ -115,7 +115,7 @@ class Steque {
      * complexity O(N).
      * because we are iterating through complete steque.
      */
-    public void toprint() {
+    public void toPrint() {
         if (size == 0) {
             System.out.println("Steque is empty.");
             return;
@@ -158,21 +158,21 @@ public final class Solution {
             // String token = scan.nextLine();
             String[] tokens = scan.nextLine().split(" ");
             if (tokens[0].length() == 0) {
-                steque.makingnull();
+                steque.clear();
                 System.out.println();
             }
             switch (tokens[0]) {
             case "push":
                 steque.push(Integer.parseInt(tokens[1]));
-                steque.toprint();
+                steque.toPrint();
                 break;
             case "enqueue":
                 steque.enqueue(Integer.parseInt(tokens[1]));
-                steque.toprint();
+                steque.toPrint();
                 break;
             case "pop":
                 steque.pop();
-                steque.toprint();
+                steque.toPrint();
                 break;
             default:
                 break;

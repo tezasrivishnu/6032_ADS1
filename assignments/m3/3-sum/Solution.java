@@ -4,7 +4,13 @@ import java.util.Arrays;
  * Class for solution.
  * @author tezasrivishnu
  */
-class Solution {
+final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+
+    }
     /**
      * main program for the class solution.
      *
@@ -12,13 +18,21 @@ class Solution {
      */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        Solution sol = new Solution();
+        ThreeSum sum = new ThreeSum();
         int input = sc.nextInt();
         long[] inputarray = new long[input];
         for (int i = 0; i < input; i++) {
             inputarray[i] = sc.nextLong();
         }
-        System.out.println(sol.threeSum(inputarray));
+        System.out.println(sum.threeSum(inputarray));
+    }
+}
+class ThreeSum {
+    /**
+     * Constructs the object.
+     */
+    ThreeSum() {
+
     }
     /**
      * finding if sum of three elements is zero using 3-sum complexity.

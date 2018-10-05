@@ -1,0 +1,24 @@
+########## Testcase 0: Passed ##########
+Expected Output: 
+70
+Your Output: 
+70
+----------------------------------------
+########## Testcase 1: Passed ##########
+Expected Output: 
+528
+Your Output: 
+528
+----------------------------------------
+########## Testcase 2: Passed ##########
+Expected Output: 
+4039
+Your Output: 
+4039
+----------------------------------------
+########## Testcase 3: Passed ##########
+Expected Output: 
+32074
+Your Output: 
+32074
+----------------------------------------

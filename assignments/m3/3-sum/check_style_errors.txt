@@ -1,4 +1,2 @@
 Starting audit...
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m3\3-sum\Solution.java:30: Missing a Javadoc comment. [JavadocType]
 Audit done.
-Checkstyle ends with 1 errors.

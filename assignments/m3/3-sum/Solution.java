@@ -27,6 +27,9 @@ final class Solution {
         System.out.println(sum.threeSum(inputarray));
     }
 }
+/**
+ * Class for three sum.
+ */
 class ThreeSum {
     /**
      * Constructs the object.

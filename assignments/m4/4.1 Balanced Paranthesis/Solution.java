@@ -55,6 +55,12 @@ class CharacterStack {
  */
 class Solution {
     /**
+     * Constructs the object.
+     */
+    private Solution() {
+
+    }
+    /**
      * main class for the solution class.
      *
      * @param      args  The arguments
@@ -69,6 +75,9 @@ class Solution {
         }
     }
 }
+/**
+ * Class for balanced paranthesis.
+ */
 class BalancedParanthesis {
     /**
      * Constructs the object.

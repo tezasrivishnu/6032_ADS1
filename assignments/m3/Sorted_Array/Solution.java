@@ -3,7 +3,13 @@ import java.util.Scanner;
  * Class for solution.
  * @author tezasrivishnu.
  */
-class Solution {
+final class Solution {
+    /**
+     * Constructs the object.
+     */
+    Solution() {
+
+    }
     /**
      * main program for solution class.
      *
@@ -37,7 +43,7 @@ class Merge {
     /**
      * Constructs the object.
      */
-    Merge(){
+    Merge() {
 
     }
     /**

@@ -1,0 +1,5 @@
+Starting audit...
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m4\4.1 Balanced Paranthesis\Solution.java:56:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m4\4.1 Balanced Paranthesis\Solution.java:72: Missing a Javadoc comment. [JavadocType]
+Audit done.
+Checkstyle ends with 2 errors.

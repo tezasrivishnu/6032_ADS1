@@ -1,4 +1,2 @@
 Starting audit...
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m12\Assignment-1\Solution.java:37:35: '6' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 1 errors.

@@ -34,7 +34,7 @@ final class Solution {
                             Integer.parseInt(array[1 + 2]),
                             Integer.parseInt(array[2 + 2]),
                             Integer.parseInt(array[2 + 2 + 1]),
-                            array[6]));
+                            array[2 + 2 + 2]));
       n += 1;
     }
     info.sort();

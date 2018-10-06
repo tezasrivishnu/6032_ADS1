@@ -1,5 +1,13 @@
 import java.util.Scanner;
+/**
+ * Class for solution.
+ */
 class Solution {
+	/**
+	 * main function for the program.
+	 * complexity O(n) as we are taking input n times.
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int students = scan.nextInt();
@@ -11,7 +19,7 @@ class Solution {
 		int n = 0;
 		Information info = new Information(students);
 		Insertion insert = new Insertion(unreserved, bcreserved,
-		                                 screserved, streserved);
+		                                 screserved, streserved, vacancies);
 		while (n < students) {
 			String[] array = scan.next().split(",");
 			info.add(new Students(array[0], array[1],
@@ -113,17 +121,29 @@ class Information {
 }
 class Insertion {
 	Insertion() {}
-	int open;
-	int bc;
-	int sc;
-	int st;
-	int vacancies;
-	Insertion(int one, int two, int three, int four) {
+	static int open;
+	static int bc;
+	static int sc;
+	static int st;
+	static int vacancies;
+	Insertion(int one, int two, int three, int four, int vacancy) {
 		open = one;
 		bc = two;
 		sc = three;
 		st = four;
-		vacancies = open + bc + sc + st;
+		//stem.out.println(vacancy);
+		vacancies = vacancy;
+	}
+	public static int getOpen() {
+		return open;
+	}public static int getBC() {
+		return bc;
+	}public static int getSC() {
+		return sc;
+	}public static int getST() {
+		return st;
+	}public static int getSTVacancy() {
+		return vacancies;
 	}
 	public void sort(Students[] a) {
 		int n = a.length;
@@ -134,7 +154,7 @@ class Insertion {
 		}
 		System.out.println(show(a));
 		System.out.println();
-		System.out.println(toppers(a));
+		System.out.print(toppers(a));
 	}
 	private boolean less(Students v, Students w) {
 		return v.compareTo(w) > 0;
@@ -157,49 +177,50 @@ class Insertion {
 		       + a[i].getCategory();
 		return str;
 	}
-	public String toppers(Students[] a) {
+	public static String toppers(Students[] a) {
 		String str = "";
 		int i = 0;
-		int vacancie = 0;
+		int vacan = 0;
 		int op = 0;
 		int bc1 = 0;
 		int sc1 = 0;
 		int st1 = 0;
 		for (i = 0; i < a.length - 1; i++) {
 			int j = i + 1;
-			while (vacancie < vacancies) {
-				if (a[i].getCategory().equals("open") && op < open
+			while (vacan < Insertion.getSTVacancy()) {
+				if (a[i].getCategory().equals("OPEN") && op < Insertion.getOpen()
 				        && a[i].getTotal() > a[j].getTotal()) {
 					str += a[i].getName() + "," +
 					       a[i].getTotal() + "," + a[i].getCategory()
 					       + "\n";
 					op += 1;
-					vacancie += 1;
+					vacan += 1;
 				}
-				if (a[i].getCategory().equals("BC") && bc1 < bc
+				if (a[i].getCategory().equals("BC") && bc1 < Insertion.getBC()
 				        && a[i].getTotal() > a[j].getTotal()) {
 					str += a[i].getName() + "," +
 					       a[i].getTotal() + "," + a[i].getCategory()
 					       + "\n";
 					bc1 += 1;
-					vacancie += 1;
-				} if (a[i].getCategory().equals("SC") && sc1 < sc
+					vacan += 1;
+				} if (a[i].getCategory().equals("SC") && sc1 < Insertion.getSC()
 				        && a[i].getTotal() > a[j].getTotal()) {
 					str += a[i].getName() + "," +
 					       a[i].getTotal() + "," + a[i].getCategory()
 					       + "\n";
 					sc1 += 1;
-					vacancie += 1;
-				} if (a[i].getCategory().equals("ST") && st1 < st
+					vacan += 1;
+				} if (a[i].getCategory().equals("ST") && st1 < Insertion.getST()
 				        && a[i].getTotal() > a[j].getTotal()) {
 					str += a[i].getName() + "," +
 					       a[i].getTotal() + "," + a[i].getCategory()
 					       + "\n";
 					st1 += 1;
-					vacancie += 1;
+					vacan += 1;
 				}
 			}
 		}
+		System.out.println(str);
 		return str;
 	}
 }

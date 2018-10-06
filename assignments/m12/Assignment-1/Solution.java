@@ -11,15 +11,15 @@ class Solution {
 		int n = 0;
 		Information info = new Information(students);
 		Insertion insert = new Insertion(unreserved, bcreserved,
-			screserved, streserved);
+		                                 screserved, streserved);
 		while (n < students) {
 			String[] array = scan.next().split(",");
 			info.add(new Students(array[0], array[1],
 			                      Integer.parseInt(array[2]),
 			                      Integer.parseInt(array[3]),
-			                      Integer.parseInt(array[4]), 
+			                      Integer.parseInt(array[4]),
 			                      Integer.parseInt(array[5]), array[6]));
-			n+=1;
+			n += 1;
 		}
 		info.sort();
 	}
@@ -68,7 +68,7 @@ class Students {
 	}
 	public int compareTo(Students two) {
 		if ((this.getTotal() == two.getTotal())
-			&& (this.getSub3() == two.getSub3())
+		        && (this.getSub3() == two.getSub3())
 		        && (this.getSub2() == two.getSub2())) {
 			String[] thisdob = this.getDOB().split("-");
 			String[] twodob = two.getDOB().split("-");
@@ -93,7 +93,6 @@ class Information {
 	int size;
 	Insertion merge;
 	Information(int n) {
-		System.out.println(n);
 		students = new Students[n];
 		size = 0;
 		merge = new Insertion();
@@ -108,7 +107,7 @@ class Information {
 	}
 
 	// public String toString(Students[] a) {
-		
+
 	// }
 
 }
@@ -119,64 +118,90 @@ class Insertion {
 	int sc;
 	int st;
 	int vacancies;
-    Insertion(int one, int two, int three, int four) { 
-    	open = one;
-    	bc = two;
-    	sc = three;
-    	st = four;
-    	vacancies = open + bc + sc + st;
-    }
-    public void sort(Students[] a) {
-        int n = a.length;
-        for (int i = 0; i < n; i++) {
-            for (int j = i; j > 0 && less(a[j], a[j-1]); j--) {
-                exch(a, j, j-1);
-            }
-        }
-        System.out.println(show(a));
-        System.out.println();
-        System.out.println(toppers(a));
-    }
-    private boolean less(Students v, Students w) {
-        return v.compareTo(w) > 0;
-   }
-    private static void exch(Students[] a, int i, int j) {
-        Students swap = a[i];
-        a[i] = a[j];
-        a[j] = swap;
-    }
-    public String show(Students[] a) {
-        String str = "";
+	Insertion(int one, int two, int three, int four) {
+		open = one;
+		bc = two;
+		sc = three;
+		st = four;
+		vacancies = open + bc + sc + st;
+	}
+	public void sort(Students[] a) {
+		int n = a.length;
+		for (int i = 0; i < n; i++) {
+			for (int j = i; j > 0 && less(a[j], a[j - 1]); j--) {
+				exch(a, j, j - 1);
+			}
+		}
+		System.out.println(show(a));
+		System.out.println();
+		System.out.println(toppers(a));
+	}
+	private boolean less(Students v, Students w) {
+		return v.compareTo(w) > 0;
+	}
+	private static void exch(Students[] a, int i, int j) {
+		Students swap = a[i];
+		a[i] = a[j];
+		a[j] = swap;
+	}
+	public String show(Students[] a) {
+		String str = "";
 		int i = 0;
 		for (i = 0; i < a.length - 1; i++) {
-			int total = (a[i].getSub1() + 
-			       a[i].getSub2()
-			        + a[i].getSub3());
 			str += a[i].getName() + "," +
-			        total + "," + a[i].getCategory()
-			        + "\n";
+			       a[i].getTotal() + "," + a[i].getCategory()
+			       + "\n";
 		}
 		str += a[i].getName() + "," +
-		       a[i].getTotal() + "," 
-		        + a[i].getCategory();
-		 return str;
-    }
-    public String toppers(Students[] a) {
-    	String str = "";
-    	int i = 0;
-    	for (i = 0; i<vacancies; i++) {
-    		int total = (a[i].getSub1() + 
-			       a[i].getSub2()
-			        + a[i].getSub3());
-			str += a[i].getName() + "," +
-			        total + "," + a[i].getCategory()
-			        + "\n";
-    	}
-    	str += a[i].getName() + "," +
-		       a[i].getTotal() + "," 
-		        + a[i].getCategory();
-    	return str;
-    }
+		       a[i].getTotal() + ","
+		       + a[i].getCategory();
+		return str;
+	}
+	public String toppers(Students[] a) {
+		String str = "";
+		int i = 0;
+		int vacancie = 0;
+		int op = 0;
+		int bc1 = 0;
+		int sc1 = 0;
+		int st1 = 0;
+		for (i = 0; i < a.length - 1; i++) {
+			int j = i + 1;
+			while (vacancie < vacancies) {
+				if (a[i].getCategory().equals("open") && op < open
+				        && a[i].getTotal() > a[j].getTotal()) {
+					str += a[i].getName() + "," +
+					       a[i].getTotal() + "," + a[i].getCategory()
+					       + "\n";
+					op += 1;
+					vacancie += 1;
+				}
+				if (a[i].getCategory().equals("BC") && bc1 < bc
+				        && a[i].getTotal() > a[j].getTotal()) {
+					str += a[i].getName() + "," +
+					       a[i].getTotal() + "," + a[i].getCategory()
+					       + "\n";
+					bc1 += 1;
+					vacancie += 1;
+				} if (a[i].getCategory().equals("SC") && sc1 < sc
+				        && a[i].getTotal() > a[j].getTotal()) {
+					str += a[i].getName() + "," +
+					       a[i].getTotal() + "," + a[i].getCategory()
+					       + "\n";
+					sc1 += 1;
+					vacancie += 1;
+				} if (a[i].getCategory().equals("ST") && st1 < st
+				        && a[i].getTotal() > a[j].getTotal()) {
+					str += a[i].getName() + "," +
+					       a[i].getTotal() + "," + a[i].getCategory()
+					       + "\n";
+					st1 += 1;
+					vacancie += 1;
+				}
+			}
+		}
+		return str;
+	}
 }
 // class Merge {
 // 	public void sort(Students[] a) {
@@ -184,7 +209,7 @@ class Insertion {
 // 		sort(a, aux, 0, a.length - 1);
 // 	}
 // 	private void sort(Students[] a, Students[] aux, int lo, int hi) {
-// 		if (hi <= lo){ 
+// 		if (hi <= lo){
 // 			return;
 // 		}
 // 		int mid = lo + (hi - lo) / 2;

@@ -6,7 +6,7 @@ final class Solution {
 	/**
 	 * Constructs the object.
 	 */
-	Solution() {
+	private Solution() {
 
 	}
 	/**
@@ -31,9 +31,9 @@ final class Solution {
 			String[] array = scan.next().split(",");
 			info.add(new Students(array[0], array[1],
 			                      Integer.parseInt(array[2]),
-			                      Integer.parseInt(array[3]),
-			                      Integer.parseInt(array[4]),
-			                      Integer.parseInt(array[5]),
+			                      Integer.parseInt(array[1+2]),
+			                      Integer.parseInt(array[2+2]),
+			                      Integer.parseInt(array[2+2+1]),
 			                      array[6]));
 			n += 1;
 		}
@@ -45,11 +45,11 @@ final class Solution {
  */
 class Students {
 	/**
-	 * declarig the string studentname;
+	 * declarig the string studentname.
 	 */
 	private String studentname;
 	/**
-	 * declarig the string datebirth;
+	 * declarig the string datebirth.
 	 */
 	private String datebirth;
 	/**
@@ -168,12 +168,12 @@ class Students {
 	 */
 	public int compareTo(final Students two) {
 		if ((this.getTotal() == two.getTotal())
-		        && (this.getSub3() == two.getSub3())
-		        && (this.getSub2() == two.getSub2())) {
+		    && (this.getSub3() == two.getSub3())
+		    && (this.getSub2() == two.getSub2())) {
 			String[] thisdob = this.getDOB().split("-");
 			String[] twodob = two.getDOB().split("-");
 			if (Integer.parseInt(thisdob[2])
-			        < Integer.parseInt(twodob[2])) {
+			    < Integer.parseInt(twodob[2])) {
 				return -1;
 			} else {
 				return 1;
@@ -242,10 +242,25 @@ class Insertion {
 	 * Constructs the object.
 	 */
 	Insertion() {}
+	/**
+	 * declaring int open.
+	 */
 	private static int open;
+	/**
+	 * declaring int bc.
+	 */
 	private static int bc;
+	/**
+	 * declaring int sc.
+	 */
 	private static int sc;
+	/**
+	 * declaring int st.
+	 */
 	private static int st;
+	/**
+	 * declaring int vacancies.
+	 */
 	private static int vacancies;
 	/**
 	 * Constructs the object.
@@ -316,7 +331,7 @@ class Insertion {
 		int n = a.length;
 		for (int i = 0; i < n; i++) {
 			for (int j = i; j > 0 && less(a[j],
-				a[j - 1]); j--) {
+			                              a[j - 1]); j--) {
 				exch(a, j, j - 1);
 			}
 		}
@@ -343,7 +358,7 @@ class Insertion {
 	 * @param      j     index.
 	 */
 	private static void exch(final Students[] a,
-		final int i, final int j) {
+	                         final int i, final int j) {
 		Students swap = a[i];
 		a[i] = a[j];
 		a[j] = swap;
@@ -388,8 +403,8 @@ class Insertion {
 			int j = i + 1;
 			while (vacan < Insertion.getSTVacancy()) {
 				if (a[i].getCategory().equals("OPEN")
-					&& op < Insertion.getOpen()
-				        && a[i].getTotal() > a[j].getTotal()) {
+				    && op < Insertion.getOpen()
+				    && a[i].getTotal() > a[j].getTotal()) {
 					str += a[i].getName() + "," +
 					       a[i].getTotal() + ","
 					       + a[i].getCategory()
@@ -398,8 +413,8 @@ class Insertion {
 					vacan += 1;
 				}
 				if (a[i].getCategory().equals("BC")
-					&& bc1 < Insertion.getBC()
-				        && a[i].getTotal() > a[j].getTotal()) {
+				    && bc1 < Insertion.getBC()
+				    && a[i].getTotal() > a[j].getTotal()) {
 					str += a[i].getName() + "," +
 					       a[i].getTotal() + ","
 					       + a[i].getCategory()
@@ -407,8 +422,8 @@ class Insertion {
 					bc1 += 1;
 					vacan += 1;
 				} if (a[i].getCategory().equals("SC")
-					&& sc1 < Insertion.getSC()
-				        && a[i].getTotal() > a[j].getTotal()) {
+				      && sc1 < Insertion.getSC()
+				      && a[i].getTotal() > a[j].getTotal()) {
 					str += a[i].getName() + "," +
 					       a[i].getTotal() + ","
 					       + a[i].getCategory()
@@ -416,8 +431,8 @@ class Insertion {
 					sc1 += 1;
 					vacan += 1;
 				} if (a[i].getCategory().equals("ST")
-					&& st1 < Insertion.getST()
-				        && a[i].getTotal() > a[j].getTotal()) {
+				      && st1 < Insertion.getST()
+				      && a[i].getTotal() > a[j].getTotal()) {
 					str += a[i].getName() + "," +
 					       a[i].getTotal() + ","
 					       + a[i].getCategory()

@@ -2,13 +2,19 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	Solution() {
+
+	}
 	/**
 	 * main function for the program.
 	 * complexity O(n) as we are taking input n times.
 	 * @param      args  The arguments
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int students = scan.nextInt();
 		int vacancies = scan.nextInt();
@@ -19,32 +25,74 @@ class Solution {
 		int n = 0;
 		Information info = new Information(students);
 		Insertion insert = new Insertion(unreserved, bcreserved,
-		                                 screserved, streserved, vacancies);
+		                                 screserved,
+		                                 streserved, vacancies);
 		while (n < students) {
 			String[] array = scan.next().split(",");
 			info.add(new Students(array[0], array[1],
 			                      Integer.parseInt(array[2]),
 			                      Integer.parseInt(array[3]),
 			                      Integer.parseInt(array[4]),
-			                      Integer.parseInt(array[5]), array[6]));
+			                      Integer.parseInt(array[5]),
+			                      array[6]));
 			n += 1;
 		}
 		info.sort();
 	}
 }
+/**
+ * Class for students.
+ */
 class Students {
-	String studentname;
-	String datebirth;
-	int subject1;
-	int subject2;
-	int subject3;
-	int totalmarks;
-	String category;
+	/**
+	 * declarig the string studentname;
+	 */
+	private String studentname;
+	/**
+	 * declarig the string datebirth;
+	 */
+	private String datebirth;
+	/**
+	 * declarig the int subject1.
+	 */
+	private int subject1;
+	/**
+	 * declarig the int subject2.
+	 */
+	private int subject2;
+	/**
+	 * declarig the int subject3.
+	 */
+	private int subject3;
+	/**
+	 * declarig the string total marks.
+	 */
+	private int totalmarks;
+	/**
+	 * declarig the string category.
+	 */
+	private String category;
+	/**
+	 * Constructs the object.
+	 */
 	Students() {
 
 	}
-	Students(String name, String dob, int sub1,
-	         int sub2, int sub3, int total, String reservation) {
+	/**
+	 * Constructs the object.
+	 * comlexity O(1)
+	 * @param      name         The name
+	 * @param      dob          The dob
+	 * @param      sub1         The sub 1 marks
+	 * @param      sub2         The sub 2 marks
+	 * @param      sub3         The sub 3 marks
+	 * @param      total        The total marks
+	 * @param      reservation  The reservation category
+	 */
+	Students(final String name, final String dob,
+	         final int sub1,
+	         final int sub2, final int sub3,
+	         final int total, final String reservation) {
 		this.studentname = name;
 		this.datebirth = dob;
 		this.subject1 = sub1;
@@ -53,28 +101,72 @@ class Students {
 		this.totalmarks = total;
 		this.category = reservation;
 	}
+	/**
+	 * Gets the name.
+	 * complexity O(1)
+	 *
+	 * @return     The name.
+	 */
 	public String getName() {
 		return studentname;
 	}
+	/**
+	 * Gets the dob.
+	 * complexity O(1)
+	 * @return     The dob.
+	 */
 	public String getDOB() {
 		return datebirth;
 	}
+	/**
+	 * Gets the sub 1.
+	 * complexity O(1)
+	 * @return     The sub 1.
+	 */
 	public int getSub1() {
 		return subject1;
 	}
+	/**
+	 * Gets the sub 2.
+	 * complexity O(1)
+	 * @return     The sub 2.
+	 */
 	public int getSub2() {
 		return subject2;
 	}
+	/**
+	 * Gets the sub 3.
+	 * complexity O(1)
+	 * @return     The sub 3.
+	 */
 	public int getSub3() {
 		return subject3;
 	}
+	/**
+	 * Gets the total.
+	 * complexity O(1)
+	 * @return     total marks.
+	 */
 	public int getTotal() {
 		return totalmarks;
 	}
+	/**
+	 * Gets the category.
+	 *complexity O(1)
+	 * @return     The category.
+	 */
 	public String getCategory() {
 		return category;
 	}
-	public int compareTo(Students two) {
+	/**
+	 * comparing the objects.
+	 * complexity O(1)
+	 *
+	 * @param      two   Two
+	 *
+	 * @return     true or false.
+	 */
+	public int compareTo(final Students two) {
 		if ((this.getTotal() == two.getTotal())
 		        && (this.getSub3() == two.getSub3())
 		        && (this.getSub2() == two.getSub2())) {
@@ -96,37 +188,77 @@ class Students {
 		}
 	}
 }
+/**
+ * Class for information.
+ */
 class Information {
-	Students[] students;
-	int size;
-	Insertion merge;
-	Information(int n) {
+	/**
+	 * declaring the students array.
+	 */
+	private Students[] students;
+	/**
+	 * declaring the int size.
+	 */
+	private int size;
+	/**
+	 * declarin the insertion class object.
+	 */
+	private Insertion merge;
+	/**
+	 * Constructs the object.
+	 * complexity O(1)
+	 * @param      n     { parameter_description }
+	 */
+	Information(final int n) {
 		students = new Students[n];
 		size = 0;
 		merge = new Insertion();
 	}
-	public void add(Students student) {
+	/**
+	 * adding a element in student array.
+	 * complexity O(1)
+	 *
+	 * @param      student  The student
+	 */
+	public void add(final Students student) {
 		students[size] = student;
 		size += 1;
 	}
+	/**
+	 *we are callin the insertion sort.
+	 * comlexity O(1).
+	 */
 	public void sort() {
 		merge.sort(students);
 		//System.out.println(merge.show(students));
 	}
 
-	// public String toString(Students[] a) {
-
-	// }
-
 }
+/**
+ * Class for insertion.
+ */
 class Insertion {
+	/**
+	 * Constructs the object.
+	 */
 	Insertion() {}
-	static int open;
-	static int bc;
-	static int sc;
-	static int st;
-	static int vacancies;
-	Insertion(int one, int two, int three, int four, int vacancy) {
+	private static int open;
+	private static int bc;
+	private static int sc;
+	private static int st;
+	private static int vacancies;
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      one      One
+	 * @param      two      Two
+	 * @param      three    Three
+	 * @param      four     Four
+	 * @param      vacancy  The vacancy
+	 */
+	Insertion(final int one, final int two,
+	          final int three, final int four,
+	          final int vacancy) {
 		open = one;
 		bc = two;
 		sc = three;
@@ -134,21 +266,57 @@ class Insertion {
 		//stem.out.println(vacancy);
 		vacancies = vacancy;
 	}
+	/**
+	 * Gets the open.
+	 *
+	 * @return     The open.
+	 */
 	public static int getOpen() {
 		return open;
-	}public static int getBC() {
+	}
+	/**
+	 * Gets the bc.
+	 *
+	 * @return     The bc.
+	 */
+	public static int getBC() {
 		return bc;
-	}public static int getSC() {
+	}
+	/**
+	 * Gets the sc.
+	 *
+	 * @return     The sc.
+	 */
+	public static int getSC() {
 		return sc;
-	}public static int getST() {
+	}
+	/**
+	 * Gets the st.
+	 *
+	 * @return     The st.
+	 */
+	public static int getST() {
 		return st;
-	}public static int getSTVacancy() {
+	}
+	/**
+	 * Gets the st vacancy.
+	 *
+	 * @return     The st vacancy.
+	 */
+	public static int getSTVacancy() {
 		return vacancies;
 	}
+	/**
+	 * insertion sort
+	 * complexity O(N^2)
+	 *
+	 * @param      a     student array
+	 */
 	public void sort(Students[] a) {
 		int n = a.length;
 		for (int i = 0; i < n; i++) {
-			for (int j = i; j > 0 && less(a[j], a[j - 1]); j--) {
+			for (int j = i; j > 0 && less(a[j],
+				a[j - 1]); j--) {
 				exch(a, j, j - 1);
 			}
 		}
@@ -156,20 +324,44 @@ class Insertion {
 		System.out.println();
 		System.out.print(toppers(a));
 	}
+	/**
+	 * comparing two objects
+	 *
+	 * @param      v     student object
+	 * @param      w     student object
+	 *
+	 * @return     true or false.
+	 */
 	private boolean less(Students v, Students w) {
 		return v.compareTo(w) > 0;
 	}
-	private static void exch(Students[] a, int i, int j) {
+	/**
+	 * swapping of elements.
+	 *
+	 * @param      a     student array.
+	 * @param      i     index.
+	 * @param      j     index.
+	 */
+	private static void exch(final Students[] a,
+		final int i, final int j) {
 		Students swap = a[i];
 		a[i] = a[j];
 		a[j] = swap;
 	}
-	public String show(Students[] a) {
+	/**
+	 * string representation of elements.
+	 * complexity O(N)
+	 * @param      a     array
+	 *
+	 * @return     string
+	 */
+	public String show(final Students[] a) {
 		String str = "";
 		int i = 0;
 		for (i = 0; i < a.length - 1; i++) {
 			str += a[i].getName() + "," +
-			       a[i].getTotal() + "," + a[i].getCategory()
+			       a[i].getTotal() + ","
+			       + a[i].getCategory()
 			       + "\n";
 		}
 		str += a[i].getName() + "," +
@@ -177,6 +369,13 @@ class Insertion {
 		       + a[i].getCategory();
 		return str;
 	}
+	/**
+	 * tring representation of toppers.
+	 * complexity O(N)
+	 * @param      a     student array.
+	 *
+	 * @return     string.
+	 */
 	public static String toppers(Students[] a) {
 		String str = "";
 		int i = 0;
@@ -188,75 +387,46 @@ class Insertion {
 		for (i = 0; i < a.length - 1; i++) {
 			int j = i + 1;
 			while (vacan < Insertion.getSTVacancy()) {
-				if (a[i].getCategory().equals("OPEN") && op < Insertion.getOpen()
+				if (a[i].getCategory().equals("OPEN")
+					&& op < Insertion.getOpen()
 				        && a[i].getTotal() > a[j].getTotal()) {
 					str += a[i].getName() + "," +
-					       a[i].getTotal() + "," + a[i].getCategory()
+					       a[i].getTotal() + ","
+					       + a[i].getCategory()
 					       + "\n";
 					op += 1;
 					vacan += 1;
 				}
-				if (a[i].getCategory().equals("BC") && bc1 < Insertion.getBC()
+				if (a[i].getCategory().equals("BC")
+					&& bc1 < Insertion.getBC()
 				        && a[i].getTotal() > a[j].getTotal()) {
 					str += a[i].getName() + "," +
-					       a[i].getTotal() + "," + a[i].getCategory()
+					       a[i].getTotal() + ","
+					       + a[i].getCategory()
 					       + "\n";
 					bc1 += 1;
 					vacan += 1;
-				} if (a[i].getCategory().equals("SC") && sc1 < Insertion.getSC()
+				} if (a[i].getCategory().equals("SC")
+					&& sc1 < Insertion.getSC()
 				        && a[i].getTotal() > a[j].getTotal()) {
 					str += a[i].getName() + "," +
-					       a[i].getTotal() + "," + a[i].getCategory()
+					       a[i].getTotal() + ","
+					       + a[i].getCategory()
 					       + "\n";
 					sc1 += 1;
 					vacan += 1;
-				} if (a[i].getCategory().equals("ST") && st1 < Insertion.getST()
+				} if (a[i].getCategory().equals("ST")
+					&& st1 < Insertion.getST()
 				        && a[i].getTotal() > a[j].getTotal()) {
 					str += a[i].getName() + "," +
-					       a[i].getTotal() + "," + a[i].getCategory()
+					       a[i].getTotal() + ","
+					       + a[i].getCategory()
 					       + "\n";
 					st1 += 1;
 					vacan += 1;
 				}
 			}
 		}
-		System.out.println(str);
 		return str;
 	}
 }
-// class Merge {
-// 	public void sort(Students[] a) {
-// 		Students[] aux = new Students[a.length];
-// 		sort(a, aux, 0, a.length - 1);
-// 	}
-// 	private void sort(Students[] a, Students[] aux, int lo, int hi) {
-// 		if (hi <= lo){
-// 			return;
-// 		}
-// 		int mid = lo + (hi - lo) / 2;
-// 		sort(a, aux, lo, mid);
-// 		sort(a, aux, mid + 1, hi);
-// 		merge(a, aux, lo, mid, hi);
-// 	}
-// 	private void merge(Students[] a, Students[] aux,
-// 	                          int lo, int mid, int hi) {
-// 		for (int k = lo; k <= hi; k++) {
-// 			aux[k] = a[k];
-// 		}
-// 		int i = lo, j = mid + 1;
-// 		for (int k = lo; k <= hi; k++) {
-// 			if (i > mid) {
-// 				a[k] = aux[j++];
-// 			} else if (j > hi) {
-// 				a[k] = aux[i++];
-// 			} else if (less(aux[j], aux[i])) {
-// 				a[k] = aux[j++];
-// 			} else    {
-// 				a[k] = aux[i++];
-// 			}
-// 		}
-// 	}
-// 	private static boolean less(Students v, Students w) {
-// 		return v.compareTo(w) < 0;
-// 	}
-// }

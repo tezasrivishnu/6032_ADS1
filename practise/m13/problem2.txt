@@ -1,0 +1,2 @@
+Yes
+For a min heap we must have parent node must be always smaller or equal to the child node.Since the array is in sorted order and they are at a greater index both children are greater than or equal to the parent this will satisfy the min heap.

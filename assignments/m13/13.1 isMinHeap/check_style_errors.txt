@@ -1,0 +1,13 @@
+Starting audit...
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m13\13.1 isMinHeap\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m13\13.1 isMinHeap\Solution.java:76:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m13\13.1 isMinHeap\Solution.java:76:9: Variable 'len' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m13\13.1 isMinHeap\Solution.java:77:6: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m13\13.1 isMinHeap\Solution.java:77:9: Variable 'pq' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m13\13.1 isMinHeap\Solution.java:89:5: Redundant 'public' modifier. [RedundantModifier]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m13\13.1 isMinHeap\Solution.java:91:34: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m13\13.1 isMinHeap\Solution.java:91:35: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m13\13.1 isMinHeap\Solution.java:93:17: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m13\13.1 isMinHeap\Solution.java:93:18: '+' is not followed by whitespace. [WhitespaceAround]
+Audit done.
+Checkstyle ends with 10 errors.

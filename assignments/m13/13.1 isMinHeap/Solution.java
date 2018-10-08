@@ -11,7 +11,7 @@ final class Solution {
     }
     /**
      * main method for program.
-     *
+     * complexity O(n) as we are taking inuput n times.
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
@@ -118,7 +118,7 @@ class MinHeap<E> {
     }
     /**
      * Constructs the object.
-     *
+     * complexity O(n) as we are copying the array.
      * @param      array  The generic type array
      */
     MinHeap(final E[] array) {
@@ -131,7 +131,8 @@ class MinHeap<E> {
     }
     /**
      * Determines if the array is min. hepa or not.
-     *
+     * complexity O(logn) as we are iterating the parent and child and from
+     * that child nodes.
      * @param      index  The index of the array.
      *
      * @return     True if mininimum heap, False otherwise.
@@ -152,7 +153,7 @@ class MinHeap<E> {
     }
     /**
      * checking which element is large.
-     *
+     * complexity O(1) as we are comparing the two elements.
      * @param      i     index.
      * @param      j     index.
      *

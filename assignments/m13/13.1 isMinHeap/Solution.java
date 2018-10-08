@@ -22,21 +22,34 @@ final class Solution {
             int number = scan.nextInt();
             for (int i = 0; i < number; i++) {
                 String[] tokens = scan.next().split(",");
-                MinHeap<String> string = new MinHeap<String>(tokens);
+                try {
+                    if (tokens[0].length() == 0) {
+                        throw new Exception("false");
+                    } else {
+                        MinHeap<String> string = new MinHeap<String>(tokens);
+                    }
+                } catch (Exception e) {
+                    System.out.println("false");
+                }
             }
             break;
         case "Float":
             number = scan.nextInt();
             for (int i = 0; i < number; i++) {
-                String[] tokens = scan.next().split(",");
-                Float[] token = new Float[tokens.length];
-                if (tokens[0].length() == 0) {
-                    System.out.println(false);
-                } else {
-                    for (int j = 0; j < tokens.length; j++) {
-                        token[j] = Float.parseFloat(tokens[j]);
+                try {
+                    String line = scan.next();
+                    if (line.length() == 0) {
+                        throw new Exception("false");
+                    } else {
+                        String[] tokens = line.split(",");
+                        Float[] token = new Float[tokens.length];
+                        for (int j = 0; j < tokens.length; j++) {
+                            token[j] = Float.parseFloat(tokens[j]);
+                        }
+                        MinHeap<Float> floa = new MinHeap<Float>(token);
                     }
-                    MinHeap<Float> floa = new MinHeap<Float>(token);
+                } catch (Exception e) {
+                    System.out.println("false");
                 }
             }
             break;
@@ -44,22 +57,38 @@ final class Solution {
             number = scan.nextInt();
             for (int i = 0; i < number; i++) {
                 String[] tokens = scan.next().split(",");
-                Integer[] token = new Integer[tokens.length];
-                for (int j = 0; j < tokens.length; j++) {
-                    token[j] = Integer.parseInt(tokens[j]);
+                try {
+                    if (tokens[0].length() == 0) {
+                        throw new Exception("false");
+                    } else {
+                        Integer[] token = new Integer[tokens.length];
+                        for (int j = 0; j < tokens.length; j++) {
+                            token[j] = Integer.parseInt(tokens[j]);
+                        }
+                        MinHeap<Integer> inte = new MinHeap<Integer>(token);
+                    }
+                } catch (Exception e) {
+                    System.out.println("false");
                 }
-                MinHeap<Integer> inte = new MinHeap<Integer>(token);
             }
             break;
         case "Double":
             number = scan.nextInt();
             for (int i = 0; i < number; i++) {
                 String[] tokens = scan.next().split(",");
-                Double[] token = new Double[tokens.length];
-                for (int j = 0; j < tokens.length; j++) {
-                    token[j] = Double.parseDouble(tokens[j]);
+                try {
+                    if (tokens[0].length() == 0) {
+                        throw new Exception("false");
+                    } else {
+                        Double[] token = new Double[tokens.length];
+                        for (int j = 0; j < tokens.length; j++) {
+                            token[j] = Double.parseDouble(tokens[j]);
+                        }
+                        MinHeap<Double> doub = new MinHeap<Double>(token);
+                    }
+                } catch (Exception e) {
+                    System.out.println("false");
                 }
-                MinHeap<Double> doub = new MinHeap<Double>(token);
             }
             break;
         default:
@@ -88,9 +117,9 @@ class MinHeap<E> {
      */
     public MinHeap(final E[] array) {
         len = array.length;
-        pq = (E[]) new Object[len+1];
+        pq = (E[]) new Object[len + 1];
         for (int i = 0; i < len; i++) {
-            pq[i+1] = array[i];
+            pq[i + 1] = array[i];
         }
         System.out.println(isMininimumHeap(1));
     }

@@ -1,0 +1,29 @@
+P R I O * R * * I * T * Y * * * Q U E * * * U * E
+
+insert P	P
+insert R 	P	R
+insert I 	P	R 	I
+insert O	P	R 	I 	O
+remove		R 	I 	O
+insert R 	R 	I 	O	R
+remove		I 	O 	R
+remove		I 	O
+insert I 	I 	O 	I
+remove 		O	I
+insert T 	O	I 	T
+remove		O	I
+insert Y	O	I 	Y
+remove		O	I
+remove		I
+remove
+insert Q	Q	
+insert U	Q	U	
+insert E	Q	U	E	
+remove		Q	E
+remove		E
+remove
+insert U	U
+remove
+insert E	E
+
+OUTPUT------> E

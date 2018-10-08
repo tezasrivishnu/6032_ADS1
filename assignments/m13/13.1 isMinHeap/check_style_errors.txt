@@ -1,5 +1,2 @@
 Starting audit...
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m13\13.1 isMinHeap\Solution.java:109: First sentence should end with a period. [JavadocStyle]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m13\13.1 isMinHeap\Solution.java:124:13: Parameter array should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 2 errors.

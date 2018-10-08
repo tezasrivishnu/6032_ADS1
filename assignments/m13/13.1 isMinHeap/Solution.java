@@ -107,7 +107,7 @@ class MinHeap<E> {
      */
     private int len;
     /**
-     * declaring the generic array
+     * declaring the generic array.
      */
     private E[] pq;
     /**
@@ -121,7 +121,7 @@ class MinHeap<E> {
      *
      * @param      array  The generic type array
      */
-    MinHeap(E[] array) {
+    MinHeap(final E[] array) {
         len = array.length;
         pq = (E[]) new Object[len + 1];
         for (int i = 0; i < len; i++) {

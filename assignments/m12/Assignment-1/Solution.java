@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.Arrays;
+// import java.util.Arrays;
 /**
  * Class for solution.
  */
@@ -159,7 +159,12 @@ class Students {
   public String getCategory() {
     return category;
   }
-  int getAge() {
+  /**
+   * calculating the age of a person.
+   * complexity O(1) we are just calculating a persons age.
+   * @return     The age.
+   */
+  public int getAge() {
     int age = 0;
     final int year = 2018, days = 365, month = 30, ten = 10;
     String[] token = this.getDOB().split("-");
@@ -298,7 +303,6 @@ class Insertion {
    * declaring int vacancies.
    */
   private static int vacancies;
-  boolean boo = true;
   /**
    * Constructs the object.
    *
@@ -376,7 +380,13 @@ class Insertion {
     System.out.println();
     toppers(a);
   }
-  public void sort(final Students[] a, int n) {
+  /**
+   * overriding method for sorting.
+   * complexity O(N^2/2) as we are using recursion.
+   * @param      a     student array.
+   * @param      n     length of student array.
+   */
+  public void sort(final Students[] a, final int n) {
     for (int i = 0; i < n; i++) {
       for (int j = i; j > 0 && less(a[j],
                                     a[j - 1]); j--) {
@@ -431,11 +441,9 @@ class Insertion {
     return str;
   }
   /**
-   * tring representation of toppers.
-   * complexity O(N)
+   * string representation of toppers.
+   * complexity O(N) as we are iterating over the array.
    * @param      a     student array.
-   *
-   * @return     string.
    */
   public void toppers(final Students[] a) {
     int total = getOpen() + getSC() + getST() + getBC();
@@ -496,7 +504,18 @@ class Insertion {
     sort(toppers, toppers.length);
     System.out.println(show(toppers));
   }
-  public boolean contains(final Students[] arr, final Students val, int k) {
+  /**
+   * checks if student object is present or not.
+   * complexity O(n) in worst case, if the object
+   * is present at the last index.
+   * @param      arr   The student array
+   * @param      val   The student object
+   * @param      k     size of the student array.
+   *
+   * @return     true if present else false.
+   */
+  public boolean contains(final Students[] arr,
+                          final Students val, final int k) {
     for (int i = 0; i < k; i++) {
       if (val.equals(arr[i])) {
         return true;

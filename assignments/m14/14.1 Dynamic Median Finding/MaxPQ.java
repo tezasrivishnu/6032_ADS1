@@ -1,15 +1,13 @@
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-
 /**
  *  @param <Key> the generic type of key on this priority queue
  */
 
 public class MaxPQ<Key> implements Iterable<Key> {
-    private Key[] pq;                    // store items at indices 1 to n
-    private int n;                       // number of items on priority queue
-    private Comparator<Key> comparator;  // optional comparator
+    private Key[] pq;
+    private int n;
 
     /**
      * Initializes an empty priority queue with the given initial capacity.

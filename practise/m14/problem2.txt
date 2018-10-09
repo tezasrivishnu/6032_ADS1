@@ -1,0 +1,26 @@
+MAX HEAPS:
+
+E	D	C	B	A
+E	D	C	A	B
+E	D	B	A	C
+E	D	B	C	A
+E	D	A	B	C
+E	D	A	C	B
+E	C	D	B	A
+
+B	B	A	A	A
+B	A	B	A	A                                               
+
+MIN HEAPS:
+
+A	B	C	D	E
+A	B	C	E	D
+A	B	D	E	C
+A	B	D	C	E
+A	B	C	D	E
+A	C	B	E	D
+A	C	B	D	E
+                                               
+A	A	A	B	B
+A	A	B	A	B
+A	A	B	B	A                                  

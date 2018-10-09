@@ -1,0 +1,1 @@
+Unordered array. as we can add many times and also we have to remove only few max. elements. The time will be constant in removing the elements.

@@ -298,6 +298,7 @@ class Insertion {
    * declaring int vacancies.
    */
   private static int vacancies;
+  boolean boo = true;
   /**
    * Constructs the object.
    *
@@ -484,7 +485,10 @@ class Insertion {
         }
       }
     }
-    //System.out.println(getOpen());
+    while(boo) {
+      boo = false;
+      sort(toppers);
+    }
     System.out.println(show(toppers));
   }
   public boolean contains(final Students[] arr, final Students val, int k) {

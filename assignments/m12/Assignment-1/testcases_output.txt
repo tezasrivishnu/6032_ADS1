@@ -207,14 +207,14 @@ Priyanka,70,Open
 Tanya,66,BC
 Abhishek,60,BC
 
-Exception in thread "main" java.lang.NullPointerException
-	at Insertion.show(Solution.java:419)
-	at Insertion.toppers(Solution.java:459)
-	at Insertion.sort(Solution.java:376)
-	at Information.sort(Solution.java:266)
-	at Solution.main(Solution.java:41)
+divya,99,Open
+tanvi,90,ST
+Aditya,80,Open
+priya,76,SC
+Tanya,66,BC
+Ajay,76,Open
 ----------------------------------------
-########## Testcase 4: Failed ##########
+########## Testcase 4: Passed ##########
 Expected Output: 
 divya,99,Open
 tanvi,99,Open
@@ -292,12 +292,19 @@ Aryan,32,Open
 shyam,23,Open
 Shreya,23,Open
 
-Exception in thread "main" java.lang.NullPointerException
-	at Insertion.show(Solution.java:414)
-	at Insertion.toppers(Solution.java:459)
-	at Insertion.sort(Solution.java:376)
-	at Information.sort(Solution.java:266)
-	at Solution.main(Solution.java:41)
+divya,99,Open
+tanvi,99,Open
+Ishita,99,Open
+Deepak,98,Open
+Ira,93,Open
+Raj,87,Open
+mahesh,87,Open
+riya,83,Open
+Aditya,80,Open
+priya,76,Open
+Ajay,76,Open
+Amit,76,Open
+Arjun,75,Open
 ----------------------------------------
 ########## Testcase 5: Failed ##########
 Expected Output: 
@@ -379,10 +386,19 @@ Manoj,32,SC
 Aryan,32,ST
 Shreya,23,SC
 
-Exception in thread "main" java.lang.NullPointerException
-	at Insertion.show(Solution.java:414)
-	at Insertion.toppers(Solution.java:459)
-	at Insertion.sort(Solution.java:376)
-	at Information.sort(Solution.java:266)
-	at Solution.main(Solution.java:41)
+divya,99,ST
+Deepak,99,Open
+Ishita,99,Open
+Ira,93,ST
+tanvi,90,BC
+Raj,87,BC
+mahesh,87,BC
+riya,83,Open
+Aditya,80,ST
+priya,72,SC
+varsha,66,BC
+Ajay,76,Open
+Amit,76,Open
+Arjun,75,Open
+rahul,73,Open
 ----------------------------------------

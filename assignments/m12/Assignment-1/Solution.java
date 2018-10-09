@@ -160,15 +160,15 @@ class Students {
     return category;
   }
   int getAge() {
-        int age = 0;
-        final int year = 2018, days = 365, month = 30, ten = 10;
-        String[] token = this.getDOB().split("-");
-        age += (year - Integer.parseInt(token[2])) * days;
-        age += (ten - Integer.parseInt(token[1])) * month;
-        age += Integer.parseInt(token[0]);
+    int age = 0;
+    final int year = 2018, days = 365, month = 30, ten = 10;
+    String[] token = this.getDOB().split("-");
+    age += (year - Integer.parseInt(token[2])) * days;
+    age += (ten - Integer.parseInt(token[1])) * month;
+    age += Integer.parseInt(token[0]);
 
-        return age;
-    }
+    return age;
+  }
   /**
    * comparing the objects.
    * complexity O(1)
@@ -439,7 +439,6 @@ class Insertion {
       toppers[in++] = a[i];
     }
     for (int k = getOpen(); k < a.length; k++) {
-
       if (a[k].getCategory().equals("BC") && noBC > 0) {
         toppers[in++] = a[k];
         noBC--;
@@ -455,7 +454,45 @@ class Insertion {
         noST--;
       }
     }
-    //System.out.println(Arrays.toString(toppers));
+    if (noBC > 0) {
+      for (int k = getOpen(); k < a.length; k++) {
+        if (a[k].getCategory().equals("Open") && noBC > 0) {
+          if (!contains(toppers, a[k], in)) {
+            toppers[in++] = a[k];
+            noBC--;
+          }
+        }
+      }
+    }
+    if (noSC > 0) {
+      for (int k = getOpen(); k < a.length; k++) {
+        if (a[k].getCategory().equals("Open") && noSC > 0) {
+          if (!contains(toppers, a[k], in)) {
+            toppers[in++] = a[k];
+            noSC--;
+          }
+        }
+      }
+    }
+    if (noST > 0) {
+      for (int k = getOpen(); k < a.length; k++) {
+        if (a[k].getCategory().equals("Open") && noST > 0) {
+          if (!contains(toppers, a[k], in)) {
+            toppers[in++] = a[k];
+            noST--;
+          }
+        }
+      }
+    }
+    //System.out.println(getOpen());
     System.out.println(show(toppers));
+  }
+  public boolean contains(final Students[] arr, final Students val, int k) {
+    for (int i = 0; i < k; i++) {
+      if (val.equals(arr[i])) {
+        return true;
+      }
+    }
+    return false;
   }
 }

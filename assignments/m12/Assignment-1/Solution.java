@@ -376,6 +376,14 @@ class Insertion {
     System.out.println();
     toppers(a);
   }
+  public void sort(final Students[] a, int n) {
+    for (int i = 0; i < n; i++) {
+      for (int j = i; j > 0 && less(a[j],
+                                    a[j - 1]); j--) {
+        exch(a, j, j - 1);
+      }
+    }
+  }
   /**
    * comparing two objects.
    *
@@ -485,6 +493,7 @@ class Insertion {
         }
       }
     }
+    sort(toppers, toppers.length);
     System.out.println(show(toppers));
   }
   public boolean contains(final Students[] arr, final Students val, int k) {

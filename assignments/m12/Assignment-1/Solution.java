@@ -485,10 +485,6 @@ class Insertion {
         }
       }
     }
-    while(boo) {
-      boo = false;
-      sort(toppers);
-    }
     System.out.println(show(toppers));
   }
   public boolean contains(final Students[] arr, final Students val, int k) {

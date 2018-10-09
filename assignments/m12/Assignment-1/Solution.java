@@ -458,30 +458,30 @@ class Insertion {
     if (noBC > 0) {
       for (int k = getOpen(); k < a.length; k++) {
         if (a[k].getCategory().equals("Open") && noBC > 0) {
-          if (!contains(toppers, a[k], in)) {
+          // if (!contains(toppers, a[k], in)) {
             toppers[in++] = a[k];
             noBC--;
-          }
+          // }
         }
       }
     }
     if (noSC > 0) {
       for (int k = getOpen(); k < a.length; k++) {
         if (a[k].getCategory().equals("Open") && noSC > 0) {
-          if (!contains(toppers, a[k], in)) {
+          // if (!contains(toppers, a[k], in)) {
             toppers[in++] = a[k];
             noSC--;
-          }
+          // }
         }
       }
     }
     if (noST > 0) {
       for (int k = getOpen(); k < a.length; k++) {
         if (a[k].getCategory().equals("Open") && noST > 0) {
-          if (!contains(toppers, a[k], in)) {
+          // if (!contains(toppers, a[k], in)) {
             toppers[in++] = a[k];
             noST--;
-          }
+          // }
         }
       }
     }

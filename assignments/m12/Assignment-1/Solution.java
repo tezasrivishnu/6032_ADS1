@@ -159,6 +159,16 @@ class Students {
   public String getCategory() {
     return category;
   }
+  int getAge() {
+        int age = 0;
+        final int year = 2018, days = 365, month = 30, ten = 10;
+        String[] token = this.getDOB().split("-");
+        age += (year - Integer.parseInt(token[2])) * days;
+        age += (ten - Integer.parseInt(token[1])) * month;
+        age += Integer.parseInt(token[0]);
+
+        return age;
+    }
   /**
    * comparing the objects.
    * complexity O(1)
@@ -168,24 +178,47 @@ class Students {
    * @return     true or false.
    */
   public int compareTo(final Students two) {
-    if ((this.getTotal() == two.getTotal())
-        && (this.getSub3() == two.getSub3())
-        && (this.getSub2() == two.getSub2())) {
-      String[] thisdob = this.getDOB().split("-");
-      String[] twodob = two.getDOB().split("-");
-      if (Integer.parseInt(thisdob[2])
-          < Integer.parseInt(twodob[2])) {
+    // if ((this.getTotal() == two.getTotal())
+    //     && (this.getSub3() == two.getSub3())
+    //     && (this.getSub2() == two.getSub2())) {
+    //   String[] thisdob = this.getDOB().split("-");
+    //   String[] twodob = two.getDOB().split("-");
+    //   if (Integer.parseInt(thisdob[2])
+    //       < Integer.parseInt(twodob[2])) {
+    //     return -1;
+    //   } else {
+    //     return 1;
+    //   }
+    // } else if ((this.getTotal() == two.getTotal())
+    //            && (this.getSub3() == two.getSub3())) {
+    //   return this.getSub2() - this.getSub3();
+    // } else if (((this.getTotal() == two.getTotal()))) {
+    //   return this.getSub2() - this.getSub2();
+    // } else {
+    //   return this.getTotal() - two.getTotal();
+    // // }
+    if (this.getTotal() > two.getTotal()) {
+      return 1;
+    } else if (this.getTotal() < two.getTotal()) {
+      return -1;
+    } else {
+      if (this.getSub3() > two.getSub3()) {
+        return 1;
+      } else if (this.getSub3() < two.getSub3()) {
         return -1;
       } else {
-        return 1;
+        if (this.getSub2() > two.getSub2()) {
+          return 1;
+        } else if (this.getSub2() < two.getSub2()) {
+          return -1;
+        } else {
+          if (this.getAge() < two.getAge()) {
+            return 1;
+          } else {
+            return -1;
+          }
+        }
       }
-    } else if ((this.getTotal() == two.getTotal())
-               && (this.getSub3() == two.getSub3())) {
-      return this.getSub2() - this.getSub3();
-    } else if (((this.getTotal() == two.getTotal()))) {
-      return this.getSub2() - this.getSub2();
-    } else {
-      return this.getTotal() - two.getTotal();
     }
   }
 }
@@ -412,12 +445,12 @@ class Insertion {
         noBC--;
       }
       if (a[k].getCategory().
-                 equals("SC") && noSC > 0) {
+          equals("SC") && noSC > 0) {
         toppers[in++] = a[k];
         noSC--;
       }
       if ((a[k].getCategory()).
-                 equals("ST") && noST > 0) {
+          equals("ST") && noST > 0) {
         toppers[in++] = a[k];
         noST--;
       }

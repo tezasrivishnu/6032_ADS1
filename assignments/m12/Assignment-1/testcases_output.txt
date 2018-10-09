@@ -214,7 +214,7 @@ priya,76,SC
 Tanya,66,BC
 Ajay,76,Open
 ----------------------------------------
-########## Testcase 4: Failed ##########
+########## Testcase 4: Passed ##########
 Expected Output: 
 divya,99,Open
 tanvi,99,Open
@@ -301,10 +301,10 @@ Raj,87,Open
 mahesh,87,Open
 riya,83,Open
 Aditya,80,Open
-riya,83,Open
-Aditya,80,Open
-riya,83,Open
-Aditya,80,Open
+priya,76,Open
+Ajay,76,Open
+Amit,76,Open
+Arjun,75,Open
 ----------------------------------------
 ########## Testcase 5: Failed ##########
 Expected Output: 

@@ -19,6 +19,9 @@ class Solution {
 			if (min.size() - max.size() > 1) {
 				max.insert(min.delMin());
 			}
+			if (max.size() - min.size() > 1) {
+				min.insert(max.delMax());
+			}
 			if (Math.abs(min.size() - max.size()) == 1) {
 				if (min.size() > max.size()) {
 					median = min.min();

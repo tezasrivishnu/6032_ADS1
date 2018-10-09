@@ -3,7 +3,7 @@ import java.lang.*;
 class Solution {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		int number = scan.nextInt();
+		long number = scan.nextInt();
 		MinPQ<Double> min = new MinPQ<Double>();
 		MaxPQ<Double> max = new MaxPQ<Double>();
 		double median = 0.0;

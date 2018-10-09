@@ -1,0 +1,14 @@
+Starting audit...
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m14\14.1 Dynamic Median Finding\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m14\14.1 Dynamic Median Finding\Solution.java:2: Using the '.*' form of import should be avoided - java.lang.*. [AvoidStarImport]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m14\14.1 Dynamic Median Finding\Solution.java:2:1: Redundant import from the java.lang package - java.lang.*. [RedundantImport]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m14\14.1 Dynamic Median Finding\Solution.java:3: Missing a Javadoc comment. [JavadocType]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m14\14.1 Dynamic Median Finding\Solution.java:3:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m14\14.1 Dynamic Median Finding\Solution.java:4:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m14\14.1 Dynamic Median Finding\Solution.java:4:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m14\14.1 Dynamic Median Finding\Solution.java:4:33: Parameter args should be final. [FinalParameters]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m14\14.1 Dynamic Median Finding\Solution.java:30: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m14\14.1 Dynamic Median Finding\Solution.java:53: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m14\14.1 Dynamic Median Finding\Solution.java:111: Line has trailing spaces. [RegexpSingleline]
+Audit done.
+Checkstyle ends with 11 errors.

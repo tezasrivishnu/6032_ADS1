@@ -7,7 +7,7 @@ class Solution {
 		MinPQ<Double> min = new MinPQ<Double>();
 		MaxPQ<Double> max = new MaxPQ<Double>();
 		double median = 0.0;
-		for (int i = 0; i < number; i++) {
+		for (long i = 0; i < number; i++) {
 			double input = scan.nextDouble();
 			if (input > median) {
 				min.insert(input);

@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.lang.Math;
 /**
  * Class for solution.
  */
@@ -44,7 +43,7 @@ final class Solution {
                     median = max.max();
                     System.out.println(median);
                 }
-            } 
+            }
             if (min.size() - max.size() == 0) {
                 double mini = min.delMin();
                 min.insert(mini);
@@ -67,7 +66,7 @@ final class Solution {
 //     public MinPQ(int initCapacity) {
 //         pq = new int[initCapacity + 1];
 //         n = 0;
-//     } 
+//     }
 //     /**
 //      * Initializes an empty priority queue.
 //      */
@@ -125,7 +124,7 @@ final class Solution {
 // }
 // class MaxPQ {
 //  private int[] pq;
-//     private int n; 
+//     private int n;
 //     public MaxPQ(int initCapacity) {
 //         pq = new int[initCapacity + 1];
 //         n = 0;

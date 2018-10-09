@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 /**
  * Class for solution.
  */
@@ -339,7 +340,7 @@ class Insertion {
     }
     System.out.println(show(a));
     System.out.println();
-    System.out.print(toppers(a));
+    toppers(a);
   }
   /**
    * comparing two objects.
@@ -394,59 +395,34 @@ class Insertion {
    *
    * @return     string.
    */
-  public static String toppers(final Students[] a) {
-    String str = "";
-    int i = 0;
-    int vacan = 0;
-    int op = 0;
-    int bc1 = 0;
-    int sc1 = 0;
-    int st1 = 0;
-    for (i = 0; i < a.length - 1; i++) {
-      int j = i + 1;
-      while (vacan < Insertion.getSTVacancy()) {
-        if (a[i].getCategory().equals("OPEN")
-            && op < Insertion.getOpen()
-            && a[i].getTotal() > a[j].getTotal()) {
-          str += a[i].getName() + ","
-                 + a[i].getTotal() + ","
-                 + a[i].getCategory()
-                 + "\n";
-          op += 1;
-          vacan += 1;
-        }
-        if (a[i].getCategory().equals("BC")
-            && bc1 < Insertion.getBC()
-            && a[i].getTotal() > a[j].getTotal()) {
-          str += a[i].getName() + ","
-                 + a[i].getTotal() + ","
-                 + a[i].getCategory()
-                 + "\n";
-          bc1 += 1;
-          vacan += 1;
-        }
-        if (a[i].getCategory().equals("SC")
-            && sc1 < Insertion.getSC()
-            && a[i].getTotal() > a[j].getTotal()) {
-          str += a[i].getName() + ","
-                 + a[i].getTotal() + ","
-                 + a[i].getCategory()
-                 + "\n";
-          sc1 += 1;
-          vacan += 1;
-        }
-        if (a[i].getCategory().equals("ST")
-            && st1 < Insertion.getST()
-            && a[i].getTotal() > a[j].getTotal()) {
-          str += a[i].getName() + ","
-                 + a[i].getTotal() + ","
-                 + a[i].getCategory()
-                 + "\n";
-          st1 += 1;
-          vacan += 1;
-        }
+  public void toppers(final Students[] a) {
+    int total = getOpen() + getSC() + getST() + getBC();
+    int noSC = getSC();
+    int noBC = getBC();
+    int noST = getST();
+    int in = 0;
+    Students[] toppers = new Students[total];
+    for (int i = 0; i < getOpen(); i++) {
+      toppers[in++] = a[i];
+    }
+    for (int k = getOpen(); k < a.length; k++) {
+
+      if (a[k].getCategory().equals("BC") && noBC > 0) {
+        toppers[in++] = a[k];
+        noBC--;
+      }
+      if (a[k].getCategory().
+                 equals("SC") && noSC > 0) {
+        toppers[in++] = a[k];
+        noSC--;
+      }
+      if ((a[k].getCategory()).
+                 equals("ST") && noST > 0) {
+        toppers[in++] = a[k];
+        noST--;
       }
     }
-    return str;
+    //System.out.println(Arrays.toString(toppers));
+    System.out.println(show(toppers));
   }
 }

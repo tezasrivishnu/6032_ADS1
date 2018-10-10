@@ -1,5 +1,8 @@
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * { item_description }
+ */
 final class Solution {
     /**
      * Constructs the object.
@@ -104,7 +107,7 @@ class BSTable {
     /**
      * returns the element value. if not present
      * returns previous element value.
-     * complexity O()
+     * complexity O(logn)
      * @param      key   The key
      *
      * @return     the key if present else the
@@ -128,7 +131,7 @@ class BSTable {
      *
      * @return     index int.
      */
-    public int rank(String key) {
+    public int rank(final String key) {
         int low = 0;
         int high = size - 1;
         while (low <= high) {
@@ -169,7 +172,7 @@ class BSTable {
         size--;
         keyarr[size] = null;
         valarr[size] = null;
-        if (size > 0 && size == keyarr.length / 4) {
+        if (size > 0 && size == keyarr.length / (2 + 2)) {
             resize(keyarr.length / 2);
         }
     }

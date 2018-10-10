@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Arrays;
 /**
- * { item_description }
+ * class of Solution.
  */
 final class Solution {
     /**

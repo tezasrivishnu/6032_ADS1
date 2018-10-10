@@ -1,0 +1,1 @@
+Binary Search ST would be better because it takes complexity of N while insertion and logN for getting a element. But Sequential Search ST takes complexity of N for both insertion and searching of the element.

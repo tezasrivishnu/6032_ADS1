@@ -4,7 +4,7 @@ Expected Output:
 Your Output: 
 1
 ----------------------------------------
-########## Testcase 1: Failed ##########
+########## Testcase 1: Passed ##########
 Expected Output: 
 6
 5
@@ -14,11 +14,7 @@ Your Output:
 6
 5
 7
-Exception in thread "main" java.lang.NumberFormatException: null
-	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at BinaryTree.get(Solution.java:77)
-	at Solution.main(Solution.java:16)
+2
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -28,6 +24,6 @@ Your Output:
 Exception in thread "main" java.lang.NumberFormatException: null
 	at java.base/java.lang.Integer.parseInt(Unknown Source)
 	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at BinaryTree.get(Solution.java:77)
+	at BinaryTree.get(Solution.java:78)
 	at Solution.main(Solution.java:16)
 ----------------------------------------

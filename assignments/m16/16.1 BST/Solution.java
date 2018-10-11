@@ -64,14 +64,15 @@ class BinaryTree {
 		return root;
 	}
 	public int get(BookDetails key) {
-		while (root != null) {
-			int cmp = key.compareTo(root.key);
+		Node x = root;
+		while (x != null) {
+			int cmp = key.compareTo(x.key);
 			if (cmp < 0) {
-				root = root.left;
+				x = x.left;
 			} else if (cmp > 0) {
-				root = root.right;
+				x = x.right;
 			} else if (cmp == 0) {
-				return root.val;
+				return x.val;
 			}
 		}
 		return Integer.parseInt(null);

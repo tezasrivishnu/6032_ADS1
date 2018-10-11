@@ -1,0 +1,2 @@
+I think option d cannot be the sequence while inserting the elements.
+because 8 in the array is out of place. 8 must be right node w.r.t the parent 7 but it might be also the left child of the parent 3, which cannot take place in binary tree.

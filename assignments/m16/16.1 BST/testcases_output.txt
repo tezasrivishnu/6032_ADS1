@@ -16,14 +16,11 @@ Your Output:
 7
 2
 ----------------------------------------
-########## Testcase 2: Failed ##########
+########## Testcase 2: Passed ##########
 Expected Output: 
 null
 7
 Your Output: 
-Exception in thread "main" java.lang.NumberFormatException: null
-	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at BinaryTree.get(Solution.java:183)
-	at Solution.main(Solution.java:27)
+null
+7
 ----------------------------------------

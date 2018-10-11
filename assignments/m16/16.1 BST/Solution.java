@@ -180,7 +180,7 @@ class BinaryTree {
                 return x.val;
             }
         }
-        return Integer.parseInt(null);
+        return -1;
     }
     /**
      * helper method.

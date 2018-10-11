@@ -21,11 +21,12 @@ final class Solution {
             String[] tokens = scan.nextLine().split(",");
             if (tokens[0].equals("put")) {
                 bt.put(new BookInformtion(tokens[1], tokens[2],
-                                          Float.parseFloat(tokens[3])),
+                Float.parseFloat(tokens[3])),
                        Integer.parseInt(tokens[4]));
             } else if (tokens[0].equals("get")) {
-                System.out.println(bt.get(new BookInformtion(tokens[1], tokens[2],
-                                          Float.parseFloat(tokens[3]))));
+                System.out.println(bt.get(new
+                    BookInformtion(tokens[1], tokens[2],
+                        Float.parseFloat(tokens[3]))));
             }
         }
     }
@@ -53,7 +54,8 @@ class BookInformtion implements Comparable {
      * @param      bookauthor  The bookauthor
      * @param      bookprice   The bookprice
      */
-    BookInformtion(final String bookname, final String bookauthor,
+    BookInformtion(final String bookname,
+        final String bookauthor,
                    final float bookprice) {
         this.name = bookname;
         this.author = bookauthor;
@@ -87,7 +89,8 @@ class BookInformtion implements Comparable {
         return this.price;
     }
     public int compareTo(final Object object) {
-        BookInformtion that = (BookInformtion) object;
+        BookInformtion that =
+        (BookInformtion) object;
         return this.name.compareTo(that.name);
     }
 }
@@ -97,7 +100,8 @@ class BookInformtion implements Comparable {
 class Node {
 
     /**
-     * initiazing the bookinformation class object.
+     * initiazing the bookinformation
+     * class object.
      */
     public BookInformtion key;
     /**
@@ -139,7 +143,8 @@ class BinaryTree {
     /**
      *
      * returning the root node of the tree.
-     * complexity O(1) we are just returing the value.
+     * complexity O(1) we are just
+     * returing the value.
      * @return     root node.
      */
     public Node root() {
@@ -173,12 +178,14 @@ class BinaryTree {
      * @param      key   The key
      * @param      val   The value
      */
-    public void put(final BookInformtion key, int val) {
+    public void put(final BookInformtion key,
+        final int val) {
         root = put(root, key, val);
     }
     /**
      * inserting a element in the tree.
-     * complexity O(n) we must go through each and every parent node.
+     * complexity O(n) we must go through
+     * each and every parent node.
      * @param      x     Node
      * @param      key   The Book information key
      * @param      val   The value
@@ -186,7 +193,8 @@ class BinaryTree {
      * @return     the node.
      */
     private Node put(final Node x,
-                     final BookInformtion key, final int val) {
+                     final BookInformtion key, 
+                     final int val) {
         if (x == null) {
             return new Node(key, val);
         }

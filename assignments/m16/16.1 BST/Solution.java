@@ -27,9 +27,9 @@ final class Solution {
                 int output = bt.get(new
                     BookInformtion(tokens[1], tokens[2],
                         Float.parseFloat(tokens[2 + 1])));
-                if(output != -1) {
+                if (output != -1) {
                 System.out.println(output);
-            }else {
+            } else {
                 System.out.println("null");
             }
             }

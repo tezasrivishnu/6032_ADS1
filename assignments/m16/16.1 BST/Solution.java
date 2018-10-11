@@ -21,12 +21,12 @@ final class Solution {
             String[] tokens = scan.nextLine().split(",");
             if (tokens[0].equals("put")) {
                 bt.put(new BookInformtion(tokens[1], tokens[2],
-                Float.parseFloat(tokens[3])),
-                       Integer.parseInt(tokens[4]));
+                Float.parseFloat(tokens[2 + 1])),
+                       Integer.parseInt(tokens[2 + 2]));
             } else if (tokens[0].equals("get")) {
                 System.out.println(bt.get(new
                     BookInformtion(tokens[1], tokens[2],
-                        Float.parseFloat(tokens[3]))));
+                        Float.parseFloat(tokens[2 + 1]))));
             }
         }
     }
@@ -88,6 +88,13 @@ class BookInformtion implements Comparable {
     public float getPrice() {
         return this.price;
     }
+    /**
+     * comparing two objects string names.
+     *complexity O(1).
+     * @param      object  The object
+     *
+     * @return     the comparing value.
+     */
     public int compareTo(final Object object) {
         BookInformtion that =
         (BookInformtion) object;
@@ -98,30 +105,29 @@ class BookInformtion implements Comparable {
  * Class for node.
  */
 class Node {
-
     /**
      * initiazing the bookinformation
      * class object.
      */
-    public BookInformtion key;
+    BookInformtion key;
     /**
      * initiazing the int value.
      */
-    public int val;
+    int val;
     /**
      * initiazing the node class objects.
      */
-    public Node left, right;
+    Node left, right;
     /**
      * Constructs the object.
      *
      * @param      key   The key
      * @param      val   The value
      */
-    public Node(final BookInformtion key,
-                final int val) {
-        this.key = key;
-        this.val = val;
+    Node(final BookInformtion info,
+                final int value) {
+        this.key = info;
+        this.val = value;
         left = null;
         right = null;
     }
@@ -193,7 +199,7 @@ class BinaryTree {
      * @return     the node.
      */
     private Node put(final Node x,
-                     final BookInformtion key, 
+                     final BookInformtion key,
                      final int val) {
         if (x == null) {
             return new Node(key, val);

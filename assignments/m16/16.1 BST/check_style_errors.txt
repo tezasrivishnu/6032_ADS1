@@ -1,15 +1,11 @@
 Starting audit...
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:24:41: '3' is a magic number. [MagicNumber]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:25:48: '4' is a magic number. [MagicNumber]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:29:49: '3' is a magic number. [MagicNumber]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:91:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:106:27: Variable 'key' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:110:16: Variable 'val' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:114:17: Variable 'left' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:114:23: Variable 'right' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:121:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:121:38: 'key' hides a field. [HiddenField]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:122:27: 'val' hides a field. [HiddenField]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:196: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:112:20: Variable 'key' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:116:9: Variable 'val' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:120:10: Variable 'left' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:120:16: Variable 'right' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:124:8: Unused @param tag for 'key'. [JavadocMethod]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:125:8: Unused @param tag for 'val'. [JavadocMethod]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:127:31: Expected @param tag for 'info'. [JavadocMethod]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:128:27: Expected @param tag for 'value'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 12 errors.
+Checkstyle ends with 8 errors.

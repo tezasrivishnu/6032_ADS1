@@ -24,9 +24,14 @@ final class Solution {
                                           Float.parseFloat(tokens[2 + 1])),
                        Integer.parseInt(tokens[2 + 2]));
             } else if (tokens[0].equals("get")) {
-                System.out.println(bt.get(new
+                int output = bt.get(new
                     BookInformtion(tokens[1], tokens[2],
-                        Float.parseFloat(tokens[2 + 1]))));
+                        Float.parseFloat(tokens[2 + 1])));
+                if(output != -1) {
+                System.out.println(output);
+            }else {
+                System.out.println("null");
+            }
             }
         }
     }

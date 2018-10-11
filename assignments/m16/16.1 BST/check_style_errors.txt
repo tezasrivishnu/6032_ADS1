@@ -1,11 +1,8 @@
 Starting audit...
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:112:20: Variable 'key' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:116:9: Variable 'val' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:120:10: Variable 'left' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:120:16: Variable 'right' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:124:8: Unused @param tag for 'key'. [JavadocMethod]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:125:8: Unused @param tag for 'val'. [JavadocMethod]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:127:31: Expected @param tag for 'info'. [JavadocMethod]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:128:27: Expected @param tag for 'value'. [JavadocMethod]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:29: Line is longer than 80 characters (found 85). [LineLength]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:138:12: Unused @param tag for 'key'. [JavadocMethod]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:139:12: Unused @param tag for 'val'. [JavadocMethod]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:141:35: Expected @param tag for 'info'. [JavadocMethod]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:142:24: Expected @param tag for 'value'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 8 errors.
+Checkstyle ends with 5 errors.

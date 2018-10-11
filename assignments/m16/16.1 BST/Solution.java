@@ -21,12 +21,12 @@ final class Solution {
             String[] tokens = scan.nextLine().split(",");
             if (tokens[0].equals("put")) {
                 bt.put(new BookInformtion(tokens[1], tokens[2],
-                Float.parseFloat(tokens[2 + 1])),
+                                          Float.parseFloat(tokens[2 + 1])),
                        Integer.parseInt(tokens[2 + 2]));
             } else if (tokens[0].equals("get")) {
                 System.out.println(bt.get(new
-                    BookInformtion(tokens[1], tokens[2],
-                        Float.parseFloat(tokens[2 + 1]))));
+                                          BookInformtion(tokens[1], tokens[2],
+                                                  Float.parseFloat(tokens[2 + 1]))));
             }
         }
     }
@@ -55,7 +55,7 @@ class BookInformtion implements Comparable {
      * @param      bookprice   The bookprice
      */
     BookInformtion(final String bookname,
-        final String bookauthor,
+                   final String bookauthor,
                    final float bookprice) {
         this.name = bookname;
         this.author = bookauthor;
@@ -97,39 +97,8 @@ class BookInformtion implements Comparable {
      */
     public int compareTo(final Object object) {
         BookInformtion that =
-        (BookInformtion) object;
+            (BookInformtion) object;
         return this.name.compareTo(that.name);
-    }
-}
-/**
- * Class for node.
- */
-class Node {
-    /**
-     * initiazing the bookinformation
-     * class object.
-     */
-    BookInformtion key;
-    /**
-     * initiazing the int value.
-     */
-    int val;
-    /**
-     * initiazing the node class objects.
-     */
-    Node left, right;
-    /**
-     * Constructs the object.
-     *
-     * @param      key   The key
-     * @param      val   The value
-     */
-    Node(final BookInformtion info,
-                final int value) {
-        this.key = info;
-        this.val = value;
-        left = null;
-        right = null;
     }
 }
 /**
@@ -147,7 +116,37 @@ class BinaryTree {
         root = null;
     }
     /**
-     *
+    * Class for node.
+    */
+    class Node {
+        /**
+         * initiazing the bookinformation
+         * class object.
+         */
+        private  BookInformtion key;
+        /**
+         * initiazing the int value.
+         */
+        private int val;
+        /**
+         * initiazing the node class objects.
+         */
+        private Node left, right;
+        /**
+         * Constructs the object.
+         *
+         * @param      key   The key
+         * @param      val   The value
+         */
+        Node(final BookInformtion info,
+             final int value) {
+            this.key = info;
+            this.val = value;
+            left = null;
+            right = null;
+        }
+    }
+    /**
      * returning the root node of the tree.
      * complexity O(1) we are just
      * returing the value.
@@ -185,7 +184,7 @@ class BinaryTree {
      * @param      val   The value
      */
     public void put(final BookInformtion key,
-        final int val) {
+                    final int val) {
         root = put(root, key, val);
     }
     /**
@@ -215,3 +214,4 @@ class BinaryTree {
         return x;
     }
 }
+

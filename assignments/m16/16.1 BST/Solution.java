@@ -25,8 +25,8 @@ final class Solution {
                        Integer.parseInt(tokens[2 + 2]));
             } else if (tokens[0].equals("get")) {
                 System.out.println(bt.get(new
-                                          BookInformtion(tokens[1], tokens[2],
-                                                  Float.parseFloat(tokens[2 + 1]))));
+                    BookInformtion(tokens[1], tokens[2],
+                        Float.parseFloat(tokens[2 + 1]))));
             }
         }
     }
@@ -135,8 +135,8 @@ class BinaryTree {
         /**
          * Constructs the object.
          *
-         * @param      key   The key
-         * @param      val   The value
+         * @param      info   The key
+         * @param      value   The value
          */
         Node(final BookInformtion info,
              final int value) {
@@ -214,4 +214,3 @@ class BinaryTree {
         return x;
     }
 }
-

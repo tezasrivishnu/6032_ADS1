@@ -1,8 +1,2 @@
 Starting audit...
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:29: Line is longer than 80 characters (found 85). [LineLength]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:138:12: Unused @param tag for 'key'. [JavadocMethod]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:139:12: Unused @param tag for 'val'. [JavadocMethod]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:141:35: Expected @param tag for 'info'. [JavadocMethod]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m16\16.1 BST\Solution.java:142:24: Expected @param tag for 'value'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 5 errors.

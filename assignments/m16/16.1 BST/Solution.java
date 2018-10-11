@@ -34,7 +34,7 @@ final class Solution {
 /**
  * Class for book informtion.
  */
-class BookInformtion implements Comparable {
+class BookInformtion {
     /**
      * initalizing the string name.
      */
@@ -95,10 +95,10 @@ class BookInformtion implements Comparable {
      *
      * @return     the comparing value.
      */
-    public int compareTo(final Object object) {
-        BookInformtion that =
-            (BookInformtion) object;
-        return this.name.compareTo(that.name);
+    public int compareTo(final BookInformtion object) {
+        // BookInformtion that =
+        //     (BookInformtion) object;
+        return this.name.compareTo(object.name);
     }
 }
 /**

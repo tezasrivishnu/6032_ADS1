@@ -25,7 +25,7 @@ final class Solution {
             pq.insert(new TaxiCab(i, i));
         }
         int tempsum = 0;
-        while (pq.isEmpty()) {
+        while (!pq.isEmpty()) {
             TaxiCab s = pq.delMin();
             if (tempsum == s.getSum()) {
                 mcounter++;
@@ -33,11 +33,9 @@ final class Solution {
                 mcounter = 0;
             }
             if (mcounter == mpairs) {
-                System.out.println("here");
                 nthnumber--;
                 if (nthnumber == 0) {
-                    System.out.println("here");
-                    System.out.println(s.sum);
+                    System.out.println(s.getSum());
                     break;
                 }
             }

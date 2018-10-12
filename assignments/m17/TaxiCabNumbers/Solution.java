@@ -10,7 +10,7 @@ final class Solution {
 
     }
     /**
-     * declaring the value of 600. 
+     * declaring the value of 600.
      */
     private static final int SIXHUNDRED = 600;
     /**

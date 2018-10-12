@@ -36,4 +36,13 @@ class TaxiCab {
 		this.i = i;
 		this.j = j;
 	}
+	public int compareTo(TaxiCab that) {
+        if (this.sum < that.sum){
+         return -1;
+        }
+        if (this.sum > that.sum){
+         return +1;
+        }
+        return 0;
+    }
 }

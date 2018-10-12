@@ -23,5 +23,9 @@ Starting audit...
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m17\TaxiCabNumbers\Solution.java:34:28: 'i' hides a field. [HiddenField]
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m17\TaxiCabNumbers\Solution.java:34:31: Parameter j should be final. [FinalParameters]
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m17\TaxiCabNumbers\Solution.java:34:35: 'j' hides a field. [HiddenField]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m17\TaxiCabNumbers\Solution.java:39:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m17\TaxiCabNumbers\Solution.java:39:30: Parameter that should be final. [FinalParameters]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m17\TaxiCabNumbers\Solution.java:40:33: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m17\TaxiCabNumbers\Solution.java:43:33: '{' is not preceded with whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 24 errors.
+Checkstyle ends with 28 errors.

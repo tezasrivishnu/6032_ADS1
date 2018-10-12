@@ -43,7 +43,7 @@ final class Solution {
 /**
  * Class for taxi cab.
  */
-class TaxiCab {
+class TaxiCab implements Comparable<TaxiCab> {
     /**
      * initializing the sum variable.
      */

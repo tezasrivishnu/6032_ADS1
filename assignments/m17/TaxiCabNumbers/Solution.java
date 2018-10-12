@@ -29,14 +29,14 @@ final class Solution {
             TaxiCab s = pq.delMin();
             if (tempsum == s.sum) {
                 mcounter++;
-                if (mcounter == mpairs) {
-                    ncounter++;
-                    if (ncounter == nthnumber) {
-                        System.out.println(s.sum);
-                        break;
-                    }
-                } else {
-                    mcounter = 0;
+            } else {
+                mcounter = 0;
+            }
+            if (mcounter == mpairs) {
+                ncounter++;
+                if (ncounter == nthnumber) {
+                    System.out.println(s.sum);
+                    break;
                 }
             }
             tempsum = s.sum;
@@ -65,13 +65,13 @@ class TaxiCab implements Comparable<TaxiCab> {
     /**
      * Constructs the object.
      *
-     * @param      i     number
-     * @param      j     number
+     * @param      one     number
+     * @param      two     number
      */
-    TaxiCab(final int i, final int j) {
-        this.sum = i * i * i + j * j * j;
-        this.i = i;
-        this.j = j;
+    TaxiCab(final int one, final int two) {
+        this.sum = one * one * one + two * two * two;
+        this.i = one;
+        this.j = two;
     }
     /**
      * comparing the two objects of taxicab class.

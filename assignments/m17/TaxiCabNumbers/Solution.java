@@ -24,7 +24,7 @@ final class Solution {
         for (int i = 0; i <= 600; i++) {
             pq.insert(new TaxiCab(i, i));
         }
-        int tempsum = 0;
+        int tempsum = -15;
         while (!pq.isEmpty()) {
             TaxiCab s = pq.delMin();
             if (tempsum == s.getSum()) {
@@ -53,15 +53,15 @@ class TaxiCab implements Comparable<TaxiCab> {
     /**
      * initializing the sum variable.
      */
-    int sum;
+    private int sum;
     /**
      * initializing the i variable.
      */
-    int i;
+    private int i;
     /**
      * initializing the j variable.
      */
-    int j;
+    private int j;
     /**
      * Constructs the object.
      *

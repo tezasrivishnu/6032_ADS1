@@ -32,7 +32,7 @@ final class Solution {
             } else {
                 mcounter = 0;
             }
-            if (mcounter == mpairs) {
+            if (mcounter == mpairs - 1) {
                 ncounter++;
                 if (ncounter == nthnumber) {
                     System.out.println(s.sum);

@@ -10,6 +10,10 @@ final class Solution {
 
     }
     /**
+     * declaring the value of 600. 
+     */
+    private static final int SIXHUNDRED = 600;
+    /**
      * main method for the program.
      * complexity O(n) as we are taking the input n times.
      * @param      args  The arguments
@@ -21,10 +25,10 @@ final class Solution {
         int mcounter = 0;
         int ncounter = 0;
         MinPQ<TaxiCab> pq = new MinPQ<TaxiCab>();
-        for (int i = 0; i <= 600; i++) {
+        for (int i = 0; i <= SIXHUNDRED; i++) {
             pq.insert(new TaxiCab(i, i));
         }
-        int tempsum = -15;
+        int tempsum = -1;
         while (!pq.isEmpty()) {
             TaxiCab s = pq.delMin();
             if (tempsum == s.getSum()) {
@@ -40,7 +44,7 @@ final class Solution {
                 }
             }
             tempsum = s.getSum();
-            if (s.getSecond() < 600) {
+            if (s.getSecond() < SIXHUNDRED) {
                 pq.insert(new TaxiCab(s.getFirst(), s.getSecond() + 1));
             }
         }
@@ -89,12 +93,27 @@ class TaxiCab implements Comparable<TaxiCab> {
         }
         return 0;
     }
+    /**
+     * Gets the first number.
+     * complexity O(1)
+     * @return     The first.
+     */
     public int getFirst() {
         return this.i;
     }
+    /**
+     * Gets the second number.
+     * complexity O(1)
+     * @return     The second.
+     */
     public int getSecond() {
         return this.j;
     }
+    /**
+     * Gets the sum of cubes of two numbers.
+     * complexity O(1)
+     * @return     The sum.
+     */
     public int getSum() {
         return this.sum;
     }

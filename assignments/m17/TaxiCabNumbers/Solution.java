@@ -33,8 +33,8 @@ final class Solution {
                 mcounter = 0;
             }
             if (mcounter == mpairs) {
-                ncounter++;
-                if (ncounter == nthnumber) {
+                nthnumber--;
+                if (nthnumber == 0) {
                     System.out.println("here");
                     System.out.println(s.sum);
                     break;

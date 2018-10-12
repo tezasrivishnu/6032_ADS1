@@ -19,6 +19,7 @@ final class Solution {
         int nthnumber = scan.nextInt();
         int mpairs = scan.nextInt();
         int mcounter = 0;
+        int ncounter = 0;
         MinPQ<TaxiCab> pq = new MinPQ<TaxiCab>();
         for (int i = 0; i <= 400; i++) {
             pq.insert(new TaxiCab(i, i));
@@ -29,8 +30,13 @@ final class Solution {
             if (tempsum == s.sum) {
                 mcounter++;
                 if (mcounter == mpairs) {
-                    System.out.println(s.sum);
-                    break;
+                    ncounter++;
+                    if (ncounter == nthnumber) {
+                        System.out.println(s.sum);
+                        break;
+                    }
+                } else {
+                    mcounter = 0;
                 }
             }
             tempsum = s.sum;

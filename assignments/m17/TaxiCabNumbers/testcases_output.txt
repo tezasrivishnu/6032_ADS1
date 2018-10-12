@@ -2,7 +2,7 @@
 Expected Output: 
 1729
 Your Output: 
-0
+
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 

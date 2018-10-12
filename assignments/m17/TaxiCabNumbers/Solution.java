@@ -35,6 +35,7 @@ final class Solution {
             if (mcounter == mpairs) {
                 ncounter++;
                 if (ncounter == nthnumber) {
+                    System.out.println("here");
                     System.out.println(s.sum);
                     break;
                 }

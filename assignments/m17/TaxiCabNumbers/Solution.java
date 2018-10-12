@@ -18,7 +18,7 @@ final class Solution {
         Scanner scan = new Scanner(System.in);
         int nthnumber = scan.nextInt();
         int mpairs = scan.nextInt();
-        int mcounter = 0;
+        int mcounter = 1;
         int ncounter = 0;
         MinPQ<TaxiCab> pq = new MinPQ<TaxiCab>();
         for (int i = 0; i <= 400; i++) {

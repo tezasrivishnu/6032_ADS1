@@ -6,7 +6,7 @@ Exception in thread "main" java.lang.ClassCastException: TaxiCab cannot be cast 
 	at MinPQ.greater(MinPQ.java:207)
 	at MinPQ.swim(MinPQ.java:186)
 	at MinPQ.insert(MinPQ.java:159)
-	at Solution.main(Solution.java:10)
+	at Solution.main(Solution.java:24)
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -16,7 +16,7 @@ Exception in thread "main" java.lang.ClassCastException: TaxiCab cannot be cast 
 	at MinPQ.greater(MinPQ.java:207)
 	at MinPQ.swim(MinPQ.java:186)
 	at MinPQ.insert(MinPQ.java:159)
-	at Solution.main(Solution.java:10)
+	at Solution.main(Solution.java:24)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -26,7 +26,7 @@ Exception in thread "main" java.lang.ClassCastException: TaxiCab cannot be cast 
 	at MinPQ.greater(MinPQ.java:207)
 	at MinPQ.swim(MinPQ.java:186)
 	at MinPQ.insert(MinPQ.java:159)
-	at Solution.main(Solution.java:10)
+	at Solution.main(Solution.java:24)
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -36,7 +36,7 @@ Exception in thread "main" java.lang.ClassCastException: TaxiCab cannot be cast 
 	at MinPQ.greater(MinPQ.java:207)
 	at MinPQ.swim(MinPQ.java:186)
 	at MinPQ.insert(MinPQ.java:159)
-	at Solution.main(Solution.java:10)
+	at Solution.main(Solution.java:24)
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -46,5 +46,5 @@ Exception in thread "main" java.lang.ClassCastException: TaxiCab cannot be cast 
 	at MinPQ.greater(MinPQ.java:207)
 	at MinPQ.swim(MinPQ.java:186)
 	at MinPQ.insert(MinPQ.java:159)
-	at Solution.main(Solution.java:10)
+	at Solution.main(Solution.java:24)
 ----------------------------------------

@@ -18,7 +18,7 @@ final class Solution {
         Scanner scan = new Scanner(System.in);
         int nthnumber = scan.nextInt();
         int mpairs = scan.nextInt();
-        int mcounter = 1;
+        int mcounter = 0;
         int ncounter = 0;
         MinPQ<TaxiCab> pq = new MinPQ<TaxiCab>();
         for (int i = 0; i <= 600; i++) {
@@ -32,7 +32,7 @@ final class Solution {
             } else {
                 mcounter = 0;
             }
-            if (mcounter == mpairs) {
+            if (mcounter == mpairs - 1) {
                 nthnumber--;
                 if (nthnumber == 0) {
                     System.out.println(s.getSum());

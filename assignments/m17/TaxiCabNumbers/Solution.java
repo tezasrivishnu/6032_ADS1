@@ -21,27 +21,27 @@ final class Solution {
         int mcounter = 1;
         int ncounter = 0;
         MinPQ<TaxiCab> pq = new MinPQ<TaxiCab>();
-        for (int i = 0; i <= 400; i++) {
+        for (int i = 0; i <= 600; i++) {
             pq.insert(new TaxiCab(i, i));
         }
         int tempsum = 0;
         while (pq.isEmpty()) {
             TaxiCab s = pq.delMin();
-            if (tempsum == s.sum) {
+            if (tempsum == s.getSum()) {
                 mcounter++;
             } else {
                 mcounter = 0;
             }
-            if (mcounter == mpairs - 1) {
+            if (mcounter == mpairs) {
                 ncounter++;
                 if (ncounter == nthnumber) {
                     System.out.println(s.sum);
                     break;
                 }
             }
-            tempsum = s.sum;
-            if (s.j < 400) {
-                pq.insert(new TaxiCab(s.i, s.j + 1));
+            tempsum = s.getSum();
+            if (s.getSecond() < 600) {
+                pq.insert(new TaxiCab(s.getFirst(), s.getSecond() + 1));
             }
         }
     }
@@ -88,5 +88,14 @@ class TaxiCab implements Comparable<TaxiCab> {
             return +1;
         }
         return 0;
+    }
+    public int getFirst() {
+        return this.i;
+    }
+    public int getSecond() {
+        return this.j;
+    }
+    public int getSum() {
+        return this.sum;
     }
 }

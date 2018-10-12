@@ -33,6 +33,7 @@ final class Solution {
                 mcounter = 0;
             }
             if (mcounter == mpairs) {
+                System.out.println("here");
                 nthnumber--;
                 if (nthnumber == 0) {
                     System.out.println("here");

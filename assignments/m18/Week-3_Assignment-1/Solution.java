@@ -9,9 +9,9 @@ class Solution {
 		int input = Integer.parseInt(number);
 		System.out.println(input);
 		int counter = 0;
-		int index = 0;
-		Stock[] max = new Stock[input];
-		Stock[] min = new Stock[input];
+		int index = input;
+		Stock[] max = new Stock[5];
+		Stock[] min = new Stock[5];
 		for (int i = 0; i < input * 6; i++) {
 			counter++;
 			String[] tokens = scan.nextLine().split(",");
@@ -21,14 +21,11 @@ class Solution {
 				                          Float.parseFloat(tokens[1])));
 				maxstock.insert(new Stock((tokens[0]),
 				                          Float.parseFloat(tokens[1])));
-				min[index] = minstock.delMin();
-				max[index] = maxstock.delMax();
-				index++;
 			} else {
-				// for (int j = 0; j<5; i++) {
-				// 	max[j] = maxstock.delMax();
-				// 	min[j] = minstock.delMin();
-				// }
+				for (int j = 0; j<5; i++) {
+					max[j] = maxstock.delMax();
+					min[j] = minstock.delMin();
+				}
 				System.out.println(stock.toString(max));
 				System.out.println();
 				System.out.println(stock.toString(min));

@@ -39,7 +39,7 @@ class Solution {
 	}
 }
 
-class Stock {
+class Stock implements Comparable<Stock>{
 	String stockname;
 	float stockfrequency;
 	Stock() {}

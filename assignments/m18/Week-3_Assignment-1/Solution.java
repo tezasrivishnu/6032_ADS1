@@ -21,12 +21,14 @@ class Solution {
 				                          Float.parseFloat(tokens[1])));
 				maxstock.insert(new Stock((tokens[0]),
 				                          Float.parseFloat(tokens[1])));
+				min[index] = minstock.delMin();
+				max[index] = maxstock.delMax();
 				index++;
 			} else {
-				for (int j = 0; j<5; i++) {
-					max[j] = maxstock.delMax();
-					min[j] = minstock.delMin();
-				}
+				// for (int j = 0; j<5; i++) {
+				// 	max[j] = maxstock.delMax();
+				// 	min[j] = minstock.delMin();
+				// }
 				System.out.println(stock.toString(max));
 				System.out.println();
 				System.out.println(stock.toString(min));

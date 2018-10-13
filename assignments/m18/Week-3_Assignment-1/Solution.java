@@ -105,10 +105,10 @@ class Stock implements Comparable<Stock> {
      * @return     int value.
      */
     public int compareTo(final Stock that) {
-        if (this.getFrequency() - that.getFrequency() > 0) {
-            return 1;
-        } else if (this.getFrequency() - that.getFrequency() < 0) {
+        if (this.getFrequency() - that.getFrequency() < 0) {
             return -1;
+        } else if (this.getFrequency() - that.getFrequency() > 0) {
+            return 1;
         }
         return 0;
     }

@@ -10,8 +10,8 @@ class Solution {
 		System.out.println(input);
 		int counter = 0;
 		int index = 0;
-		Stock[] max = new Stock[5];
-		Stock[] min = new Stock[5];
+		Stock[] max = new Stock[input];
+		Stock[] min = new Stock[input];
 		for (int i = 0; i < input * 6; i++) {
 			counter++;
 			String[] tokens = scan.nextLine().split(",");

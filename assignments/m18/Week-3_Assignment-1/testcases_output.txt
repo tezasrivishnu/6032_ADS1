@@ -74,7 +74,7 @@ WABCO India 0.33
 Your Output: 
 Exception in thread "main" java.util.NoSuchElementException: Priority queue underflow
 	at MaxPQ.max(MaxPQ.java:137)
-	at Solution.main(Solution.java:25)
+	at Solution.main(Solution.java:39)
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -152,7 +152,7 @@ Chola Inv Fin 1.47
 Your Output: 
 Exception in thread "main" java.util.NoSuchElementException: Priority queue underflow
 	at MaxPQ.max(MaxPQ.java:137)
-	at Solution.main(Solution.java:25)
+	at Solution.main(Solution.java:39)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -235,7 +235,7 @@ WABCO India 0.33
 Your Output: 
 Exception in thread "main" java.util.NoSuchElementException: Priority queue underflow
 	at MaxPQ.max(MaxPQ.java:137)
-	at Solution.main(Solution.java:25)
+	at Solution.main(Solution.java:39)
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -318,7 +318,7 @@ Chola Inv Fin 1.47
 Your Output: 
 Exception in thread "main" java.util.NoSuchElementException: Priority queue underflow
 	at MaxPQ.max(MaxPQ.java:137)
-	at Solution.main(Solution.java:25)
+	at Solution.main(Solution.java:39)
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -416,5 +416,5 @@ Tasty Bite Eat
 Your Output: 
 Exception in thread "main" java.util.NoSuchElementException: Priority queue underflow
 	at MaxPQ.max(MaxPQ.java:137)
-	at Solution.main(Solution.java:25)
+	at Solution.main(Solution.java:39)
 ----------------------------------------

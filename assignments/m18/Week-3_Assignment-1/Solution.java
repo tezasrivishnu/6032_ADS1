@@ -1,6 +1,20 @@
 import java.util.Scanner;
-class Solution {
-	public static void main(String[] args) {
+/**
+ * Class for solution.
+ */
+final class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	private Solution() {
+
+	}
+	/**
+	 * main method for the program.
+	 * complexity O(n) as we are taking n inputs.
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		MinPQ<Stock> minstock = new MinPQ<Stock>();
 		MaxPQ<Stock> maxstock = new MaxPQ<Stock>();
@@ -39,22 +53,58 @@ class Solution {
 		}
 	}
 }
-
+/**
+ * Class for stock.
+ */
 class Stock implements Comparable<Stock>{
-	String stockname;
-	float stockfrequency;
-	Stock() {}
-	Stock(String name, float freq) {
+	/**
+	 * initializing the string variable stockname.
+	 */
+	private String stockname;
+	/**
+	 * initializing the float variable stockfrequency.
+	 */
+	private float stockfrequency;
+	/**
+	 * Constructs the object.
+	 */
+	Stock() {
+
+	}
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      name  The name
+	 * @param      freq  The frequency
+	 */
+	Stock(final String name, final float freq) {
 		this.stockname = name;
 		this.stockfrequency = freq;
 	}
+	/**
+	 * Gets the stock name.
+	 * complexxity O(1) as we are just returning the name.
+	 * @return     The name.
+	 */
 	public String getName() {
 		return this.stockname;
 	}
+	/**
+	 * Gets the stock name.
+	 * complexxity O(1) as we are just returning the freuency.
+	 * @return     The frequency.
+	 */
 	public float getFrequency() {
 		return this.stockfrequency;
 	}
-	public int compareTo(Stock that) {
+	/**
+	 * comparing two stock objects frequencies. 
+	 * complexxity O(1)
+	 * @param      that  The that
+	 *
+	 * @return     int value.
+	 */
+	public int compareTo(final Stock that) {
 		if(this.getFrequency() - that.getFrequency() > 0){
 			return 1;
 		} else if (this.getFrequency() - that.getFrequency() < 0){
@@ -62,7 +112,14 @@ class Stock implements Comparable<Stock>{
 		}
 		return 0;
 	}
-	public String toString(Stock[] array) {
+	/**
+	 * Returns a string representation of the arrays.
+	 * complexity O(n) as we iterating over the full array.
+	 * @param      array  The array
+	 *
+	 * @return     String representation of the object.
+	 */
+	public String toString(final Stock[] array) {
 		int i = 0;
 		String str = "";
 		for (i = 0; i < 4; i++) {

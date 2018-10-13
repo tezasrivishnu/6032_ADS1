@@ -56,7 +56,7 @@ final class Solution {
 /**
  * Class for stock.
  */
-class Stock implements Comparable <Stock> {
+class Stock implements Comparable<Stock> {
     /**
      * initializing the string variable stockname.
      */

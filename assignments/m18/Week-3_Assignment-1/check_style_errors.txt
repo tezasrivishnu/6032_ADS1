@@ -1,5 +1,2 @@
 Starting audit...
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m18\Week-3_Assignment-1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m18\Week-3_Assignment-1\Solution.java:59:34: '<' is preceded with whitespace. [GenericWhitespace]
 Audit done.
-Checkstyle ends with 2 errors.

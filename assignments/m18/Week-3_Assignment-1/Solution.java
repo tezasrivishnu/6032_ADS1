@@ -7,7 +7,6 @@ class Solution {
 		Stock stock = new Stock();
 		String number = scan.nextLine();
 		int input = Integer.parseInt(number);
-		System.out.println(input);
 		int counter = 0;
 		int index = input;
 		Stock[] max = new Stock[5];
@@ -24,9 +23,9 @@ class Solution {
 			} else {
 				for (int j = 0; j<5; i++) {
 					max[j] = maxstock.max();
-					maxstock.delMax();
+					//maxstock.delMax();
 					min[j] = minstock.min();
-					minstock.delMin();
+					//minstock.delMin();
 				}
 				System.out.println(stock.toString(max));
 				System.out.println();

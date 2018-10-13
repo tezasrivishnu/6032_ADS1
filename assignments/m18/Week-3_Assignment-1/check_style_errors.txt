@@ -8,7 +8,7 @@ Starting audit...
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m18\Week-3_Assignment-1\Solution.java:13:41: '5' is a magic number. [MagicNumber]
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m18\Week-3_Assignment-1\Solution.java:14:41: '5' is a magic number. [MagicNumber]
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m18\Week-3_Assignment-1\Solution.java:15:45: '6' is a magic number. [MagicNumber]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m18\Week-3_Assignment-1\Solution.java:16: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m18\Week-3_Assignment-1\Solution.java:19: Line has trailing spaces. [RegexpSingleline]
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m18\Week-3_Assignment-1\Solution.java:21: Line is longer than 80 characters (found 88). [LineLength]
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m18\Week-3_Assignment-1\Solution.java:23: Line is longer than 80 characters (found 88). [LineLength]
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m18\Week-3_Assignment-1\Solution.java:45: Missing a Javadoc comment. [JavadocType]

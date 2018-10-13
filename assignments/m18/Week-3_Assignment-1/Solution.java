@@ -13,10 +13,10 @@ class Solution {
 		Stock[] max = new Stock[5];
 		Stock[] min = new Stock[5];
 		for (int i = 0; i < input * 6; i++) {
-			
+			counter++;
 			String[] tokens = scan.nextLine().split(",");
-			if (counter == 0 || counter % input != 0) {
-				counter++;
+			if (counter % input != 0) {
+				
 				minstock.insert(new Stock((tokens[0]),
 				                          Float.parseFloat(tokens[1])));
 				maxstock.insert(new Stock((tokens[0]),

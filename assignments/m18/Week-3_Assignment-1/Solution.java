@@ -23,8 +23,10 @@ class Solution {
 				                          Float.parseFloat(tokens[1])));
 			} else {
 				for (int j = 0; j<5; i++) {
-					max[j] = maxstock.delMax();
-					min[j] = minstock.delMin();
+					max[j] = maxstock.max();
+					maxstock.delMax();
+					min[j] = minstock.min();
+					minstock.delMin();
 				}
 				System.out.println(stock.toString(max));
 				System.out.println();

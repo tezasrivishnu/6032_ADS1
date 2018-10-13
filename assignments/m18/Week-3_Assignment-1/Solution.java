@@ -23,9 +23,9 @@ class Solution {
 			} else {
 				for (int j = 0; j<5; i++) {
 					max[j] = maxstock.max();
-					//maxstock.delMax();
+					maxstock.delMax();
 					min[j] = minstock.min();
-					//minstock.delMin();
+					minstock.delMin();
 				}
 				System.out.println(stock.toString(max));
 				System.out.println();

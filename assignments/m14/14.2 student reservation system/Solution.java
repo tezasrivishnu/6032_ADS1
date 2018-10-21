@@ -345,7 +345,7 @@ class Insertion {
   }
   /**
    * insertion sort.
-   * complexity O(N^2)
+   * complexity O(nlogn)
    *
    * @param      a     student array
    */

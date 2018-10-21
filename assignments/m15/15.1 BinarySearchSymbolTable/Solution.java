@@ -78,7 +78,7 @@ class BSTable {
     }
     /**
      * adding key value pair to respective arrays.
-     * complexity O(logn) we are adding a element,
+     * complexity O(n) we are adding a element,
      * if element is present we are updating the element value.
      * @param      key    The key
      * @param      value  The value

@@ -18,42 +18,10 @@ final class Solution {
         Scanner scan = new Scanner(System.in);
         Median med = new Median();
         long number = scan.nextInt();
-        // MinPQ<Double> min = new MinPQ<Double>();
-        // MaxPQ<Double> max = new MaxPQ<Double>();
-        // double median = 0.0;
         for (long i = 0; i < number; i++) {
             double input = scan.nextDouble();
             med.insert(input);
-            med.dynamicMedian();
-            // if (input > median) {
-            //     min.insert(input);
-            // } else if (input < median) {
-            //     max.insert(input);
-            // } else {
-            //     min.insert(input);
-            // }
-            // if (min.size() - max.size() > 1) {
-            //     max.insert(min.delMin());
-            // }
-            // if (max.size() - min.size() > 1) {
-            //     min.insert(max.delMax());
-            // }
-            // if (Math.abs(min.size() - max.size()) == 1) {
-            //     if (min.size() > max.size()) {
-            //         median = min.min();
-            //         System.out.println(median);
-            //     } else {
-            //         median = max.max();
-            //         System.out.println(median);
-            //     }
-            // }
-            // if (min.size() - max.size() == 0) {
-            //     double mini = min.delMin();
-            //     min.insert(mini);
-            //     double maxi = max.delMax();
-            //     max.insert(maxi);
-            //     median = (mini + maxi) / 2.0;
-            //     System.out.println(median);
+            System.out.println(med.dynamicMedian());
         }
     }
 }
@@ -67,14 +35,14 @@ class Median {
         max = new MaxPQ<Double>();
         median = 0.0;
     }
-    public void dynamicMedian() {
+    public double dynamicMedian() {
         if (Math.abs(min.size() - max.size()) == 1) {
             if (min.size() > max.size()) {
                 median = min.min();
-                System.out.println(median);
+                return median;
             } else {
                 median = max.max();
-                System.out.println(median);
+                return median;
             }
         }
         if (min.size() - max.size() == 0) {
@@ -83,8 +51,9 @@ class Median {
             double maxi = max.delMax();
             max.insert(maxi);
             median = (mini + maxi) / 2.0;
-            System.out.println(median);
+                return median;
         }
+        return 0.0;
     }
     public void insert(double input) {
         if (input > median) {

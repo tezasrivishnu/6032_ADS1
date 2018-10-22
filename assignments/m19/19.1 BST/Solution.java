@@ -22,13 +22,13 @@ final class Solution {
             switch (tokens[0]) {
             case "put":
                 bst.put(new BookInfo(tokens[1], tokens[2],
-                                     tokens[3]), Integer.parseInt(tokens[4]));
+                    tokens[2 + 1]), Integer.parseInt(tokens[2 + 2]));
                 break;
             case "get":
                 int output = bst.get(new BookInfo(tokens[1],
                                                   tokens[2],
                                                   tokens[3]));
-                if(output == 0) {
+                if (output == 0) {
                     System.out.println("null");
                 } else {
                     System.out.println(output);
@@ -49,12 +49,12 @@ final class Solution {
                 break;
             case "floor":
                 Comparable floor = bst.floor(new BookInfo(
-                                                 tokens[1], tokens[2], tokens[3]));
+                    tokens[1], tokens[2], tokens[2 + 1]));
                 System.out.println(floor.toString());
                 break;
             case "ceiling":
                 Comparable ceiling = bst.ceiling(new BookInfo(
-                                                     tokens[1], tokens[2], tokens[3]));
+                    tokens[1], tokens[2], tokens[2 + 1]));
                 System.out.println(ceiling.toString());
                 break;
             default:
@@ -138,7 +138,7 @@ class BookInfo implements Comparable<BookInfo> {
      *
      * @return     the value after comparision.
      */
-    public int compareTo(BookInfo that) {
+    public int compareTo(final BookInfo that) {
         return this.getName().compareTo(that.getName());
     }
     // public String getQuantity() {
@@ -147,6 +147,8 @@ class BookInfo implements Comparable<BookInfo> {
 }
 /**
  * Class for bst.
+ *
+ * @param      <BookInfo>  The book information class
  */
 class BST<BookInfo extends Comparable<BookInfo>> {
     /**
@@ -251,7 +253,7 @@ class BST<BookInfo extends Comparable<BookInfo>> {
      *
      * @return     int value.
      */
-    public int get(Node rtemp, BookInfo book) {
+    public int get(final Node rtemp, final BookInfo book) {
         if (rtemp == null) {
             return 0;
         }
@@ -280,7 +282,7 @@ class BST<BookInfo extends Comparable<BookInfo>> {
      *
      * @return     size.
      */
-    public int size(Node rtemp) {
+    public int size(final Node rtemp) {
         if (rtemp == null) {
             return 0;
         } else {
@@ -423,7 +425,7 @@ class BST<BookInfo extends Comparable<BookInfo>> {
      * @return     the Node object
      */
     public Node floor(final Node rtemp, final BookInfo book) {
-        if(rtemp == null) {
+        if (rtemp == null) {
             return null;
         }
         int cvalue = book.compareTo(rtemp.book);

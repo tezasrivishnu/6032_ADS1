@@ -27,14 +27,22 @@ final class Solution {
 }
 
 class Median {
-    MinPQ<Double> min;
-    MaxPQ<Double> max;
-    double median;
+    private MinPQ<Double> min;
+    private MaxPQ<Double> max;
+    private double median;
+    /**
+     * Constructs the object.
+     */
     Median() {
         min = new MinPQ<Double>();
         max = new MaxPQ<Double>();
         median = 0.0;
     }
+    /**
+     * finding the median.
+     * complexity O(1) as we are just finding the median.
+     * @return     double value.
+     */
     public double dynamicMedian() {
         if (Math.abs(min.size() - max.size()) == 1) {
             if (min.size() > max.size()) {
@@ -55,7 +63,12 @@ class Median {
         }
         return 0.0;
     }
-    public void insert(double input) {
+    /**
+     * inserting the input into the heap.
+     * complexity O(1) as we are just finding the median.
+     * @param      input  The input
+     */
+    public void insert(final double input) {
         if (input > median) {
             min.insert(input);
         } else if (input < median) {

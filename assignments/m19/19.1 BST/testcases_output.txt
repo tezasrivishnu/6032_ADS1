@@ -54,12 +54,13 @@ Street, Kiran, 800.0
 Your Output: 
 Harry, JK, 600.0
 Harry, JK, 600.0
+Street, Kiran, 800.0
+0
 Exception in thread "main" java.lang.NullPointerException
 	at BST$Node.access$000(Solution.java:155)
-	at BST.floor(Solution.java:419)
-	at BST.floor(Solution.java:426)
-	at BST.floor(Solution.java:426)
-	at BST.floor(Solution.java:426)
-	at BST.floor(Solution.java:407)
-	at Solution.main(Solution.java:47)
+	at BST.ceiling(Solution.java:384)
+	at BST.ceiling(Solution.java:389)
+	at BST.ceiling(Solution.java:396)
+	at BST.ceiling(Solution.java:372)
+	at Solution.main(Solution.java:52)
 ----------------------------------------

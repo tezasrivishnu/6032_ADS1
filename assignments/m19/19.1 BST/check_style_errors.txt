@@ -12,5 +12,6 @@ Starting audit...
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m19\19.1 BST\Solution.java:250:20: Parameter rtemp should be final. [FinalParameters]
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m19\19.1 BST\Solution.java:250:32: Parameter book should be final. [FinalParameters]
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m19\19.1 BST\Solution.java:279:21: Parameter rtemp should be final. [FinalParameters]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m19\19.1 BST\Solution.java:419:11: 'if' is not followed by whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 13 errors.
+Checkstyle ends with 14 errors.

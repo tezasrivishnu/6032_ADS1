@@ -25,10 +25,21 @@ final class Solution {
         }
     }
 }
-
+/**
+ * Class for median.
+ */
 class Median {
+    /**
+     * initializing the minPQ.
+     */
     private MinPQ<Double> min;
+    /**
+     * initializing the maxPQ.
+     */
     private MaxPQ<Double> max;
+    /**
+     * initializing double variable.
+     */
     private double median;
     /**
      * Constructs the object.

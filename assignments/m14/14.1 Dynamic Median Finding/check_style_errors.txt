@@ -8,8 +8,7 @@ Starting audit...
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m14\14.1 Dynamic Median Finding\Solution.java:64:12: Variable 'median' must be private and have accessor methods. [VisibilityModifier]
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m14\14.1 Dynamic Median Finding\Solution.java:65:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m14\14.1 Dynamic Median Finding\Solution.java:70:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m14\14.1 Dynamic Median Finding\Solution.java:70:19: Name 'DynamicMedian' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m14\14.1 Dynamic Median Finding\Solution.java:90:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m14\14.1 Dynamic Median Finding\Solution.java:90:24: Parameter input should be final. [FinalParameters]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m14\14.1 Dynamic Median Finding\Solution.java:89:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m14\14.1 Dynamic Median Finding\Solution.java:89:24: Parameter input should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 12 errors.
+Checkstyle ends with 11 errors.

@@ -27,7 +27,7 @@ final class Solution {
             case "get":
                 int output = bst.get(new BookInfo(tokens[1],
                                                   tokens[2],
-                                                  tokens[3]));
+                                                  tokens[2 + 1]));
                 if (output == 0) {
                     System.out.println("null");
                 } else {
@@ -242,7 +242,7 @@ class BST<BookInfo extends Comparable<BookInfo>> {
      *
      * @return     the int value.
      */
-    public int get(BookInfo book) {
+    public int get(final BookInfo book) {
         return get(root, book);
     }
     /**

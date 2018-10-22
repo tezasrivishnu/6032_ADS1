@@ -193,10 +193,27 @@ class BST<BookInfo extends Comparable<BookInfo>> {
 	BST() {
 
 	}
-	public void put(BookInfo book, int value) {
+	/**
+	 * helper method for put.
+	 *complexity O() as we are calling the main put method
+	 * @param      book   The book bookinfo object
+	 * @param      value  The value  int type.
+	 */
+	public void put(final BookInfo book,
+		final int value) {
 		root = put(root, book, value);
 	}
-	public Node put(Node rtemp, BookInfo book, int value) {
+	/**
+	 * we are adding an book info object to the tree.
+	 * complexity O()
+	 * @param      rtemp  The rtemp node object
+	 * @param      book   The book bookinfo object
+	 * @param      value  The value int type
+	 *
+	 * @return     the node object.
+	 */
+	public Node put(final Node rtemp, final BookInfo book,
+		final int value) {
 		if (rtemp == null) {
 			return new Node(book, value, 1);
 		}
@@ -227,9 +244,22 @@ class BST<BookInfo extends Comparable<BookInfo>> {
 			return rtemp.value;
 		}
 	}
+	/**
+	 * helper method for the main size method.
+	 * complexity O(1) as the complexity
+	 * of the size method is 1.
+	 * @return     size.
+	 */
 	public int size() {
 		return size(root);
 	}
+	/**
+	 * calculating the size of the node element.
+	 * complexity (1) as we are just returning the size of the tree.
+	 * @param      rtemp  The rtemp
+	 *
+	 * @return     size.
+	 */
 	public int size(Node rtemp) {
 		if (rtemp == null) {
 			return 0;
@@ -272,10 +302,25 @@ class BST<BookInfo extends Comparable<BookInfo>> {
 			return rtemp;
 		}
 	}
+	/**
+	 * helper method for the ceiling.
+	 * complexity O()
+	 * @param      book  The bookinfo object
+	 *
+	 * @return     the bookinfo object.
+	 */
 	public BookInfo ceiling(BookInfo book) {
 		Node rtemp = ceiling(root, book);
 		return rtemp.book;
 	}
+	/**
+	 * finding the before element of the key.
+	 * complexity O()
+	 * @param      rtemp  The rtemp node object
+	 * @param      book   The book bookinfo object.
+	 *
+	 * @return     the Node object
+	 */
 	public Node ceiling(Node rtemp, BookInfo book) {
 		int cvalue = book.compareTo(rtemp.book);
 		if (cvalue == 0) {
@@ -291,12 +336,26 @@ class BST<BookInfo extends Comparable<BookInfo>> {
 		}
 		return ceiling(rtemp.right, book);
 	}
+	/**
+	 * helper method for the floor.
+	 * complexity O()
+	 * @param      book  The book
+	 *
+	 * @return     the bookinfo object.
+	 */
 	public BookInfo floor(BookInfo book) {
 		Node x = floor(root, book);
 		return x.book;
 	}
-
-	private Node floor(Node rtemp, BookInfo book) {
+	/**
+	 * finding the next element of the element.
+	 * complexity O()
+	 * @param      rtemp  The rtemp
+	 * @param      book   The book
+	 *
+	 * @return     the Node object
+	 */
+	public Node floor(Node rtemp, BookInfo book) {
 		int cvalue = book.compareTo(rtemp.book);
 		if (cvalue == 0) {
 			return rtemp;

@@ -28,7 +28,11 @@ final class Solution {
                 int output = bst.get(new BookInfo(tokens[1],
                                                   tokens[2],
                                                   tokens[3]));
-                System.out.println(output);
+                if(output == 0) {
+                    System.out.println("null");
+                } else {
+                    System.out.println(output);
+                }
                 break;
             case "max":
                 Comparable maxbook = bst.max();

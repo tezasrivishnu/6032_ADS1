@@ -195,7 +195,7 @@ class BST<BookInfo extends Comparable<BookInfo>> {
     }
     /**
      * helper method for put.
-     *complexity O() as we are calling the main put method
+     *complexity O(logn) as we are calling the main put method
      * @param      book   The book bookinfo object
      * @param      value  The value  int type.
      */
@@ -205,7 +205,7 @@ class BST<BookInfo extends Comparable<BookInfo>> {
     }
     /**
      * we are adding an book info object to the tree.
-     * complexity O()
+     * complexity O(logn) in the worst case scenario.
      * @param      rtemp  The rtemp node object
      * @param      book   The book bookinfo object
      * @param      value  The value int type
@@ -230,8 +230,8 @@ class BST<BookInfo extends Comparable<BookInfo>> {
     }
     /**
      * helper method fpr the main get method.
-     * complexity O() as time comlexity of main get method
-     * is
+     * complexity O(logn) as time comlexity of main get method
+     * is logn
      * @param      book  The book
      *
      * @return     the int value.
@@ -241,7 +241,7 @@ class BST<BookInfo extends Comparable<BookInfo>> {
     }
     /**
      * we are returning the place of book object in the tree.
-     * complexity O()
+     * complexity O(logn) in the worst case scenario.
      * @param      rtemp  The rtemp node object
      * @param      book   The book bookinfo object.
      *
@@ -285,8 +285,8 @@ class BST<BookInfo extends Comparable<BookInfo>> {
     }
     /**
      * helper method for main min method.
-     * complexity O() as the time complexity
-     * of main min method is
+     * complexity O(logn) as the time complexity
+     * of main min method is logn
      * @return     bookinfo object
      */
     public BookInfo min() {
@@ -294,7 +294,7 @@ class BST<BookInfo extends Comparable<BookInfo>> {
     }
     /**
      * finding the min element in the tree.
-     * complexity O()
+     * complexity O(logn) in the worst case scenario.
      * @param      rtemp  node object
      *
      * @return     node object.
@@ -308,8 +308,8 @@ class BST<BookInfo extends Comparable<BookInfo>> {
     }
     /**
      * helper method for main max method.
-     * complexity O() as the time complexity
-     * of main max method is
+     * complexity O(logn) as the time complexity
+     * of main max method is logn
      * @return     bookinfo object
      */
     public BookInfo max() {
@@ -317,7 +317,7 @@ class BST<BookInfo extends Comparable<BookInfo>> {
     }
     /**
      * finding the max element in the tree.
-     * complexity O()
+     * complexity O(logn) in the worst case scenario.
      * @param      rtemp  node object
      *
      * @return     node object.
@@ -331,8 +331,8 @@ class BST<BookInfo extends Comparable<BookInfo>> {
     }
     /**
      * helper method for the main select method.
-     * complexity O() as time compleity of main select method
-     * is
+     * complexity O(logn) as time compleity of main select method
+     * is logn
      * @param      select  The select int type
      *
      * @return     bookinfo object
@@ -343,7 +343,7 @@ class BST<BookInfo extends Comparable<BookInfo>> {
     }
     /**
      * we are finding the nth smallest element in tree.
-     * complexity O()
+     * complexity O(logn) in the worst case scenario.
      * @param      rtemp   The rtemp node object
      * @param      select  The select int type
      *
@@ -362,7 +362,8 @@ class BST<BookInfo extends Comparable<BookInfo>> {
     }
     /**
      * helper method for the ceiling.
-     * complexity O()
+     * complexity O(logn) as the time comlexity of main
+     * ceiling method is logn.
      * @param      book  The bookinfo object
      *
      * @return     the bookinfo object.
@@ -373,7 +374,7 @@ class BST<BookInfo extends Comparable<BookInfo>> {
     }
     /**
      * finding the before element of the key.
-     * complexity O()
+     * complexity O(logn) in the worst case scenario.
      * @param      rtemp  The rtemp node object
      * @param      book   The book bookinfo object.
      *
@@ -396,7 +397,8 @@ class BST<BookInfo extends Comparable<BookInfo>> {
     }
     /**
      * helper method for the floor.
-     * complexity O()
+     * complexity O(logn) as the time complexity of main
+     * floor method is logn.
      * @param      book  The book
      *
      * @return     the bookinfo object.
@@ -407,7 +409,7 @@ class BST<BookInfo extends Comparable<BookInfo>> {
     }
     /**
      * finding the next element of the element.
-     * complexity O()
+     * complexity O(logn) in the worst case scenario.
      * @param      rtemp  The rtemp
      * @param      book   The book
      *

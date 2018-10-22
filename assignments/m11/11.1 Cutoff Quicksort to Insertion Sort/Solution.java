@@ -55,7 +55,8 @@ class QuickSort {
     }
     /**
      * method to send to sorting method.
-     * complexity O(1) as we are calling a method once.
+     * complexity O(n^2) as the complexity of the second sort
+     * method is n^2;
      * @param      array   array
      */
     public void sort(final Comparable[] array) {
@@ -63,7 +64,8 @@ class QuickSort {
     }
     /**
      * sorting of the array.
-     *
+     * complexity O(n^2) and we are calling the partion method
+     * with comlexity n, conssidering big O notation complexity is n^2.
      * @param      array   The array
      * @param      low     The low value
      * @param      high    The high value
@@ -82,7 +84,7 @@ class QuickSort {
     }
     /**
      * partitioning the array and swapping the elements.
-     *
+     * complexity in the worst case will be O(n)
      * @param      array  The array
      * @param      low    The low value
      * @param      high   The high value

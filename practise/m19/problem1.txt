@@ -1,0 +1,6 @@
+a. floor of "Q" is Q
+b. select 5 is Q.
+c. ceiling of "Q" is Q
+d. rank of "J" is 2.
+e. size of "D" is 2.
+f. D E J M S P Q T

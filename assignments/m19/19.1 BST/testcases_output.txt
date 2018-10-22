@@ -40,7 +40,7 @@ Street, Kiran, 800.0
 IT, Viswas, 400.0
 2
 ----------------------------------------
-########## Testcase 2: Failed ##########
+########## Testcase 2: Passed ##########
 Expected Output: 
 Harry, JK, 600.0
 Harry, JK, 600.0
@@ -56,11 +56,9 @@ Harry, JK, 600.0
 Harry, JK, 600.0
 Street, Kiran, 800.0
 null
-Exception in thread "main" java.lang.NullPointerException
-	at BST$Node.access$000(Solution.java:159)
-	at BST.ceiling(Solution.java:388)
-	at BST.ceiling(Solution.java:393)
-	at BST.ceiling(Solution.java:400)
-	at BST.ceiling(Solution.java:376)
-	at Solution.main(Solution.java:56)
+IT, Viswas, 400.0
+Street, Kiran, 800.0
+Harry, JK, 600.0
+Street, Kiran, 800.0
+7
 ----------------------------------------

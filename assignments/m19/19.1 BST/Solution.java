@@ -385,6 +385,9 @@ class BST<BookInfo extends Comparable<BookInfo>> {
      * @return     the Node object
      */
     public Node ceiling(final Node rtemp, final BookInfo book) {
+        if (rtemp == null) {
+            return null;
+        }
         int cvalue = book.compareTo(rtemp.book);
         if (cvalue == 0) {
             return rtemp;

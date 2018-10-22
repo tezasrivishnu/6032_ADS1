@@ -45,7 +45,7 @@ final class Solution {
                 break;
             case "floor":
                 Comparable floor = bst.floor(new BookInfo(
-                                                     tokens[1], tokens[2], tokens[3]));
+                                                 tokens[1], tokens[2], tokens[3]));
                 System.out.println(floor.toString());
                 break;
             case "ceiling":
@@ -200,7 +200,7 @@ class BST<BookInfo extends Comparable<BookInfo>> {
      * @param      value  The value  int type.
      */
     public void put(final BookInfo book,
-        final int value) {
+                    final int value) {
         root = put(root, book, value);
     }
     /**
@@ -213,7 +213,7 @@ class BST<BookInfo extends Comparable<BookInfo>> {
      * @return     the node object.
      */
     public Node put(final Node rtemp, final BookInfo book,
-        final int value) {
+                    final int value) {
         if (rtemp == null) {
             return new Node(book, value, 1);
         }
@@ -228,9 +228,25 @@ class BST<BookInfo extends Comparable<BookInfo>> {
         rtemp.size = 1 + size(rtemp.left) + size(rtemp.right);
         return rtemp;
     }
+    /**
+     * helper method fpr the main get method.
+     * complexity O() as time comlexity of main get method
+     * is
+     * @param      book  The book
+     *
+     * @return     the int value.
+     */
     public int get(BookInfo book) {
         return get(root, book);
     }
+    /**
+     * we are returning the place of book object in the tree.
+     * complexity O()
+     * @param      rtemp  The rtemp node object
+     * @param      book   The book bookinfo object.
+     *
+     * @return     int value.
+     */
     public int get(Node rtemp, BookInfo book) {
         if (rtemp == null) {
             return 0;
@@ -267,32 +283,74 @@ class BST<BookInfo extends Comparable<BookInfo>> {
             return rtemp.size;
         }
     }
+    /**
+     * helper method for main min method.
+     * complexity O() as the time complexity
+     * of main min method is
+     * @return     bookinfo object
+     */
     public BookInfo min() {
         return min(root).book;
     }
-
-    public Node min(Node rtemp) {
+    /**
+     * finding the min element in the tree.
+     * complexity O()
+     * @param      rtemp  node object
+     *
+     * @return     node object.
+     */
+    public Node min(final Node rtemp) {
         if (rtemp.left == null) {
             return rtemp;
         } else {
             return min(rtemp.left);
         }
     }
+    /**
+     * helper method for main max method.
+     * complexity O() as the time complexity
+     * of main max method is
+     * @return     bookinfo object
+     */
     public BookInfo max() {
         return max(root).book;
     }
-    public Node max(Node rtemp) {
+    /**
+     * finding the max element in the tree.
+     * complexity O()
+     * @param      rtemp  node object
+     *
+     * @return     node object.
+     */
+    public Node max(final Node rtemp) {
         if (rtemp.right == null) {
             return rtemp;
         } else {
             return max(rtemp.right);
         }
     }
-    public BookInfo select(int select) {
+    /**
+     * helper method for the main select method.
+     * complexity O() as time compleity of main select method
+     * is
+     * @param      select  The select int type
+     *
+     * @return     bookinfo object
+     */
+    public BookInfo select(final int select) {
         Node rtemp = select(root, select);
         return rtemp.book;
     }
-    public Node select(Node rtemp, int select) {
+    /**
+     * we are finding the nth smallest element in tree.
+     * complexity O()
+     * @param      rtemp   The rtemp node object
+     * @param      select  The select int type
+     *
+     * @return     node object
+     */
+    public Node select(final Node rtemp,
+                       final int select) {
         int value = size(rtemp.left);
         if (value > select) {
             return select(rtemp.left,  select);

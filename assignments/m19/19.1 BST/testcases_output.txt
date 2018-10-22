@@ -56,10 +56,10 @@ Harry, JK, 600.0
 Harry, JK, 600.0
 Exception in thread "main" java.lang.NullPointerException
 	at BST$Node.access$000(Solution.java:155)
-	at BST.floor(Solution.java:359)
-	at BST.floor(Solution.java:366)
-	at BST.floor(Solution.java:366)
-	at BST.floor(Solution.java:366)
-	at BST.floor(Solution.java:347)
+	at BST.floor(Solution.java:417)
+	at BST.floor(Solution.java:424)
+	at BST.floor(Solution.java:424)
+	at BST.floor(Solution.java:424)
+	at BST.floor(Solution.java:405)
 	at Solution.main(Solution.java:47)
 ----------------------------------------

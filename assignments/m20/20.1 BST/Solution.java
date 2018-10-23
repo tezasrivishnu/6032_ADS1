@@ -401,7 +401,12 @@ class BST<BookInfo extends Comparable<BookInfo>> {
      */
     public BookInfo ceiling(final BookInfo book) {
         Node rtemp = ceiling(root, book);
-        return rtemp.book;
+        if (rtemp == null) {
+            return null;
+        }
+        else {
+            return rtemp.book;
+        }
     }
     /**
      * finding the before element of the key.

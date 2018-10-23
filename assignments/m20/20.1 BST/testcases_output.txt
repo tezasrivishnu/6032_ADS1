@@ -15,8 +15,11 @@ Hello, Ajay, 200.0
 2
 IT, Viswas, 400.0
 IT, Viswas, 400.0
+null
 Exception in thread "main" java.lang.NullPointerException
-	at Solution.main(Solution.java:53)
+	at BST$Node.access$000(Solution.java:175)
+	at BST.ceiling(Solution.java:400)
+	at Solution.main(Solution.java:60)
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -39,9 +42,9 @@ TheBook, Joy, 24000.0
 Street, Kiran, 800.0
 Mental, Robert, 1800.0
 Exception in thread "main" java.lang.NullPointerException
-	at BST$Node.access$000(Solution.java:171)
-	at BST.ceiling(Solution.java:396)
-	at Solution.main(Solution.java:56)
+	at BST$Node.access$000(Solution.java:175)
+	at BST.ceiling(Solution.java:400)
+	at Solution.main(Solution.java:60)
 ----------------------------------------
 ########## Testcase 2: Passed ##########
 Expected Output: 

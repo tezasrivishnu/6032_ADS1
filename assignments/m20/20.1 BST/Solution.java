@@ -50,7 +50,11 @@ final class Solution {
             case "floor":
                 Comparable floor = bst.floor(new BookInfo(
                                                  tokens[1], tokens[2], tokens[2 + 1]));
-                System.out.println(floor.toString());
+                if (floor == null) {
+                    System.out.println("null");
+                } else {
+                    System.out.println(floor.toString());
+                }
                 break;
             case "ceiling":
                 Comparable ceiling = bst.ceiling(new BookInfo(

@@ -59,7 +59,11 @@ final class Solution {
             case "ceiling":
                 Comparable ceiling = bst.ceiling(new BookInfo(
                                                      tokens[1], tokens[2], tokens[2 + 1]));
-                System.out.println(ceiling.toString());
+                if (ceiling == null) {
+                    System.out.println("null");
+                } else {
+                    System.out.println(ceiling.toString());
+                }
                 break;
             case "delete":
                 bst.delete(new BookInfo(tokens[1], tokens[2],

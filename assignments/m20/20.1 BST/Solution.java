@@ -22,12 +22,12 @@ final class Solution {
             switch (tokens[0]) {
             case "put":
                 bst.put(new BookInfo(tokens[1], tokens[2],
-                                     tokens[2 + 1]), Integer.parseInt(tokens[2 + 2]));
+                tokens[2 + 1]), Integer.parseInt(tokens[2 + 2]));
                 break;
             case "get":
                 int output = bst.get(new BookInfo(tokens[1],
-                                                  tokens[2],
-                                                  tokens[2 + 1]));
+                    tokens[2],
+                                   tokens[2 + 1]));
                 if (output == 0) {
                     System.out.println("null");
                 } else {
@@ -44,12 +44,12 @@ final class Solution {
                 break;
             case "select":
                 Comparable select = bst.select(Integer.
-                                               parseInt(tokens[1]));
+                        parseInt(tokens[1]));
                 System.out.println(select.toString());
                 break;
             case "floor":
                 Comparable floor = bst.floor(new BookInfo(
-                                                 tokens[1], tokens[2], tokens[2 + 1]));
+                        tokens[1], tokens[2], tokens[2 + 1]));
                 if (floor == null) {
                     System.out.println("null");
                 } else {
@@ -58,7 +58,7 @@ final class Solution {
                 break;
             case "ceiling":
                 Comparable ceiling = bst.ceiling(new BookInfo(
-                                                     tokens[1], tokens[2], tokens[2 + 1]));
+                            tokens[1], tokens[2], tokens[2 + 1]));
                 if (ceiling == null) {
                     System.out.println("null");
                 } else {

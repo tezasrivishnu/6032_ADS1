@@ -67,7 +67,7 @@ final class Solution {
                 break;
             case "delete":
                 bst.delete(new BookInfo(tokens[1], tokens[2],
-                                        tokens[3]));
+                                        tokens[2 + 1]));
                 break;
             case "deleteMin":
                 bst.deleteMin();
@@ -403,8 +403,7 @@ class BST<BookInfo extends Comparable<BookInfo>> {
         Node rtemp = ceiling(root, book);
         if (rtemp == null) {
             return null;
-        }
-        else {
+        } else {
             return rtemp.book;
         }
     }
@@ -477,10 +476,23 @@ class BST<BookInfo extends Comparable<BookInfo>> {
             return rtemp;
         }
     }
+    /**
+     * helper method for the main deletemin method.
+     * complexity is h(height of the tree) as time
+     * comlexity of main deletemin method
+     * is h(height of the tree)
+     */
     public void deleteMin() {
         root = deleteMin(root);
     }
-
+    /**
+     * deleting the minimum element in the tree.
+     * complexity is h, where h is the height of the tree
+     *
+     * @param      rtemp  The rtemp
+     *
+     * @return     node object.
+     */
     public Node deleteMin(final Node rtemp) {
         if (rtemp.left == null) {
             return rtemp.right;
@@ -489,10 +501,23 @@ class BST<BookInfo extends Comparable<BookInfo>> {
         rtemp.size = size(rtemp.left) + size(rtemp.right) + 1;
         return rtemp;
     }
+    /**
+     * helper method for the main deletemax method.
+     * complexity is h(height of the tree) as time
+     * comlexity of main deletemax method
+     * is h(height of the tree)
+     */
     public void deleteMax() {
         root = deleteMax(root);
     }
-
+    /**
+     * deleting the maximum element in the tree.
+     * complexity is h, where h is the height of the tree
+     *
+     * @param      rtemp  The rtemp
+     *
+     * @return     node object.
+     */
     public Node deleteMax(final Node rtemp) {
         if (rtemp.right == null) {
             return rtemp.left;
@@ -501,11 +526,25 @@ class BST<BookInfo extends Comparable<BookInfo>> {
         rtemp.size = size(rtemp.left) + size(rtemp.right) + 1;
         return rtemp;
     }
-    public void delete(BookInfo book) {
+    /**
+     * helper method for the main delete method.
+     * complexity is h(height of the tree) as time
+     * comlexity of main delete method
+     * is h(height of the tree)
+     * @param book bookinfo object.
+     */
+    public void delete(final BookInfo book) {
         root = delete(root, book);
     }
-
-    public Node delete(Node rtemp, BookInfo book) {
+    /**
+     * deleting an in the tree.
+     * complexity is h, where h is the height of the tree
+     *
+     * @param      rtemp  The rtemp
+     * @param      book book info object
+     * @return     node object.
+     */
+    public Node delete(final Node rtemp, final BookInfo book) {
         if (rtemp == null) {
             return null;
         }
@@ -522,7 +561,7 @@ class BST<BookInfo extends Comparable<BookInfo>> {
                 return rtemp.right;
             }
             Node temp = rtemp;
-            rtemp = min(temp.right);
+            temp = min(temp.right);
             rtemp.right = deleteMin(temp.right);
             rtemp.left = temp.left;
         }

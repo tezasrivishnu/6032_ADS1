@@ -16,9 +16,7 @@ Hello, Ajay, 200.0
 IT, Viswas, 400.0
 IT, Viswas, 400.0
 Exception in thread "main" java.lang.NullPointerException
-	at BST$Node.access$000(Solution.java:171)
-	at BST.floor(Solution.java:435)
-	at Solution.main(Solution.java:51)
+	at Solution.main(Solution.java:53)
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 

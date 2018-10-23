@@ -22,7 +22,7 @@ final class Solution {
             switch (tokens[0]) {
             case "put":
                 bst.put(new BookInfo(tokens[1], tokens[2],
-                    tokens[2 + 1]), Integer.parseInt(tokens[2 + 2]));
+                                     tokens[2 + 1]), Integer.parseInt(tokens[2 + 2]));
                 break;
             case "get":
                 int output = bst.get(new BookInfo(tokens[1],
@@ -49,21 +49,21 @@ final class Solution {
                 break;
             case "floor":
                 Comparable floor = bst.floor(new BookInfo(
-                    tokens[1], tokens[2], tokens[2 + 1]));
+                                                 tokens[1], tokens[2], tokens[2 + 1]));
                 System.out.println(floor.toString());
                 break;
             case "ceiling":
                 Comparable ceiling = bst.ceiling(new BookInfo(
-                    tokens[1], tokens[2], tokens[2 + 1]));
+                                                     tokens[1], tokens[2], tokens[2 + 1]));
                 System.out.println(ceiling.toString());
                 break;
             case "delete":
                 bst.delete(new BookInfo(tokens[1], tokens[2],
-                    tokens[3]));
+                                        tokens[3]));
                 break;
             case "deleteMin":
                 bst.deleteMin();
-            break;
+                break;
             case "deleteMax":
                 bst.deleteMax();
                 break;
@@ -432,7 +432,11 @@ class BST<BookInfo extends Comparable<BookInfo>> {
      */
     public BookInfo floor(final BookInfo book) {
         Node x = floor(root, book);
-        return x.book;
+        if (x == null) {
+            return null;
+        } else {
+            return x.book;
+        }
     }
     /**
      * finding the next element of the element.
@@ -495,11 +499,9 @@ class BST<BookInfo extends Comparable<BookInfo>> {
         int cmp = book.compareTo(rtemp.book);
         if      (cmp < 0) {
             rtemp.left  = delete(rtemp.left,  book);
-        }
-        else if (cmp > 0) {
+        } else if (cmp > 0) {
             rtemp.right = delete(rtemp.right, book);
-        }
-        else { 
+        } else {
             if (rtemp.right == null) {
                 return rtemp.left;
             }
@@ -510,7 +512,7 @@ class BST<BookInfo extends Comparable<BookInfo>> {
             rtemp = min(temp.right);
             rtemp.right = deleteMin(temp.right);
             rtemp.left = temp.left;
-        } 
+        }
         rtemp.size = size(rtemp.left) + size(rtemp.right) + 1;
         return rtemp;
     }

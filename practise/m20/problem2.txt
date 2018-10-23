@@ -1,0 +1,10 @@
+					    WORST CASE						 AVERAGE CASE
+				SEARCH 	  INSERT	 DELETE	     SEARCH		INSERT		DELETE
+LSST			  N			N			N		  N/2		   N		  N/2
+
+B S TABLE		logN		N 			N 		 logN		  N/2		  N/2
+
+BST				  N			N			N		 logN		  logN		  logN
+
+2-3 TREES		 logN	  logN		  logN		 logN	 	  logN		  logN	  
+

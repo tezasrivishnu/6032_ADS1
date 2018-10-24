@@ -1,0 +1,2 @@
+iii and iv are the red black trees beacuse the black links to the null on the left sub stree and the right subtree are equal.
+Where as in i and ii the balck links are uneven.

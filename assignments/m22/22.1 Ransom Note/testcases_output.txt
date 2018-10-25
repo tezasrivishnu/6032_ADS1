@@ -15,7 +15,7 @@ Expected Output:
 No
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
-	at CheckWords.words(Solution.java:55)
+	at CheckWords.words(Solution.java:54)
 	at Solution.main(Solution.java:16)
 ----------------------------------------
 ########## Testcase 3: Passed ##########

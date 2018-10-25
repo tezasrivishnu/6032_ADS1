@@ -6,7 +6,6 @@ Starting audit...
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m22\22.1 Ransom Note\Solution.java:3:33: Parameter args should be final. [FinalParameters]
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m22\22.1 Ransom Note\Solution.java:8:32: Array brackets at illegal position. [ArrayTypeStyle]
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m22\22.1 Ransom Note\Solution.java:9:33: Array brackets at illegal position. [ArrayTypeStyle]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m22\22.1 Ransom Note\Solution.java:16:19: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m22\22.1 Ransom Note\Solution.java:23: Missing a Javadoc comment. [JavadocType]
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m22\22.1 Ransom Note\Solution.java:24:9: Missing a Javadoc comment. [JavadocVariable]
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m22\22.1 Ransom Note\Solution.java:24:49: Variable 'hashone' must be private and have accessor methods. [VisibilityModifier]
@@ -16,8 +15,5 @@ Starting audit...
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m22\22.1 Ransom Note\Solution.java:30:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m22\22.1 Ransom Note\Solution.java:30:30: Parameter firstarr should be final. [FinalParameters]
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m22\22.1 Ransom Note\Solution.java:30:49: Parameter secondarr should be final. [FinalParameters]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m22\22.1 Ransom Note\Solution.java:49:20: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m22\22.1 Ransom Note\Solution.java:52:27: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m22\22.1 Ransom Note\Solution.java:55:27: 'if' is not followed by whitespace. [WhitespaceAfter]
 Audit done.
-Checkstyle ends with 20 errors.
+Checkstyle ends with 16 errors.

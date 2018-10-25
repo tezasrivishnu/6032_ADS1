@@ -13,7 +13,7 @@ class Solution {
 		for (int i = 0; i < second; i++) {
 			secondarr[i] = scan.next();
 		}
-		if(word.words(firstarr, secondarr)) {
+		if (word.words(firstarr, secondarr)) {
 			System.out.println("Yes");
 		} else {
 			System.out.println("No");
@@ -46,13 +46,12 @@ class CheckWords {
 				hashtwo.put(two, 1);
 			}
 		}
-		for(String check : hashtwo.keys()) {
+		for (String check : hashtwo.keys()) {
 			Integer onevalue = hashone.get(check);
 			Integer twovalue = hashtwo.get(check);
-			if(twovalue == null) {
+			if (twovalue == null) {
 				return false;
-			}
-			if(onevalue < twovalue) {
+			} else if (onevalue < twovalue) {
 				return false;
 			}
 		}

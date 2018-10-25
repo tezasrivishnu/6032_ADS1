@@ -11,7 +11,9 @@ final class Solution {
     }
     /**
      * main method for the program.
-     * complexity is O()
+     * complexity is O(n + logN) as we are taking n inputs
+     * and calling the checkwords class words method whose
+     * complexity is logN.
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
@@ -58,7 +60,8 @@ class CheckWords {
     /**
      * checking if rason note words are present in.
      * magsine note or note.
-     * complexity O()
+     * complexity O(logN) as we are calling the get and
+     * put methods in the seperate chaining.
      * @param      firstarr   The firstarr
      * @param      secondarr  The secondarr
      *

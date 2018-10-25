@@ -1,4 +1,7 @@
 import java.util.Scanner;
+/**
+ * Class for solution.
+ */
 class Solution {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
@@ -49,7 +52,7 @@ class CheckWords {
 		for (String check : hashtwo.keys()) {
 			Integer onevalue = hashone.get(check);
 			Integer twovalue = hashtwo.get(check);
-			if (twovalue == null) {
+			if (twovalue == null || onevalue == null) {
 				return false;
 			} else if (onevalue < twovalue) {
 				return false;

@@ -4,7 +4,7 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
@@ -69,7 +69,7 @@ class LinearProbing {
     /**
      * Constructs the object.
      */
-    public LinearProbing() {
+    LinearProbing() {
         this(CAPACITY);
     }
     /**
@@ -88,7 +88,7 @@ class LinearProbing {
     *complexity is O(N) in worst case.
     *
     * @param   key    The key
-    * @param   value  The value
+    * @param   val  The value
     */
     public void put(final String string, final int val) {
         if (size >= (arraylength / 2)) {
@@ -108,12 +108,13 @@ class LinearProbing {
     }
     /**
      *this method returns the hash value.
-     * @param      key   The key
+     * @param      string   The key
      * complexity O(1).
      * @return hash value
      */
     public int hash(final String string) {
-        return ((11 * string.hashCode()) % arraylength);
+        return (((CAPACITY + CAPACITY + 2 + 1)
+        * string.hashCode()) % arraylength);
     }
     /**
      *resizingthe arrays.
@@ -164,10 +165,11 @@ class LinearProbing {
      */
     public Iterable<String> keys() {
         Queue<String> queue = new Queue<String>();
-        for (int i = 0; i < arraylength; i++)
+        for (int i = 0; i < arraylength; i++) {
             if (character[i] != null) {
                 queue.enqueue(character[i]);
             }
+        }
         return queue;
     }
     /**
@@ -215,13 +217,13 @@ class LinearProbing {
             i = (i + 1) % arraylength;
         }
         size--;
-        if (size > 0 && size <= arraylength / 8) {
+        if (size > 0 && size <= arraylength / (2 + 2 + 2 + 2)) {
             resize(arraylength / 2);
         }
     }
     /**
      *this returns whether the key is present or not.
-     * @param      key  the key
+     * @param      string  the key
      * complexity O(n) in worst case as the complexity of get
       * method is n in worst case.
      * @return  key is present

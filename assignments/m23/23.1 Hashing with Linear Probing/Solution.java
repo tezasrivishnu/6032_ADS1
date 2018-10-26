@@ -4,8 +4,8 @@ class Solution {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		LinearProbing lp = new LinearProbing();
-		int number = scan.nextInt();
-		for (int i = 0; i < number; i++) {
+		String number = scan.nextLine();
+		while(scan.hasNext()) {
 			String[] tokens = scan.nextLine().split(" ");
 			switch (tokens[0]) {
 			case "put":
@@ -75,10 +75,13 @@ class LinearProbing {
 		// value = Arrays.copyOf(value, capacity);
 	}
 	public Integer get(String string) {
-		for (int index = hash(string);
-		        character[index] != null; index
-		        = (index + 1) % arraylength) {
+		// System.out.println(Arrays.toString(character));
+		int index;
+		for (index = hash(string); character[index] != null;
+		        index = (index + 1) % arraylength) {
+			// System.out.println(character[index]);
 			if (character[index].equals(string)) {
+				//		System.out.println(value[index]);
 				return value[index];
 			}
 		}

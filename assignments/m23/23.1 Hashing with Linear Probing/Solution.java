@@ -43,7 +43,7 @@ class LinearProbing {
 	}
 
 	public void put(String string, int val) {
-		if (size >= arraylength / 2) {
+		if (size >= (arraylength / 2)) {
 			resize(2 * arraylength);
 		}
 		int index;
@@ -59,10 +59,10 @@ class LinearProbing {
 		size++;
 	}
 	public int hash(String string) {
-		return (11 * (string.hashCode()) % arraylength);
+		return ((11 * string.hashCode()) % arraylength);
 	}
 	public void resize(int capacity) {
-		LinearProbing temp = new LinearProbing();
+		LinearProbing temp = new LinearProbing(capacity);
 		for (int i = 0; i < arraylength; i++) {
 			if (character[i] != null) {
 				temp.put(character[i], value[i]);
@@ -71,6 +71,8 @@ class LinearProbing {
 		character = temp.character;
 		value = temp.value;
 		arraylength = temp.arraylength;
+		// character = Arrays.copyOf(character, capacity);
+		// value = Arrays.copyOf(value, capacity);
 	}
 	public Integer get(String string) {
 		for (int index = hash(string);
@@ -91,11 +93,11 @@ class LinearProbing {
 		return queue;
 	}
 	public String display() {
+		System.out.println("display");
 		if (size == 0) {
 			return "{}";
 		}
 		String str = "{";
-		int i = 0;
 		for (String check : keys()) {
 			str += check + ":" + get(check) + ", ";
 		}
@@ -104,7 +106,9 @@ class LinearProbing {
 		return str;
 	}
 	public void delete(String string) {
-		if (!contains(string)) return;
+		if (!contains(string)) {
+			return;
+		}
 		int i = hash(string);
 		while (!string.equals(character[i])) {
 			i = (i + 1) % arraylength;
@@ -113,12 +117,12 @@ class LinearProbing {
 		value[i] = null;
 		i = (i + 1) % arraylength;
 		while (character[i] != null) {
-			String keyToRehash = character[i];
-			int valToRehash = value[i];
+			String charac = character[i];
+			int val = value[i];
 			character[i] = null;
 			value[i] = null;
 			size--;
-			put(keyToRehash, valToRehash);
+			put(charac, val);
 			i = (i + 1) % arraylength;
 		}
 		size--;

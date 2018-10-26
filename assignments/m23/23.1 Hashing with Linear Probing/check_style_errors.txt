@@ -1,5 +1,2 @@
 Starting audit...
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m23\23.1 Hashing with Linear Probing\Solution.java:90:7: Unused @param tag for 'key'. [JavadocMethod]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m23\23.1 Hashing with Linear Probing\Solution.java:93:34: Expected @param tag for 'string'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 2 errors.

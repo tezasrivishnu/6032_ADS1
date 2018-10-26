@@ -87,7 +87,7 @@ class LinearProbing {
     *to put the character in table.
     *complexity is O(N) in worst case.
     *
-    * @param   key    The key
+    * @param   string    The key
     * @param   val  The value
     */
     public void put(final String string, final int val) {

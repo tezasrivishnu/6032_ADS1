@@ -1,0 +1,3 @@
+only c. is the correct one as they are in order according to the linear probing.
+
+rest all will not occur when we use linear probing because the elements are in different indexes.

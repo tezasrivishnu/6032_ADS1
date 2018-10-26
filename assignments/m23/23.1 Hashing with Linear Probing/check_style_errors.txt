@@ -35,10 +35,10 @@ Starting audit...
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m23\23.1 Hashing with Linear Probing\Solution.java:87:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m23\23.1 Hashing with Linear Probing\Solution.java:89: 'for' construct must use '{}'s. [NeedBraces]
 [ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m23\23.1 Hashing with Linear Probing\Solution.java:95:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m23\23.1 Hashing with Linear Probing\Solution.java:108:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m23\23.1 Hashing with Linear Probing\Solution.java:108:28: Parameter string should be final. [FinalParameters]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m23\23.1 Hashing with Linear Probing\Solution.java:129:55: '8' is a magic number. [MagicNumber]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m23\23.1 Hashing with Linear Probing\Solution.java:133:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m23\23.1 Hashing with Linear Probing\Solution.java:133:33: Parameter string should be final. [FinalParameters]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m23\23.1 Hashing with Linear Probing\Solution.java:107:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m23\23.1 Hashing with Linear Probing\Solution.java:107:28: Parameter string should be final. [FinalParameters]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m23\23.1 Hashing with Linear Probing\Solution.java:128:55: '8' is a magic number. [MagicNumber]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m23\23.1 Hashing with Linear Probing\Solution.java:132:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m23\23.1 Hashing with Linear Probing\Solution.java:132:33: Parameter string should be final. [FinalParameters]
 Audit done.
 Checkstyle ends with 41 errors.

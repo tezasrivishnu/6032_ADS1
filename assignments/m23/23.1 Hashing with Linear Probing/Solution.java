@@ -93,7 +93,6 @@ class LinearProbing {
 		return queue;
 	}
 	public String display() {
-		System.out.println("display");
 		if (size == 0) {
 			return "{}";
 		}

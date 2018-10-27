@@ -2,7 +2,7 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
@@ -11,7 +11,10 @@ class Solution {
     }
     /**
      * main method for the program.
-     * complexity O()
+     * complexity O(mn) as we are taking m,n inputs
+     * complexity of the put and get method in seperate
+     * chaining hash are O(n) respectively.
+     * in the worst case.
      * @param      args  The arguments
      */
     public static void main(final String[] args) {

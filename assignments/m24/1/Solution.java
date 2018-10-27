@@ -14,10 +14,12 @@ class Solution {
 		for(int i = 0; i< Integer.parseInt(get); i++) {
 			String[] items = scan.nextLine().split(" ");
 			Student stu = finding.get(Integer.parseInt(items[1]));
-			if(Integer.parseInt(items[2]) == 1) {
+			if(Integer.parseInt(items[2]) == 1 && stu != null) {
 				System.out.println(stu.getName());
-			} else {
+			} else if (Integer.parseInt(items[2]) == 2 && stu != null){
 				System.out.println(stu.getMarks());
+			} else {
+				System.out.println("Student doesn't exists...");
 			}
 		}
 

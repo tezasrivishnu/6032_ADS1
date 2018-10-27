@@ -34,10 +34,11 @@ final class Solution {
             switch (items[0]) {
             case "BE":
                 for (Student stu : finding.keys()) {
-                    if ((stu != null) && (stu.getMarks()
-                                          >= Double.parseDouble(items[1])
-                                          && stu.getMarks() <= Double.parseDouble(items[2])
-                                         )) {
+                    if ((stu.getMarks()
+                            >= Double.parseDouble(items[1])
+                            && stu.getMarks()
+                            <= Double.parseDouble(items[2])
+                        )) {
                         System.out.println(stu.getName());
                     }
                 }

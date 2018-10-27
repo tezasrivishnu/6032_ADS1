@@ -47,9 +47,6 @@ final class Solution {
                 break;
             case "LE":
                 for (Student stu : finding.keys()) {
-
-                    System.out.println(stu.getName() + " "
-                                      + stu.getMarks());
                     if (stu.getMarks() <= Double.parseDouble(items[1])
                        ) {
                         System.out.println(stu.getName());

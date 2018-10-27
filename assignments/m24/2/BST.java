@@ -121,7 +121,8 @@ public class BST<Key extends Comparable<Key>, Value> {
 
     /**
      * Returns the value associated with the given key.
-     *
+     * complexity O(logn) as we are calling
+     * the main get method.
      * @param  key the key
      * @return the value associated with the given key if the key is in the symbol table
      *         and {@code null} if the key is not in the symbol table
@@ -130,7 +131,14 @@ public class BST<Key extends Comparable<Key>, Value> {
     public Value get(Key key) {
         return get(root, key);
     }
-
+    /**
+     * getting an element.
+     * complexity O(logn) as we are calling
+     * @param      x     the node
+     * @param      key   the object.
+     *
+     * @return     the value of the object.
+     */
     private Value get(Node x, Key key) {
         if (key == null) throw new IllegalArgumentException("called get() with a null key");
         if (x == null) return null;
@@ -145,7 +153,7 @@ public class BST<Key extends Comparable<Key>, Value> {
      * value with the new value if the symbol table already contains the specified key.
      * Deletes the specified key (and its associated value) from this symbol table
      * if the specified value is {@code null}.
-     *
+     * complexity O(logn) as we are using binary method.
      * @param  key the key
      * @param  val the value
      * @throws IllegalArgumentException if {@code key} is {@code null}

@@ -1,7 +1,5 @@
 Starting audit...
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m24\2\Solution.java:2:8: Unused import - java.util.Arrays. [UnusedImports]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m24\2\Solution.java:34: switch without "default" clause. [MissingSwitchDefault]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m24\2\Solution.java:88:26: Expected @param tag for 'roll'. [JavadocMethod]
-[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m24\2\Solution.java:111:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m24\2\Solution.java:36: switch without "default" clause. [MissingSwitchDefault]
+[ERROR] C:\Users\itsvi\Desktop\MSIT\IT\ADS 1\6032_ADS1\assignments\m24\2\Solution.java:51:60: '+' should be on a new line. [OperatorWrap]
 Audit done.
-Checkstyle ends with 4 errors.
+Checkstyle ends with 2 errors.

@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Arrays;
 /**
  * Class for solution.
  */
@@ -12,7 +11,10 @@ final class Solution {
     }
     /**
      * main method for the program.
-     * complexity O()
+     * complexity O(mn) as we are taking mn inputs
+     * we are
+     * using the put and get method of the BST.
+     * logn + logn for both the methods.
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
@@ -34,17 +36,20 @@ final class Solution {
             switch (items[0]) {
             case "BE":
                 for (Student stu : finding.keys()) {
-                    if ((stu.getMarks()
+                    if (stu.getMarks()
                             >= Double.parseDouble(items[1])
                             && stu.getMarks()
                             <= Double.parseDouble(items[2])
-                        )) {
+                        ) {
                         System.out.println(stu.getName());
                     }
                 }
                 break;
             case "LE":
                 for (Student stu : finding.keys()) {
+
+                    System.out.println(stu.getName() + " " +
+                        stu.getMarks());
                     if (stu.getMarks() <= Double.parseDouble(items[1])
                        ) {
                         System.out.println(stu.getName());
@@ -81,7 +86,7 @@ class Student implements Comparable<Student> {
     private double studentmarks;
     /**
      * Constructs the object.
-     *
+     * @param      roll the roll number
      * @param      name   The name
      * @param      marks  The marks
      */
@@ -108,6 +113,13 @@ class Student implements Comparable<Student> {
     public double getMarks() {
         return this.studentmarks;
     }
+    /**
+     * comparing the two student object marks.
+     * complexity O(1)
+     * @param      that  The that
+     *
+     * @return     1 if larger, 0 if equal and -1 if smaller
+     */
     public int compareTo(final Student that) {
         if (this.getMarks() < that.getMarks()) {
             return -1;

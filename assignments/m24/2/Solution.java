@@ -40,7 +40,7 @@ final class Solution {
                             >= Double.parseDouble(items[1])
                             && stu.getMarks()
                             <= Double.parseDouble(items[2])
-                        ) {
+                       ) {
                         System.out.println(stu.getName());
                     }
                 }
@@ -48,8 +48,8 @@ final class Solution {
             case "LE":
                 for (Student stu : finding.keys()) {
 
-                    System.out.println(stu.getName() + " " +
-                        stu.getMarks());
+                    System.out.println(stu.getName() + " "
+                                      + stu.getMarks());
                     if (stu.getMarks() <= Double.parseDouble(items[1])
                        ) {
                         System.out.println(stu.getName());
@@ -63,6 +63,8 @@ final class Solution {
                         System.out.println(stu.getName());
                     }
                 }
+                break;
+            default:
                 break;
             }
         }

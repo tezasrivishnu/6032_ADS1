@@ -24,8 +24,8 @@ final class Solution {
             String[] tokens = scan.nextLine().split(",");
             finding.put(
                 new Student(tokens[0],
-                        tokens[1],
-                         Double.parseDouble(tokens[2])),
+                            tokens[1],
+                            Double.parseDouble(tokens[2])),
                 Double.parseDouble(tokens[2]));
         }
         String get = scan.nextLine();
@@ -35,12 +35,29 @@ final class Solution {
             case "BE":
                 for (Student stu : finding.keys()) {
                     if ((stu != null) && (stu.getMarks()
-                        >= Double.parseDouble(items[1])
-                && stu.getMarks() <= Double.parseDouble(items[2])
-                             )){
+                                          >= Double.parseDouble(items[1])
+                                          && stu.getMarks() <= Double.parseDouble(items[2])
+                                         )) {
                         System.out.println(stu.getName());
                     }
                 }
+                break;
+            case "LE":
+                for (Student stu : finding.keys()) {
+                    if (stu.getMarks() <= Double.parseDouble(items[2])
+                       ) {
+                        System.out.println(stu.getName());
+                    }
+                }
+                break;
+            case "GE":
+                for (Student stu : finding.keys()) {
+                    if (stu.getMarks() >= Double.parseDouble(items[2])
+                       ) {
+                        System.out.println(stu.getName());
+                    }
+                }
+                break;
             }
         }
     }
@@ -48,7 +65,7 @@ final class Solution {
 /**
  * Class for student.
  */
-class Student implements Comparable<Student>{
+class Student implements Comparable<Student> {
     /**
      * initializing the student roll variable.
      */
@@ -91,9 +108,9 @@ class Student implements Comparable<Student>{
         return this.studentmarks;
     }
     public int compareTo(final Student that) {
-        if(this.getMarks() < that.getMarks()) {
+        if (this.getMarks() < that.getMarks()) {
             return -1;
-        }else if(this.getMarks() > that.getMarks()) {
+        } else if (this.getMarks() > that.getMarks()) {
             return 1;
         }
         return 0;
